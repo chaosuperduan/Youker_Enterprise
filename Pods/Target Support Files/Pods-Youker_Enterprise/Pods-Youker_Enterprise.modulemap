@@ -1,0 +1,6 @@
+framework module Pods_Youker_Enterprise {
+  umbrella header "Pods-Youker_Enterprise-umbrella.h"
+
+  export *
+  module * { export * }
+}
