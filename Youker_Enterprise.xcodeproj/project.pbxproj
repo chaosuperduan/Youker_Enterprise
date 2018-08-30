@@ -77,7 +77,6 @@
 		E50BBDAE2137A07D00F09D92 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E50BBD492137A07C00F09D92 /* AMap.bundle */; };
 		E50BBDAF2137A07D00F09D92 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BBD4A2137A07C00F09D92 /* MAMapKit.framework */; };
 		E50BBDB02137A07D00F09D92 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BBD4B2137A07C00F09D92 /* AMapSearchKit.framework */; };
-		E50BBDB22137A07D00F09D92 /* jpush-ios-3.0.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BBD502137A07C00F09D92 /* jpush-ios-3.0.9.a */; };
 		E50BBDB32137A07D00F09D92 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BBD532137A07C00F09D92 /* AlipaySDK.framework */; };
 		E50BBDB52137A07D00F09D92 /* CGXPickerViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E50BBD582137A07C00F09D92 /* CGXPickerViewManager.m */; };
 		E50BBDB62137A07D00F09D92 /* NSDate+CGXPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E50BBD5D2137A07C00F09D92 /* NSDate+CGXPicker.m */; };
@@ -340,10 +339,6 @@
 		E50BBD492137A07C00F09D92 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		E50BBD4A2137A07C00F09D92 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		E50BBD4B2137A07C00F09D92 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
-		E50BBD4D2137A07C00F09D92 /* jcore-ios-1.1.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.9.a"; sourceTree = "<group>"; };
-		E50BBD4E2137A07C00F09D92 /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
-		E50BBD4F2137A07C00F09D92 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
-		E50BBD502137A07C00F09D92 /* jpush-ios-3.0.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.9.a"; sourceTree = "<group>"; };
 		E50BBD532137A07C00F09D92 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		E50BBD562137A07C00F09D92 /* CGXAddressPcikerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXAddressPcikerView.h; sourceTree = "<group>"; };
 		E50BBD572137A07C00F09D92 /* CGXDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGXDatePickerView.h; sourceTree = "<group>"; };
@@ -512,7 +507,6 @@
 				E50BBDA52137A07D00F09D92 /* libWeChatSDK.a in Frameworks */,
 				FE7AC1702897CFE1D85DAFDB /* Pods_Youker_Enterprise.framework in Frameworks */,
 				E50BBDAF2137A07D00F09D92 /* MAMapKit.framework in Frameworks */,
-				E50BBDB22137A07D00F09D92 /* jpush-ios-3.0.9.a in Frameworks */,
 				E50BBDB32137A07D00F09D92 /* AlipaySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -919,7 +913,6 @@
 				E50BBD492137A07C00F09D92 /* AMap.bundle */,
 				E50BBD4A2137A07C00F09D92 /* MAMapKit.framework */,
 				E50BBD4B2137A07C00F09D92 /* AMapSearchKit.framework */,
-				E50BBD4C2137A07C00F09D92 /* JPush */,
 				E50BBD512137A07C00F09D92 /* FDAlertViewDemo */,
 				E50BBD532137A07C00F09D92 /* AlipaySDK.framework */,
 			);
@@ -960,17 +953,6 @@
 				E50BBD482137A07C00F09D92 /* FDAlertView.h */,
 			);
 			path = FDAlertView;
-			sourceTree = "<group>";
-		};
-		E50BBD4C2137A07C00F09D92 /* JPush */ = {
-			isa = PBXGroup;
-			children = (
-				E50BBD4D2137A07C00F09D92 /* jcore-ios-1.1.9.a */,
-				E50BBD4E2137A07C00F09D92 /* JPushNotificationExtensionService.h */,
-				E50BBD4F2137A07C00F09D92 /* JPUSHService.h */,
-				E50BBD502137A07C00F09D92 /* jpush-ios-3.0.9.a */,
-			);
-			path = JPush;
 			sourceTree = "<group>";
 		};
 		E50BBD512137A07C00F09D92 /* FDAlertViewDemo */ = {

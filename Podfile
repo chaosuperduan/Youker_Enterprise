@@ -27,6 +27,7 @@ pod 'ESPullToRefresh'           #下拉刷新
 pod 'AFNetworking'
 pod 'SVProgressHUD'
 pod 'AMapSearch' 
+pod 'JPush'
 #pod 'AMapNavi' #导航SDK 已包含3D地图，无需单独引入3D地图
 pod 'AMapLocation'
 

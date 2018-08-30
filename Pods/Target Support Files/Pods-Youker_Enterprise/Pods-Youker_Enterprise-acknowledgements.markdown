@@ -113,6 +113,14 @@ SOFTWARE.
 
 
 
+## JCore
+
+Copyright jpush.cn
+
+## JPush
+
+Copyright jiguang.cn
+
 ## Kingfisher
 
 The MIT License (MIT)
