@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		09072006F0130A528B4BF678 /* Pods_Youker_EnterpriseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76D3D624BB23299B80417E /* Pods_Youker_EnterpriseTests.framework */; };
 		0EB44B2013A8ED117440E33D /* Pods_Youker_EnterpriseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C021F587FB603B0CD8AF52 /* Pods_Youker_EnterpriseUITests.framework */; };
+		18511F782139A88F00DF7BAD /* HomeFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18511F762139A88F00DF7BAD /* HomeFootView.swift */; };
+		18511F792139A88F00DF7BAD /* HomeFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18511F772139A88F00DF7BAD /* HomeFootView.xib */; };
 		185232D22136FCF8009927D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185232D12136FCF8009927D2 /* AppDelegate.swift */; };
 		185232D42136FCF8009927D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185232D32136FCF8009927D2 /* ViewController.swift */; };
 		185232D72136FCF8009927D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185232D52136FCF8009927D2 /* Main.storyboard */; };
@@ -227,6 +229,8 @@
 
 /* Begin PBXFileReference section */
 		107212BBBD58CF04E38E5B9E /* Pods-Youker_EnterpriseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_EnterpriseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_EnterpriseTests/Pods-Youker_EnterpriseTests.release.xcconfig"; sourceTree = "<group>"; };
+		18511F762139A88F00DF7BAD /* HomeFootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFootView.swift; sourceTree = "<group>"; };
+		18511F772139A88F00DF7BAD /* HomeFootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFootView.xib; sourceTree = "<group>"; };
 		185232CE2136FCF8009927D2 /* Youker_Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youker_Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185232D12136FCF8009927D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185232D32136FCF8009927D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -1186,6 +1190,8 @@
 		E50BBE0B2137D97000F09D92 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18511F762139A88F00DF7BAD /* HomeFootView.swift */,
+				18511F772139A88F00DF7BAD /* HomeFootView.xib */,
 				E50BBE4F2137E61A00F09D92 /* facilitiesView.swift */,
 				E50BBE292137DF4600F09D92 /* HotelImageView.swift */,
 				E50BBE282137DF4600F09D92 /* HotelImageView.xib */,
@@ -1456,6 +1462,7 @@
 				E50BBDAA2137A07D00F09D92 /* 5-160914192R4-50.gif in Resources */,
 				E50BBE6A2137E99100F09D92 /* OrderDetailHeader.xib in Resources */,
 				E50BBDB82137A07D00F09D92 /* CGXPickerView.bundle in Resources */,
+				18511F792139A88F00DF7BAD /* HomeFootView.xib in Resources */,
 				E50BBE392137E1EB00F09D92 /* RoomViewController.xib in Resources */,
 				E50BBE832137EAD200F09D92 /* SelectCouponView.xib in Resources */,
 				E50BBE7B2137EA7F00F09D92 /* PriceDetailView.xib in Resources */,
@@ -1652,6 +1659,7 @@
 				E50BBDBD2137A07D00F09D92 /* CGXStringPickerView.m in Sources */,
 				E50BBDAD2137A07D00F09D92 /* FDAlertView.m in Sources */,
 				E50BBD882137A07D00F09D92 /* MJRefreshAutoStateFooter.m in Sources */,
+				18511F782139A88F00DF7BAD /* HomeFootView.swift in Sources */,
 				E50BBEBD21391E0300F09D92 /* HomeHeaderView.swift in Sources */,
 				E50BBDD62137CA3F00F09D92 /* UIView+Extension.m in Sources */,
 				E50BBD7C2137A07D00F09D92 /* UIBarButtonItem-Extension.swift in Sources */,

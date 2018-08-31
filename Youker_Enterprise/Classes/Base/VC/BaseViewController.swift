@@ -49,6 +49,7 @@ class BaseViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = bacgColor;
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(note:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(note:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
     }
