@@ -5,7 +5,7 @@
 //  Created by 振轩 on 2018/5/12.
 //  Copyright © 2018年 M2Micro. All rights reserved.
 //
-let naviColor = UIColor.init(r: 17, g: 175, b: 124)
+let naviColor = UIColor.init(r: 60, g: 184, b: 255)
 let backColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.1)
 let appid = "wx03e9d2bf62182d81"
 let appscret = "2c961d969969881c5047028a73ddc547"

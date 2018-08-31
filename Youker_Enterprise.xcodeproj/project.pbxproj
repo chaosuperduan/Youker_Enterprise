@@ -199,6 +199,12 @@
 		E50BBEB72137F20100F09D92 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BBEB62137F20100F09D92 /* CoreLocation.framework */; };
 		E50BBEB92137F29F00F09D92 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BBEB82137F29F00F09D92 /* UserNotifications.framework */; };
 		E50BBEBB2137F2A900F09D92 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BBEBA2137F2A900F09D92 /* CFNetwork.framework */; };
+		E50BBEBD21391E0300F09D92 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBEBC21391E0300F09D92 /* HomeHeaderView.swift */; };
+		E50BBEBF21391E4000F09D92 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEBE21391E4000F09D92 /* HomeHeaderView.xib */; };
+		E50BBEC2213932A600F09D92 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBEC0213932A600F09D92 /* ButtonCell.swift */; };
+		E50BBEC3213932A600F09D92 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC1213932A600F09D92 /* ButtonCell.xib */; };
+		E50BBEC52139399100F09D92 /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC42139399100F09D92 /* UserHeaderView.xib */; };
+		E50BBEC7213939AE00F09D92 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */; };
 		FE7AC1702897CFE1D85DAFDB /* Pods_Youker_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */; };
 /* End PBXBuildFile section */
 
@@ -479,6 +485,12 @@
 		E50BBEB62137F20100F09D92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E50BBEB82137F29F00F09D92 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		E50BBEBA2137F2A900F09D92 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E50BBEBC21391E0300F09D92 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		E50BBEBE21391E4000F09D92 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		E50BBEC0213932A600F09D92 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		E50BBEC1213932A600F09D92 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		E50BBEC42139399100F09D92 /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
+		E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -633,6 +645,10 @@
 				E50BBE482137E5AE00F09D92 /* CycleView */,
 				E50BBE252137DF1C00F09D92 /* PriceView.swift */,
 				E50BBE242137DF1C00F09D92 /* PriceView.xib */,
+				E50BBEBC21391E0300F09D92 /* HomeHeaderView.swift */,
+				E50BBEBE21391E4000F09D92 /* HomeHeaderView.xib */,
+				E50BBEC42139399100F09D92 /* UserHeaderView.xib */,
+				E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1198,6 +1214,8 @@
 				E50BBE342137E1D500F09D92 /* RoomTableViewCell.xib */,
 				E50BBE0F2137D9C900F09D92 /* HotelListTableViewCell.swift */,
 				E50BBE0E2137D9C900F09D92 /* HotelListTableViewCell.xib */,
+				E50BBEC0213932A600F09D92 /* ButtonCell.swift */,
+				E50BBEC1213932A600F09D92 /* ButtonCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1420,6 +1438,7 @@
 				E50BBD972137A07D00F09D92 /* SVProgressHUD.bundle in Resources */,
 				E50BBE702137E9A100F09D92 /* commentView.xib in Resources */,
 				E50BBE8F2137EB6C00F09D92 /* ShareCell.xib in Resources */,
+				E50BBEBF21391E4000F09D92 /* HomeHeaderView.xib in Resources */,
 				E50BBE2A2137DF4600F09D92 /* HotelImageView.xib in Resources */,
 				E50BBE312137E01A00F09D92 /* PayView.xib in Resources */,
 				185232DC2136FCF9009927D2 /* LaunchScreen.storyboard in Resources */,
@@ -1441,6 +1460,7 @@
 				E50BBE832137EAD200F09D92 /* SelectCouponView.xib in Resources */,
 				E50BBE7B2137EA7F00F09D92 /* PriceDetailView.xib in Resources */,
 				E50BBDA82137A07D00F09D92 /* 5-160914192R6-52.gif in Resources */,
+				E50BBEC3213932A600F09D92 /* ButtonCell.xib in Resources */,
 				E50BBE022137D86400F09D92 /* ModifyPasswordViewController.xib in Resources */,
 				E50BBE872137EB0000F09D92 /* TitleTableViewCell.xib in Resources */,
 				E50BBE952137EFA100F09D92 /* AddAcountViewController.xib in Resources */,
@@ -1453,6 +1473,7 @@
 				E50BBDAC2137A07D00F09D92 /* ContentView.xib in Resources */,
 				185232D72136FCF8009927D2 /* Main.storyboard in Resources */,
 				E50BBE072137D8B600F09D92 /* HomeViewController.xib in Resources */,
+				E50BBEC52139399100F09D92 /* UserHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1631,6 +1652,7 @@
 				E50BBDBD2137A07D00F09D92 /* CGXStringPickerView.m in Sources */,
 				E50BBDAD2137A07D00F09D92 /* FDAlertView.m in Sources */,
 				E50BBD882137A07D00F09D92 /* MJRefreshAutoStateFooter.m in Sources */,
+				E50BBEBD21391E0300F09D92 /* HomeHeaderView.swift in Sources */,
 				E50BBDD62137CA3F00F09D92 /* UIView+Extension.m in Sources */,
 				E50BBD7C2137A07D00F09D92 /* UIBarButtonItem-Extension.swift in Sources */,
 				E50BBDE12137CB2000F09D92 /* SYChineseToPinyin.m in Sources */,
@@ -1672,6 +1694,7 @@
 				E50BBE112137D9C900F09D92 /* HotelListTableViewCell.swift in Sources */,
 				E50BBE472137E55A00F09D92 /* ShareView.swift in Sources */,
 				E50BBE3A2137E1EB00F09D92 /* RoomViewController.swift in Sources */,
+				E50BBEC2213932A600F09D92 /* ButtonCell.swift in Sources */,
 				E50BBDA22137A07D00F09D92 /* WXMediaMessage+messageConstruct.m in Sources */,
 				185232D42136FCF8009927D2 /* ViewController.swift in Sources */,
 				E50BBD842137A07D00F09D92 /* UIView+MJExtension.m in Sources */,
@@ -1703,6 +1726,7 @@
 				E50BBD912137A07D00F09D92 /* MJRefreshAutoFooter.m in Sources */,
 				E50BBD9F2137A07D00F09D92 /* PageTitleView.swift in Sources */,
 				E50BBE8B2137EB3900F09D92 /* SelectCouponTableViewCell.swift in Sources */,
+				E50BBEC7213939AE00F09D92 /* UserHeaderView.swift in Sources */,
 				E50BBD862137A07D00F09D92 /* MJRefreshBackStateFooter.m in Sources */,
 				E50BBE062137D8B600F09D92 /* HomeViewController.swift in Sources */,
 				E50BBE4E2137E5AE00F09D92 /* CycleView.swift in Sources */,
