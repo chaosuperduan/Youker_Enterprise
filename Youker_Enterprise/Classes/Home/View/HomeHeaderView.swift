@@ -9,13 +9,15 @@
 import UIKit
 let ho = "home"
 class HomeHeaderView: UIView {
+    
 
     
     var titles = ["管理中心","我的订单","我的消息","邀请员工","系统设置"]
     var images = ["mangament","orders","mes_ent","invite","set_ent"]
     var collectionView:UICollectionView?
     
-    
+    //传给外部的collectionView的点击事件的闭包。
+    var callback:((NSInteger)->())?
     override init(frame: CGRect) {
         super.init(frame: frame)
        setUpUi()
@@ -41,6 +43,7 @@ class HomeHeaderView: UIView {
         self.collectionView?.register(UINib.init(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: ho)
         collectionView?.backgroundColor = bacgColor
         //self.collectionView?.backgroundColor  = UIColor.red
+        collectionView?.delegate = self
         print(collectionView?.frame)
         addSubview(collectionView!)
     }
@@ -69,6 +72,13 @@ extension HomeHeaderView:UICollectionViewDataSource{
         
 
         return cell
+    }
+}
+
+extension HomeHeaderView:UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        callback!(indexPath.item)
     }
     
 }

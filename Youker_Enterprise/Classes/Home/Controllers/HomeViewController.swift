@@ -14,7 +14,13 @@ class HomeViewController: BaseViewController {
     //设置UI.
     func setUpUi(){
        let header = UserHeaderView.LoadFromNib()
-       let secView = HomeHeaderView.init(frame: CGRect.init(x: 0, y: 200, width: KScreenW, height: 164))
+        header.frame = CGRect.init(x: 0, y: 0, width: KScreenW, height: 260)
+        print(header.frame)
+       let secView = HomeHeaderView.init(frame: CGRect.init(x: 0, y: 270, width: KScreenW, height: 164))
+        secView.callback = { index in
+            self.doWithIndex(index: index)
+        }
+      print(secView.frame)
       view.addSubview(header)
       view.addSubview(secView)
         
@@ -30,8 +36,17 @@ class HomeViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
+    //菜单的点击事件。
+    func doWithIndex(index:NSInteger){
+        switch index {
+        case 0:
+        
+            break 
+        default:
+            break
+        }
+        
+    }
 }
 
 

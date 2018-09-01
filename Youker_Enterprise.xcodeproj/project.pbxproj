@@ -207,6 +207,8 @@
 		E50BBEC3213932A600F09D92 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC1213932A600F09D92 /* ButtonCell.xib */; };
 		E50BBEC52139399100F09D92 /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC42139399100F09D92 /* UserHeaderView.xib */; };
 		E50BBEC7213939AE00F09D92 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */; };
+		E5A5A4B9213A8C1200BAA166 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */; };
+		E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */; };
 		FE7AC1702897CFE1D85DAFDB /* Pods_Youker_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */; };
 /* End PBXBuildFile section */
 
@@ -495,6 +497,8 @@
 		E50BBEC1213932A600F09D92 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		E50BBEC42139399100F09D92 /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
 		E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
+		E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
+		E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementViewController.xib; sourceTree = "<group>"; };
 		F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1205,6 +1209,8 @@
 				E50BBE382137E1EB00F09D92 /* RoomViewController.swift */,
 				E50BBE372137E1EB00F09D92 /* RoomViewController.xib */,
 				E50BBE122137D9D300F09D92 /* HotelListTableViewController.swift */,
+				E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */,
+				E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1477,6 +1483,7 @@
 				E50BBE102137D9C900F09D92 /* HotelListTableViewCell.xib in Resources */,
 				E50BBE722137E9A100F09D92 /* BookInfoView.xib in Resources */,
 				E50BBDFC2137D7CF00F09D92 /* RegisterViewController.xib in Resources */,
+				E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */,
 				E50BBDAC2137A07D00F09D92 /* ContentView.xib in Resources */,
 				185232D72136FCF8009927D2 /* Main.storyboard in Resources */,
 				E50BBE072137D8B600F09D92 /* HomeViewController.xib in Resources */,
@@ -1745,6 +1752,7 @@
 				E50BBDC22137A07D00F09D92 /* UIViewController+XHPhoto.m in Sources */,
 				E50BBE4C2137E5AE00F09D92 /* CellFlowLayout.swift in Sources */,
 				E50BBE152137D9FD00F09D92 /* HotelModel.swift in Sources */,
+				E5A5A4B9213A8C1200BAA166 /* ManagementViewController.swift in Sources */,
 				E50BBDC32137A07D00F09D92 /* FWSideMenuContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
