@@ -40,6 +40,9 @@ class HomeViewController: BaseViewController {
     func doWithIndex(index:NSInteger){
         switch index {
         case 0:
+            let naVi = FWNavigationController.init(rootViewController: ManagementViewController())
+            present(naVi, animated: true, completion: nil)
+            
         
             break 
         default:

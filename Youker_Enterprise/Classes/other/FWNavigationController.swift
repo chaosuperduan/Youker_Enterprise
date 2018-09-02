@@ -23,7 +23,7 @@ class FWNavigationController: UINavigationController {
         let textAttrs = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: navTitleFont)]
         navigationBar.titleTextAttributes = textAttrs
         self.view.backgroundColor = UIColor.white
-        navigationBar.setBackgroundImage(AppDelegate.resizableImage(imageName: "naviBack", edgeInsets: UIEdgeInsetsMake(0, 0, 0, 0)), for: .default)
+        navigationBar.setBackgroundImage(AppDelegate.resizableImage(imageName: "nnvv", edgeInsets: UIEdgeInsetsMake(0, 0, 0, 0)), for: .default)
     
         navigationBar.isTranslucent = false
         self.navigationBar.tintColor = UIColor.white
