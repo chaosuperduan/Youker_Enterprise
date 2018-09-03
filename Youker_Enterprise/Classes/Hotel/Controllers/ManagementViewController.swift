@@ -55,6 +55,20 @@ extension ManagementViewController:UITableViewDelegate,UITableViewDataSource{
         cell.accessoryType = .detailButton
         return cell
         
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.navigationController?.pushViewController(LimitationViewController(), animated: true)
+            break
+        case 1:
+            break
+        default:
+            break
+        }
     }
     
     
