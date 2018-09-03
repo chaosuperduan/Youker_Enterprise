@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		09072006F0130A528B4BF678 /* Pods_Youker_EnterpriseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76D3D624BB23299B80417E /* Pods_Youker_EnterpriseTests.framework */; };
 		0EB44B2013A8ED117440E33D /* Pods_Youker_EnterpriseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C021F587FB603B0CD8AF52 /* Pods_Youker_EnterpriseUITests.framework */; };
+		182EBE24213D896B00088673 /* StaffAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EBE23213D896B00088673 /* StaffAddTableViewController.swift */; };
+		182EBE27213D8B1D00088673 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EBE25213D8B1D00088673 /* AddViewController.swift */; };
+		182EBE28213D8B1D00088673 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182EBE26213D8B1D00088673 /* AddViewController.xib */; };
+		182EBE2B213D8D9200088673 /* LimitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EBE29213D8D9200088673 /* LimitationViewController.swift */; };
+		182EBE2C213D8D9200088673 /* LimitationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182EBE2A213D8D9200088673 /* LimitationViewController.xib */; };
+		182EBE30213D922400088673 /* LimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EBE2F213D922400088673 /* LimitView.swift */; };
 		18511F782139A88F00DF7BAD /* HomeFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18511F762139A88F00DF7BAD /* HomeFootView.swift */; };
 		18511F792139A88F00DF7BAD /* HomeFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18511F772139A88F00DF7BAD /* HomeFootView.xib */; };
 		185232D22136FCF8009927D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185232D12136FCF8009927D2 /* AppDelegate.swift */; };
@@ -207,7 +213,6 @@
 		E50BBEC3213932A600F09D92 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC1213932A600F09D92 /* ButtonCell.xib */; };
 		E50BBEC52139399100F09D92 /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC42139399100F09D92 /* UserHeaderView.xib */; };
 		E50BBEC7213939AE00F09D92 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */; };
-		E52D6F10213D193A00AFB9C9 /* StaffAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D6F0F213D193A00AFB9C9 /* StaffAddTableViewController.swift */; };
 		E5A5A4B9213A8C1200BAA166 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */; };
 		E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */; };
 		FE7AC1702897CFE1D85DAFDB /* Pods_Youker_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */; };
@@ -232,6 +237,12 @@
 
 /* Begin PBXFileReference section */
 		107212BBBD58CF04E38E5B9E /* Pods-Youker_EnterpriseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_EnterpriseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_EnterpriseTests/Pods-Youker_EnterpriseTests.release.xcconfig"; sourceTree = "<group>"; };
+		182EBE23213D896B00088673 /* StaffAddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffAddTableViewController.swift; sourceTree = "<group>"; };
+		182EBE25213D8B1D00088673 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		182EBE26213D8B1D00088673 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		182EBE29213D8D9200088673 /* LimitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitationViewController.swift; sourceTree = "<group>"; };
+		182EBE2A213D8D9200088673 /* LimitationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LimitationViewController.xib; sourceTree = "<group>"; };
+		182EBE2F213D922400088673 /* LimitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitView.swift; sourceTree = "<group>"; };
 		18511F762139A88F00DF7BAD /* HomeFootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFootView.swift; sourceTree = "<group>"; };
 		18511F772139A88F00DF7BAD /* HomeFootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFootView.xib; sourceTree = "<group>"; };
 		185232CE2136FCF8009927D2 /* Youker_Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youker_Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -498,7 +509,6 @@
 		E50BBEC1213932A600F09D92 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		E50BBEC42139399100F09D92 /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
 		E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
-		E52D6F0F213D193A00AFB9C9 /* StaffAddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffAddTableViewController.swift; sourceTree = "<group>"; };
 		E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementViewController.xib; sourceTree = "<group>"; };
 		F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -552,6 +562,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182EBE17213D806300088673 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182EBE2F213D922400088673 /* LimitView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		182EBE18213D806300088673 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				182EBE23213D896B00088673 /* StaffAddTableViewController.swift */,
+				182EBE25213D8B1D00088673 /* AddViewController.swift */,
+				182EBE26213D8B1D00088673 /* AddViewController.xib */,
+				182EBE29213D8D9200088673 /* LimitationViewController.swift */,
+				182EBE2A213D8D9200088673 /* LimitationViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		182EBE1A213D806300088673 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		182EBE1B213D806300088673 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		185232C52136FCF8009927D2 = {
 			isa = PBXGroup;
 			children = (
@@ -1336,41 +1380,12 @@
 		E52D6F08213D17F200AFB9C9 /* staffManage */ = {
 			isa = PBXGroup;
 			children = (
-				E52D6F09213D17F200AFB9C9 /* ViewModel */,
-				E52D6F0A213D17F200AFB9C9 /* Model */,
-				E52D6F0B213D17F200AFB9C9 /* View */,
-				E52D6F0C213D17F200AFB9C9 /* Controllers */,
+				182EBE18213D806300088673 /* Controllers */,
+				182EBE1A213D806300088673 /* Model */,
+				182EBE17213D806300088673 /* View */,
+				182EBE1B213D806300088673 /* ViewModel */,
 			);
 			path = staffManage;
-			sourceTree = "<group>";
-		};
-		E52D6F09213D17F200AFB9C9 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		E52D6F0A213D17F200AFB9C9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E52D6F0B213D17F200AFB9C9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E52D6F0C213D17F200AFB9C9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				E52D6F0F213D193A00AFB9C9 /* StaffAddTableViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1492,6 +1507,7 @@
 				E50BBDE02137CB2000F09D92 /* SYCity.bundle in Resources */,
 				E50BBD972137A07D00F09D92 /* SVProgressHUD.bundle in Resources */,
 				E50BBE702137E9A100F09D92 /* commentView.xib in Resources */,
+				182EBE2C213D8D9200088673 /* LimitationViewController.xib in Resources */,
 				E50BBE8F2137EB6C00F09D92 /* ShareCell.xib in Resources */,
 				E50BBEBF21391E4000F09D92 /* HomeHeaderView.xib in Resources */,
 				E50BBE2A2137DF4600F09D92 /* HotelImageView.xib in Resources */,
@@ -1504,6 +1520,7 @@
 				E50BBE772137EA1600F09D92 /* OrdersTableViewCell.xib in Resources */,
 				E50BBE532137E62300F09D92 /* facilitiesCell.xib in Resources */,
 				E50BBE362137E1D500F09D92 /* RoomTableViewCell.xib in Resources */,
+				182EBE28213D8B1D00088673 /* AddViewController.xib in Resources */,
 				E50BBDAE2137A07D00F09D92 /* AMap.bundle in Resources */,
 				E50BBE262137DF1C00F09D92 /* PriceView.xib in Resources */,
 				E50BBE5F2137E7AB00F09D92 /* ImgeViewCollectionViewCell.xib in Resources */,
@@ -1709,6 +1726,7 @@
 				E50BBDBD2137A07D00F09D92 /* CGXStringPickerView.m in Sources */,
 				E50BBDAD2137A07D00F09D92 /* FDAlertView.m in Sources */,
 				E50BBD882137A07D00F09D92 /* MJRefreshAutoStateFooter.m in Sources */,
+				182EBE30213D922400088673 /* LimitView.swift in Sources */,
 				18511F782139A88F00DF7BAD /* HomeFootView.swift in Sources */,
 				E50BBEBD21391E0300F09D92 /* HomeHeaderView.swift in Sources */,
 				E50BBDD62137CA3F00F09D92 /* UIView+Extension.m in Sources */,
@@ -1722,6 +1740,7 @@
 				E50BBE822137EAD200F09D92 /* SelectCouponView.swift in Sources */,
 				E50BBE1D2137DC3400F09D92 /* HotelViewController.swift in Sources */,
 				E50BBDB62137A07D00F09D92 /* NSDate+CGXPicker.m in Sources */,
+				182EBE2B213D8D9200088673 /* LimitationViewController.swift in Sources */,
 				E50BBDBE2137A07D00F09D92 /* CGXPickerView.m in Sources */,
 				E50BBDA12137A07D00F09D92 /* WXApiRequestHandler.m in Sources */,
 				E50BBDC12137A07D00F09D92 /* TimeTool.swift in Sources */,
@@ -1750,7 +1769,7 @@
 				E50BBDF12137D66900F09D92 /* BaseTableViewController.swift in Sources */,
 				E50BBE942137EFA100F09D92 /* AddAcountViewController.swift in Sources */,
 				E50BBE112137D9C900F09D92 /* HotelListTableViewCell.swift in Sources */,
-				E52D6F10213D193A00AFB9C9 /* StaffAddTableViewController.swift in Sources */,
+				182EBE24213D896B00088673 /* StaffAddTableViewController.swift in Sources */,
 				E50BBE472137E55A00F09D92 /* ShareView.swift in Sources */,
 				E50BBE3A2137E1EB00F09D92 /* RoomViewController.swift in Sources */,
 				E50BBEC2213932A600F09D92 /* ButtonCell.swift in Sources */,
@@ -1790,6 +1809,7 @@
 				E50BBE062137D8B600F09D92 /* HomeViewController.swift in Sources */,
 				E50BBE4E2137E5AE00F09D92 /* CycleView.swift in Sources */,
 				E50BBE032137D86400F09D92 /* ModifyPasswordViewController.swift in Sources */,
+				182EBE27213D8B1D00088673 /* AddViewController.swift in Sources */,
 				E50BBD962137A07D00F09D92 /* SVIndefiniteAnimatedView.m in Sources */,
 				E50BBE7A2137EA7F00F09D92 /* PriceDetailView.swift in Sources */,
 				E50BBE502137E61A00F09D92 /* facilitiesView.swift in Sources */,

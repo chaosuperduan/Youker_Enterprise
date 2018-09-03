@@ -1,0 +1,29 @@
+//
+//  LimitationViewController.swift
+//  Youker_Enterprise
+//
+//  Created by apple on 2018/9/3.
+//  Copyright © 2018年 apple. All rights reserved.
+//
+
+//限额管理
+
+import UIKit
+
+class LimitationViewController: UIViewController {
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+       
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+}
+
+
