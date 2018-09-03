@@ -44,7 +44,11 @@ class HomeViewController: BaseViewController {
             present(naVi, animated: true, completion: nil)
             
         
-            break 
+            break
+        case 3:
+            let naVi = FWNavigationController.init(rootViewController: StaffAddTableViewController())
+            present(naVi, animated: true, completion: nil)
+            break
         default:
             break
         }

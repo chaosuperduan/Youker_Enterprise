@@ -108,9 +108,6 @@ class AddAcountViewController: BaseViewController {
         //应用授权作用域，如获取用户个人信息则填写snsapi_userinfo
         req.scope = "snsapi_userinfo"
         WXApi.send(req)
-        
-        
-        
     }
     func showSuccess(){
         SVProgressHUD.showSuccess(withStatus: "绑定成功")

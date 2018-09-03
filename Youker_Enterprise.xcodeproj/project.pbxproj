@@ -207,6 +207,7 @@
 		E50BBEC3213932A600F09D92 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC1213932A600F09D92 /* ButtonCell.xib */; };
 		E50BBEC52139399100F09D92 /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC42139399100F09D92 /* UserHeaderView.xib */; };
 		E50BBEC7213939AE00F09D92 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */; };
+		E52D6F10213D193A00AFB9C9 /* StaffAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D6F0F213D193A00AFB9C9 /* StaffAddTableViewController.swift */; };
 		E5A5A4B9213A8C1200BAA166 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */; };
 		E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */; };
 		FE7AC1702897CFE1D85DAFDB /* Pods_Youker_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */; };
@@ -497,6 +498,7 @@
 		E50BBEC1213932A600F09D92 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		E50BBEC42139399100F09D92 /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
 		E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
+		E52D6F0F213D193A00AFB9C9 /* StaffAddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffAddTableViewController.swift; sourceTree = "<group>"; };
 		E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementViewController.xib; sourceTree = "<group>"; };
 		F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -607,6 +609,7 @@
 		185232FF2136FDA1009927D2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E52D6F08213D17F200AFB9C9 /* staffManage */,
 				E50BBE3D2137E41A00F09D92 /* Order */,
 				E50BBE082137D97000F09D92 /* Hotel */,
 				E50BBDE82137D66900F09D92 /* Base */,
@@ -1330,6 +1333,46 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		E52D6F08213D17F200AFB9C9 /* staffManage */ = {
+			isa = PBXGroup;
+			children = (
+				E52D6F09213D17F200AFB9C9 /* ViewModel */,
+				E52D6F0A213D17F200AFB9C9 /* Model */,
+				E52D6F0B213D17F200AFB9C9 /* View */,
+				E52D6F0C213D17F200AFB9C9 /* Controllers */,
+			);
+			path = staffManage;
+			sourceTree = "<group>";
+		};
+		E52D6F09213D17F200AFB9C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E52D6F0A213D17F200AFB9C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E52D6F0B213D17F200AFB9C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E52D6F0C213D17F200AFB9C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E52D6F0F213D193A00AFB9C9 /* StaffAddTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1707,6 +1750,7 @@
 				E50BBDF12137D66900F09D92 /* BaseTableViewController.swift in Sources */,
 				E50BBE942137EFA100F09D92 /* AddAcountViewController.swift in Sources */,
 				E50BBE112137D9C900F09D92 /* HotelListTableViewCell.swift in Sources */,
+				E52D6F10213D193A00AFB9C9 /* StaffAddTableViewController.swift in Sources */,
 				E50BBE472137E55A00F09D92 /* ShareView.swift in Sources */,
 				E50BBE3A2137E1EB00F09D92 /* RoomViewController.swift in Sources */,
 				E50BBEC2213932A600F09D92 /* ButtonCell.swift in Sources */,
