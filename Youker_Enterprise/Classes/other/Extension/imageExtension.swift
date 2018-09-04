@@ -8,3 +8,12 @@
 
 import Foundation
 
+import UIKit
+extension UIImage{
+    ///将照片照片转换成string.
+    static func transImageToString(imge:UIImage)->String{
+        return   (imge.compressImage(image: imge, maxLength: 200000)?.base64EncodedString())!
+    }
+    
+    
+}

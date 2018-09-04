@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="Youker_Enterprise" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="future" translatesAutoresizingMaskIntoConstraints="NO" id="Jrs-0u-ihb">
+                    <rect key="frame" x="95.5" y="140" width="184" height="51"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1I-vY-Wm4">
+                    <rect key="frame" x="39" y="251" width="297" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Erf-3s-J0E"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="智能后台,  便捷操作!">
+                            <attributes>
+                                <color key="NSColor" red="0.15686274509803921" green="0.69019607843137254" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="32" name="PingFangSC-Semibold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbc-lE-YMS">
+                    <rect key="frame" x="38" y="316" width="299" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="299" id="8iC-0H-Mp2"/>
+                        <constraint firstAttribute="height" constant="45" id="IbZ-qG-fdN"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="让优质生活一步到位!">
+                            <attributes>
+                                <color key="NSColor" red="0.15686274509803921" green="0.69019607843137254" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="32" name="PingFangSC-Semibold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmM-h6-8DK">
+                    <rect key="frame" x="38" y="454" width="299" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="299" id="HYm-l3-5zx"/>
+                        <constraint firstAttribute="height" constant="44" id="Xl5-cn-28m"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="企业注册">
+                        <color key="titleColor" red="0.15686274510000001" green="0.69019607839999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlx-oQ-GHE">
+                    <rect key="frame" x="38" y="528" width="299" height="44"/>
+                    <color key="backgroundColor" red="0.15686274510000001" green="0.69019607839999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="299" id="BF9-kt-ixu"/>
+                        <constraint firstAttribute="height" constant="44" id="r3s-Ay-oeG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="个人登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dlx-oQ-GHE" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="324-tJ-aCb"/>
+                <constraint firstItem="Jrs-0u-ihb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="DbA-dR-DJB"/>
+                <constraint firstItem="Nbc-lE-YMS" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="HkF-l2-QvC"/>
+                <constraint firstItem="Nbc-lE-YMS" firstAttribute="top" secondItem="M1I-vY-Wm4" secondAttribute="bottom" constant="20" id="QoP-FH-sDE"/>
+                <constraint firstItem="dlx-oQ-GHE" firstAttribute="top" secondItem="jmM-h6-8DK" secondAttribute="bottom" constant="30" id="UQR-14-SH3"/>
+                <constraint firstItem="M1I-vY-Wm4" firstAttribute="top" secondItem="Jrs-0u-ihb" secondAttribute="bottom" constant="60" id="cwn-hs-60H"/>
+                <constraint firstItem="Jrs-0u-ihb" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fOf-EL-Iyq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dlx-oQ-GHE" secondAttribute="bottom" constant="95" id="jfA-Ko-bNN"/>
+                <constraint firstItem="M1I-vY-Wm4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="sHK-Jy-sWz"/>
+                <constraint firstItem="jmM-h6-8DK" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="siF-cW-aeb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="69.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="future" width="184" height="51"/>
+    </resources>
+</document>

@@ -22,6 +22,26 @@ class businessInfo:BaseMode {
  @objc var  subordinate_Id:NSInteger = 0
  @objc var  subordinate_Name:NSInteger = 0
  @objc var user_Id:NSInteger = 0
+ @objc var business_Name:String?
+  @objc var business_Address:String?
+    
+    class func getDic(buInfo:businessInfo)->NSDictionary{
+        var dic:[String:AnyObject] = [String:AnyObject]()
+        
+        if buInfo.business_Address != nil{
+            
+            dic["business_Address"] = buInfo.business_Address as AnyObject
+            
+        }
+        
+        if buInfo.business_Name != nil {
+            dic["business_Name"] = buInfo.business_Name as AnyObject
+        }
+        
+        return dic as NSDictionary
+        
+        
+    }
     
 }
 
