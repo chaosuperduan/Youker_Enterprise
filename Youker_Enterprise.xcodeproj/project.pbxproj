@@ -215,6 +215,8 @@
 		E50BBEC7213939AE00F09D92 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */; };
 		E5118208213E262E00A1CC11 /* LimitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5118206213E262E00A1CC11 /* LimitCell.swift */; };
 		E5118209213E262E00A1CC11 /* LimitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5118207213E262E00A1CC11 /* LimitCell.xib */; };
+		E511820C213E6D0300A1CC11 /* LimitManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511820A213E6D0300A1CC11 /* LimitManageViewController.swift */; };
+		E511820D213E6D0300A1CC11 /* LimitManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E511820B213E6D0300A1CC11 /* LimitManageViewController.xib */; };
 		E5A5A4B9213A8C1200BAA166 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */; };
 		E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */; };
 		FE7AC1702897CFE1D85DAFDB /* Pods_Youker_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */; };
@@ -513,6 +515,8 @@
 		E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		E5118206213E262E00A1CC11 /* LimitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCell.swift; sourceTree = "<group>"; };
 		E5118207213E262E00A1CC11 /* LimitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LimitCell.xib; sourceTree = "<group>"; };
+		E511820A213E6D0300A1CC11 /* LimitManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitManageViewController.swift; sourceTree = "<group>"; };
+		E511820B213E6D0300A1CC11 /* LimitManageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LimitManageViewController.xib; sourceTree = "<group>"; };
 		E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementViewController.xib; sourceTree = "<group>"; };
 		F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -584,6 +588,8 @@
 				182EBE26213D8B1D00088673 /* AddViewController.xib */,
 				182EBE29213D8D9200088673 /* LimitationViewController.swift */,
 				182EBE2A213D8D9200088673 /* LimitationViewController.xib */,
+				E511820A213E6D0300A1CC11 /* LimitManageViewController.swift */,
+				E511820B213E6D0300A1CC11 /* LimitManageViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1550,6 +1556,7 @@
 				E50BBE102137D9C900F09D92 /* HotelListTableViewCell.xib in Resources */,
 				E50BBE722137E9A100F09D92 /* BookInfoView.xib in Resources */,
 				E50BBDFC2137D7CF00F09D92 /* RegisterViewController.xib in Resources */,
+				E511820D213E6D0300A1CC11 /* LimitManageViewController.xib in Resources */,
 				E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */,
 				E50BBDAC2137A07D00F09D92 /* ContentView.xib in Resources */,
 				185232D72136FCF8009927D2 /* Main.storyboard in Resources */,
@@ -1712,6 +1719,7 @@
 				E50BBE542137E62300F09D92 /* facilitiesCell.swift in Sources */,
 				E50BBE622137E7D600F09D92 /* Order_DetailViewController.swift in Sources */,
 				E50BBDB92137A07D00F09D92 /* CGXDatePickerView.m in Sources */,
+				E511820C213E6D0300A1CC11 /* LimitManageViewController.swift in Sources */,
 				E50BBDD82137CACC00F09D92 /* DEFINE.m in Sources */,
 				E50BBE352137E1D500F09D92 /* RoomTableViewCell.swift in Sources */,
 				E50BBE9F2137F09200F09D92 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,

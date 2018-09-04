@@ -39,6 +39,7 @@ class LimitView: UIView {
         self.collectionview?.register(UINib.init(nibName: "LimitCell", bundle: nil), forCellWithReuseIdentifier: "limit")
         collectionview?.backgroundColor = UIColor.white
         //self.collectionView?.backgroundColor  = UIColor.red
+        collectionview?.delegate = self
         print(collectionview?.frame)
         addSubview(collectionview!)
         
