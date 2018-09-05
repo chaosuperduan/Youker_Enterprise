@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="youke" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Youker_Enterprise" customModuleProvider="target">
             <connections>
                 <outlet property="PhoneTF" destination="m2l-VV-Rlv" id="5bP-ch-4Rg"/>
                 <outlet property="dismiss" destination="5fG-8n-ILD" id="JlZ-i2-6ce"/>
@@ -124,7 +124,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOP-NC-UUc">
                     <rect key="frame" x="48" y="515" width="289.5" height="40"/>
-                    <color key="backgroundColor" red="0.3411764706" green="0.70980392160000005" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.23529411759999999" green="0.72156862749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="lXL-0G-M8M"/>
                     </constraints>
@@ -280,8 +280,8 @@
         </view>
     </objects>
     <resources>
-        <image name="header" width="297" height="173"/>
-        <image name="juxing" width="123" height="31"/>
+        <image name="header" width="375" height="68"/>
+        <image name="juxing" width="269" height="40"/>
         <image name="left" width="21" height="34"/>
         <image name="mail" width="23" height="17"/>
         <image name="qq" width="50" height="50"/>

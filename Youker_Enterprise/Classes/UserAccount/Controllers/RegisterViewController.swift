@@ -4,7 +4,7 @@
 //17603014603
 //  Created by 振轩 on 2018/5/12.
 //  Copyright © 2018年 M2Micro. All rights reserved.
-//
+//注册一个企业版的测试账户。9999
 
 import UIKit
 
@@ -88,7 +88,8 @@ class RegisterViewController: BaseViewController {
         let param = NSMutableDictionary()
         param["phone_Number"] = PhoneTF.text
         param["user_Pwd"] = PwTF.text
-        param["role_Id"] = "9"
+        //注册企业的，商户角色id是131
+        param["role_Id"] = "131"
         param["login_Type"] = "72"
         
         if isWeixinRegister {
@@ -97,7 +98,7 @@ class RegisterViewController: BaseViewController {
             // param["unique_id"] = UserAccount.loadUserAccount()?.openid
             param["type"] = 73
             param["login_Type"] = "73"
-            param["registerId"] = UserAccount.loadUserAccount()?.registration_ID
+            param["registerId"] = "dfnkkkkk" //UserAccount.loadUserAccount()?.registration_ID
         }
         
         

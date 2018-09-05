@@ -9,8 +9,8 @@
 
 import Foundation
 //103
-let rootURL2 = "http://192.168.31.203:8080/Maxwell/"
-let rootURL = "http://www.iyouker.com/Maxwell/"
+let rootURL = "http://192.168.31.203:8080/Maxwell/"
+let rootURL2 = "http://www.iyouker.com/Maxwell/"
 
 //MARK:-登录
 let LoginURL = rootURL+"login/loginUser"
