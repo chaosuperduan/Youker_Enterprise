@@ -24,6 +24,7 @@
 		185232DC2136FCF9009927D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185232DA2136FCF9009927D2 /* LaunchScreen.storyboard */; };
 		185232E72136FCF9009927D2 /* Youker_EnterpriseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185232E62136FCF9009927D2 /* Youker_EnterpriseTests.swift */; };
 		185232F22136FCF9009927D2 /* Youker_EnterpriseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185232F12136FCF9009927D2 /* Youker_EnterpriseUITests.swift */; };
+		185D5A8821403F920085E559 /* cpyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D5A8721403F920085E559 /* cpyInfo.swift */; };
 		186109CB213EE5A2002D0BC1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186109C9213EE5A2002D0BC1 /* FirstViewController.swift */; };
 		186109CC213EE5A2002D0BC1 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186109CA213EE5A2002D0BC1 /* FirstViewController.xib */; };
 		186109CF213EEF23002D0BC1 /* UpdateInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186109CD213EEF22002D0BC1 /* UpdateInfoViewController.xib */; };
@@ -268,6 +269,7 @@
 		185232F12136FCF9009927D2 /* Youker_EnterpriseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youker_EnterpriseUITests.swift; sourceTree = "<group>"; };
 		185232F32136FCF9009927D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1852330A2136FDDF009927D2 /* Youker_Enterprise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Youker_Enterprise-Bridging-Header.h"; sourceTree = "<group>"; };
+		185D5A8721403F920085E559 /* cpyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cpyInfo.swift; sourceTree = "<group>"; };
 		186109C9213EE5A2002D0BC1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		186109CA213EE5A2002D0BC1 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		186109CD213EEF22002D0BC1 /* UpdateInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateInfoViewController.xib; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 		182EBE1A213D806300088673 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				185D5A8721403F920085E559 /* cpyInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1741,6 +1744,7 @@
 				E50BBE352137E1D500F09D92 /* RoomTableViewCell.swift in Sources */,
 				E50BBE9F2137F09200F09D92 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				E50BBDB52137A07D00F09D92 /* CGXPickerViewManager.m in Sources */,
+				185D5A8821403F920085E559 /* cpyInfo.swift in Sources */,
 				E50BBDBA2137A07D00F09D92 /* CGXPickerUIBaseView.m in Sources */,
 				E50BBDD52137CA3F00F09D92 /* NSDate+Extension.m in Sources */,
 				E50BBD852137A07D00F09D92 /* MJRefreshBackGifFooter.m in Sources */,
