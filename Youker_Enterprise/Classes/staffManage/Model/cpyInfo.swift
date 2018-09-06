@@ -8,7 +8,7 @@
 
 import UIKit
 
-class cpyInfo: NSObject {
+class cpyInfo: BaseMode {
     var company_Address:String?
     var company_Name:String?
     var company_Phone:String?
@@ -33,18 +33,18 @@ class cpyInfo: NSObject {
     
 }
 
-class districts:NSObject{
+class districts:BaseMode{
    var regCity:String?
     var cpyDistrict:String?
     var cpyCity:String?
-    var egDistrict:String?
+    var regDistrict:String?
     
     class func getDic(mode:districts)->NSDictionary{
         var dic:[String:AnyObject] = [String:AnyObject]()
         dic["regCity"] = mode.regCity as AnyObject
         dic["cpyDistrict"] = mode.cpyDistrict as AnyObject
         dic["cpyCity"] = mode.cpyCity as AnyObject
-        dic["egDistrict"] = mode.egDistrict as AnyObject
+        dic["regDistrict"] = mode.regDistrict as AnyObject
         
         return dic as NSDictionary
         

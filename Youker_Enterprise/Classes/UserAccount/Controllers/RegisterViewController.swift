@@ -209,6 +209,7 @@ extension RegisterViewController{
         self.PhoneTF.resignFirstResponder()
         self.RePwTF.resignFirstResponder()
         
+        present(UpdateInfoViewController(), animated: true, completion: nil)
     }
 }
 extension RegisterViewController:UITextFieldDelegate{
