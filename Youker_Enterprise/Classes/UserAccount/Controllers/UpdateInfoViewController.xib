@@ -17,6 +17,7 @@
                 <outlet property="LisenceImageView" destination="PvE-iJ-aBJ" id="gHv-Gw-1Q3"/>
                 <outlet property="RegAddBTN" destination="cpn-Jg-CLy" id="reP-Zt-94F"/>
                 <outlet property="RegDetailTF" destination="ONq-LQ-j1b" id="8my-HH-znp"/>
+                <outlet property="addressTF" destination="iv9-bE-qsG" id="mMD-Xs-QMr"/>
                 <outlet property="backImageView" destination="NgD-A0-K7S" id="5z6-hi-A6j"/>
                 <outlet property="copNameTF" destination="fsQ-eq-hpa" id="erR-Sq-bOG"/>
                 <outlet property="copPhoneTF" destination="iQS-xR-nUd" id="9nP-A9-yAm"/>
@@ -24,6 +25,7 @@
                 <outlet property="cpADDBTN" destination="vUS-hy-Abf" id="Bxh-FJ-Pwd"/>
                 <outlet property="detailAddress" destination="Wq1-bu-TJ3" id="GNC-oF-7kx"/>
                 <outlet property="frontImageView" destination="Nbk-pC-CFP" id="wlq-RL-I8M"/>
+                <outlet property="lawPerson" destination="4Xg-Ep-dbF" id="GUg-pk-yIM"/>
                 <outlet property="regAddTF" destination="SoF-vA-K1Z" id="bWf-hp-daL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -225,7 +227,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUS-hy-Abf">
-                                    <rect key="frame" x="214" y="86" width="135" height="25"/>
+                                    <rect key="frame" x="16" y="86" width="333" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <connections>
@@ -233,7 +235,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpn-Jg-CLy">
-                                    <rect key="frame" x="190" y="246" width="144" height="30"/>
+                                    <rect key="frame" x="16" y="246" width="318" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <connections>

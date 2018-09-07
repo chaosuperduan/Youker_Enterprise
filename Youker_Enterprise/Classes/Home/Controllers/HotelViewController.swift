@@ -212,6 +212,8 @@ extension HotelViewController{
         
 
     }
+    
+   
 }
 extension HotelViewController:WXApiManagerDelegate{
     

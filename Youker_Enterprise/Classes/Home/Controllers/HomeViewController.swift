@@ -11,6 +11,16 @@ import UIKit
 class HomeViewController: BaseViewController {
      var hotellist:[HotelModel] = [HotelModel]()
      var param :SearchParamModel = SearchParamModel()
+    var isLogin:Bool?{
+        didSet{
+            
+            
+            
+        
+            
+        }
+        
+    }
     //设置UI.
     func setUpUi(){
        let header = UserHeaderView.LoadFromNib()
@@ -28,9 +38,31 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUi()
+        self.isLogin = UserAccount.loadUserAccount() != nil ? true: false
+         setUpUi()
+        
+//        if self.isLogin == false {
+//
+//            let vc = RegisterViewController()
+//            vc.callBack = { account in
+//                self.QuickLogin(account: account)
+//            }
+//
+//           // FWNavigationController(rootViewController: vc)
+//            present(FWNavigationController(rootViewController: vc), animated: true, completion: nil)
+//        }
+       
+        present(RegisterViewController(), animated: true, completion: nil)
+        if UserAccount.loadUserAccount() != nil {
+            let vc = RegisterViewController()
+        
+            present(vc, animated: true, completion: nil)
+        }
        
     }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        present(RegisterViewController(), animated: true, completion: nil)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -56,5 +88,34 @@ class HomeViewController: BaseViewController {
     }
 }
 
+extension HomeViewController{
+    
+    
+    func QuickLogin(account:UserAccount){
+        let param = NSMutableDictionary()
+        param["userNum"] = account.phone_Number
+        param["pwd"] = account.user_Pwd
+        account.savaAccout()
+        
+        if account.registration_ID == nil {
+            let str:String = UserDefaults.standard.value(forKey: "registration_ID") as! String
+            if(str == nil){
+                SVProgressHUD.showError(withStatus: "获取registerID失败")
+                return
+            }else{
+                param["registerId"] = str
+            }
+        }else{
+            param["registerId"] = account.registration_ID
+        }
+        
+        LoginViewModel.sharedInstance.Login(params: param as! [String : AnyObject], orVC: nil, caBalck: { (str) in
+            self.isLogin = true
+            SVProgressHUD.showSuccess(withStatus: str)
+        })
+    }
+    
+    
+}
 
 

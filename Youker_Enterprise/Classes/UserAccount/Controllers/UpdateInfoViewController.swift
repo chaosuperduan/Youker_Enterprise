@@ -33,6 +33,10 @@ class UpdateInfoViewController: UIViewController {
     @IBOutlet weak var frontImageView: UIImageView!
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet weak var LisenceImageView: UIImageView!
+    
+    @IBOutlet weak var lawPerson: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "完善信息"
@@ -41,6 +45,7 @@ class UpdateInfoViewController: UIViewController {
 
     }
     @IBAction func addCommpayAdd(_ sender: Any) {
+        KeybordDown()
         let cView = CityPickerVeiw()
         cView.show()
          cView.cityBlock = { (pro,city,dis) in
@@ -51,7 +56,7 @@ class UpdateInfoViewController: UIViewController {
     }
     //添加注册地址.
     @IBAction func addRegAdd(_ sender: Any) {
-        
+        KeybordDown()
         let cView = CityPickerVeiw()
         cView.show()
         cView.cityBlock = { (pro,city,dis) in
@@ -67,24 +72,21 @@ class UpdateInfoViewController: UIViewController {
        
     }
     @IBAction func addFrontImage(_ sender: Any) {
-        
+        KeybordDown()
         self.showCanEdit(true) { (image) in
            self.frontImageView.image = image
-            
         }
-        
     }
     
     @IBAction func addBackImage(_ sender: Any) {
-        
+        KeybordDown()
         self.showCanEdit(true) { (image) in
             self.backImageView.image = image
             
         }
-        
-        
     }
     @IBAction func addLisence(_ sender: Any) {
+        KeybordDown()
         self.showCanEdit(true) { (image) in
             self.LisenceImageView.image = image
             
@@ -96,9 +98,13 @@ class UpdateInfoViewController: UIViewController {
         
         
         buInfo.company_Name = self.copNameTF.text
-        //buInfo.company_Address = se
+        buInfo.company_Phone = copPhoneTF.text
+        buInfo.userCount = countPhone.text
         buInfo.usccode = CodeTF.text
+        buInfo.company_Address = detailAddress.text
+        buInfo.law_person_Name = lawPerson.text
         
+    
         let params = NSMutableDictionary()
         params["userId"] = UserAccount.loadUserAccount()?.user_Id
         
@@ -117,8 +123,17 @@ class UpdateInfoViewController: UIViewController {
             
         }
     }
-    
-    
-    
- 
 }
+extension UpdateInfoViewController{
+    func KeybordDown(){
+      copNameTF.resignFirstResponder()
+      detailAddress.resignFirstResponder()
+    copPhoneTF.resignFirstResponder()
+        countPhone.resignFirstResponder()
+        CodeTF.resignFirstResponder()
+        lawPerson.resignFirstResponder()
+        RegDetailTF.resignFirstResponder()
+        }
+}
+
+

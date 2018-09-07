@@ -4,7 +4,10 @@
 //17603014603
 //  Created by 振轩 on 2018/5/12.
 //  Copyright © 2018年 M2Micro. All rights reserved.
-//注册一个企业版的测试账户。9999
+//注册一个企业版的测试账户。9977
+
+
+
 
 import UIKit
 
@@ -47,7 +50,6 @@ class RegisterViewController: BaseViewController {
             } else {
                 countdownTimer?.invalidate()
                 countdownTimer = nil
-                
                 sendButton.backgroundColor = naviColor
             }
             
@@ -101,7 +103,6 @@ class RegisterViewController: BaseViewController {
             param["registerId"] = "dfnkkkkk" //UserAccount.loadUserAccount()?.registration_ID
         }
         
-        
         if self.identyTF.text != self.identiCode{
             SVProgressHUD.showError(withStatus: "请输入正确的验证码")
             return
@@ -144,9 +145,14 @@ class RegisterViewController: BaseViewController {
                     return
                 }
                 account.savaAccout()
-                self.callBack!(account)
-                self.dismiss(animated: true, completion: nil)
-            }
+               
+                if(self.callBack != nil){
+                     self.callBack!(account)
+                     self.dismiss(animated: true, completion: nil)
+                    
+                    
+                }
+              }
         }
         
     }
@@ -209,7 +215,7 @@ extension RegisterViewController{
         self.PhoneTF.resignFirstResponder()
         self.RePwTF.resignFirstResponder()
         
-        present(UpdateInfoViewController(), animated: true, completion: nil)
+       // present(UpdateInfoViewController(), animated: true, completion: nil)
     }
 }
 extension RegisterViewController:UITextFieldDelegate{

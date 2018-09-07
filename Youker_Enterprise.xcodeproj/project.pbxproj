@@ -227,6 +227,7 @@
 		E52EDC8421412D8900458275 /* CityNameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7C21412D8900458275 /* CityNameModel.m */; };
 		E52EDC8521412D8900458275 /* UIView+GoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7E21412D8900458275 /* UIView+GoodView.m */; };
 		E52EDC8621412D8900458275 /* ZSAnalysisClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC8121412D8900458275 /* ZSAnalysisClass.m */; };
+		E5804AAB2142B550006AFBCE /* province_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E5804AAA2142B550006AFBCE /* province_data.json */; };
 		E5A5A4B9213A8C1200BAA166 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */; };
 		E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */; };
 		FE7AC1702897CFE1D85DAFDB /* Pods_Youker_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */; };
@@ -541,6 +542,7 @@
 		E52EDC8021412D8900458275 /* UIView+GoodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GoodView.h"; sourceTree = "<group>"; };
 		E52EDC8121412D8900458275 /* ZSAnalysisClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSAnalysisClass.m; sourceTree = "<group>"; };
 		E52EDC8221412D8900458275 /* CityNameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityNameModel.h; sourceTree = "<group>"; };
+		E5804AAA2142B550006AFBCE /* province_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province_data.json; sourceTree = "<group>"; };
 		E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementViewController.xib; sourceTree = "<group>"; };
 		F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1154,6 +1156,7 @@
 		E50BBDC82137C71500F09D92 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5804AAA2142B550006AFBCE /* province_data.json */,
 				E50BBDE42137CBDB00F09D92 /* POIAnnotation.h */,
 				E50BBDE32137CBDB00F09D92 /* POIAnnotation.m */,
 			);
@@ -1588,6 +1591,7 @@
 				E50BBD812137A07D00F09D92 /* MJRefresh.bundle in Resources */,
 				E50BBDAA2137A07D00F09D92 /* 5-160914192R4-50.gif in Resources */,
 				E50BBE6A2137E99100F09D92 /* OrderDetailHeader.xib in Resources */,
+				E5804AAB2142B550006AFBCE /* province_data.json in Resources */,
 				E50BBDB82137A07D00F09D92 /* CGXPickerView.bundle in Resources */,
 				18511F792139A88F00DF7BAD /* HomeFootView.xib in Resources */,
 				E50BBE392137E1EB00F09D92 /* RoomViewController.xib in Resources */,
