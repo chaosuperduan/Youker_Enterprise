@@ -31,6 +31,8 @@
 		186109D0213EEF23002D0BC1 /* UpdateInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186109CE213EEF22002D0BC1 /* UpdateInfoViewController.swift */; };
 		186109D2213EF0C6002D0BC1 /* imageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186109D1213EF0C5002D0BC1 /* imageExtension.swift */; };
 		186109D4213EF349002D0BC1 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186109D3213EF349002D0BC1 /* AccountViewModel.swift */; };
+		187ED77E2142DD6C00681240 /* InviteTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187ED77D2142DD6C00681240 /* InviteTotalViewController.swift */; };
+		187ED7802142DD9C00681240 /* InviteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187ED77F2142DD9C00681240 /* InviteTableViewController.swift */; };
 		E50BBD742137A07D00F09D92 /* FWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBCDC2137A07C00F09D92 /* FWNavigationController.swift */; };
 		E50BBD752137A07D00F09D92 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBCDE2137A07C00F09D92 /* NetworkTools.swift */; };
 		E50BBD762137A07D00F09D92 /* YoukerImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBCDF2137A07C00F09D92 /* YoukerImageExtension.swift */; };
@@ -281,6 +283,8 @@
 		186109CE213EEF22002D0BC1 /* UpdateInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateInfoViewController.swift; sourceTree = "<group>"; };
 		186109D1213EF0C5002D0BC1 /* imageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageExtension.swift; sourceTree = "<group>"; };
 		186109D3213EF349002D0BC1 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		187ED77D2142DD6C00681240 /* InviteTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTotalViewController.swift; sourceTree = "<group>"; };
+		187ED77F2142DD9C00681240 /* InviteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTableViewController.swift; sourceTree = "<group>"; };
 		18C021F587FB603B0CD8AF52 /* Pods_Youker_EnterpriseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_EnterpriseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		471D5A34D043E02BE5EB61D0 /* Pods-Youker_EnterpriseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_EnterpriseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_EnterpriseUITests/Pods-Youker_EnterpriseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9B76D3D624BB23299B80417E /* Pods_Youker_EnterpriseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_EnterpriseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -616,6 +620,8 @@
 				182EBE2A213D8D9200088673 /* LimitationViewController.xib */,
 				E511820A213E6D0300A1CC11 /* LimitManageViewController.swift */,
 				E511820B213E6D0300A1CC11 /* LimitManageViewController.xib */,
+				187ED77D2142DD6C00681240 /* InviteTotalViewController.swift */,
+				187ED77F2142DD9C00681240 /* InviteTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1827,6 +1833,7 @@
 				E50BBDE22137CB2000F09D92 /* SYCitySelectionController.m in Sources */,
 				E50BBE562137E6CE00F09D92 /* HotelInfo.swift in Sources */,
 				E50BBD922137A07D00F09D92 /* MJRefreshComponent.m in Sources */,
+				187ED77E2142DD6C00681240 /* InviteTotalViewController.swift in Sources */,
 				E50BBD8B2137A07D00F09D92 /* MJRefreshNormalHeader.m in Sources */,
 				E50BBE172137DA0700F09D92 /* HotelViewModel.swift in Sources */,
 				E50BBDE72137D5B100F09D92 /* UserAccount.swift in Sources */,
@@ -1836,6 +1843,7 @@
 				E50BBE712137E9A100F09D92 /* commentView.swift in Sources */,
 				E50BBE602137E7AB00F09D92 /* ImgeViewCollectionViewCell.swift in Sources */,
 				E50BBE6F2137E9A100F09D92 /* BookInfoView.swift in Sources */,
+				187ED7802142DD9C00681240 /* InviteTableViewController.swift in Sources */,
 				E50BBD7E2137A07D00F09D92 /* rounderImageView.swift in Sources */,
 				E50BBE692137E99100F09D92 /* OrderDetailHeader.swift in Sources */,
 				E50BBE302137E01A00F09D92 /* PayView.swift in Sources */,

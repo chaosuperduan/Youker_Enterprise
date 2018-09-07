@@ -39,7 +39,9 @@ class FirstViewController: UIViewController {
     
     @IBAction func Login(_ sender: Any) {
         
+        let vc = LoginViewController()
         
+        present(FWNavigationController(rootViewController: vc), animated: true, completion: nil)
         
     }
     
