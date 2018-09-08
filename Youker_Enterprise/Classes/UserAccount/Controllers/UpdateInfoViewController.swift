@@ -103,10 +103,11 @@ class UpdateInfoViewController: UIViewController {
         buInfo.usccode = CodeTF.text
         buInfo.company_Address = detailAddress.text
         buInfo.law_person_Name = lawPerson.text
+        let acc = UserAccount.loadUserAccount()
         
     
         let params = NSMutableDictionary()
-        params["userId"] = UserAccount.loadUserAccount()?.user_Id
+        params["userId"] = acc?.user_Id
         
         params["token"] = UserAccount.loadUserAccount()?.token!
        // params["role"] = 6//roleEnum.personalShop.rawValue

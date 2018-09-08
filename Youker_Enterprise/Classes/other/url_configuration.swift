@@ -63,6 +63,6 @@ let getWithdrawal = rootURL + "v2/userInfo/get/withdrawal/records"
 //删除订单。
 let DeleteURL = rootURL + "v2/booking/delete/order/user"
 
-//注册商户。
+//注册企业。
 
-let RegisterMerchant = rootURL + "v2/reg/regNewMerchant"
+let RegisterMerchant = rootURL + "v3/cpy/add/cpyInfo"

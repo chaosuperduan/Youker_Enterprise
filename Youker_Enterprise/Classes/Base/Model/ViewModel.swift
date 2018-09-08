@@ -38,9 +38,17 @@ class LoginViewModel: NSObject {
                 
             }else{
                 
+                print(response)
+                
+                let dicts:[String:[String:AnyObject]] =  response!["data"]!  as! [String : [String : AnyObject]]
+               
+                let   dicAount:[String:AnyObject] = dicts["userInfo"]!
+                
                 if(orVC != nil ){
                     orVC?.ReqType = RequestResultType.SUCCESS
-                    let account = UserAccount.init(dic: response!["data"] as! [String : AnyObject])
+                    
+                    
+                    let account = UserAccount.init(dic: dicAount )
                     account.user_Pwd = orVC?.pwTF.text
                     account.savaAccout()
                     orVC?.callBack!()
@@ -48,9 +56,10 @@ class LoginViewModel: NSObject {
                     orVC?.dismiss(animated: true, completion: nil)
                     
                 }else{
-                    let account = UserAccount.init(dic: response!["data"] as! [String : AnyObject])
+                    let account = UserAccount.init(dic: dicAount as! [String : AnyObject])
                     account.user_Pwd = UserAccount.account?.user_Pwd
                     account.savaAccout()
+                    
                     if(caBalck != nil){
                         caBalck!("登录成功")
                     }
