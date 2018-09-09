@@ -121,6 +121,8 @@ class UpdateInfoViewController: UIViewController {
 
         params["cpyInfo"] = String.getJSONStringFromDictionary(dictionary:cpyInfo.getDic(mode: self.buInfo) )
         CertificateMode.sharedInstance.registMerchant(params: params as! [String : AnyObject], orVC: self) {
+            //跳转控制器。
+          UIApplication.shared.keyWindow?.rootViewController = HomeViewController()
             
         }
     }

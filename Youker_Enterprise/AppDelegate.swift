@@ -17,19 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-      // let vc = HomeViewController()
-        if UserAccount.loadUserAccount() !=  nil{
-           let vc = HomeViewController()
+       let vc = HomeViewController()
+//        if UserAccount.loadUserAccount() !=  nil{
+//           let vc = HomeViewController()
+//        self.window?.rootViewController = vc
+//
+//
+//        }else{
+//
+//           let vc = FirstViewController()
+//
+//            self.window?.rootViewController = vc
+//        }
         self.window?.rootViewController = vc
-            
-           
-        }else{
-            
-           let vc = FirstViewController()
-            
-            self.window?.rootViewController = vc
-        }
-       
         window?.makeKeyAndVisible()
         return true
     }

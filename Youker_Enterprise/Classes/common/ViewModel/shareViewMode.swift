@@ -14,9 +14,6 @@ class shareViewMode: NSObject {
     var title:String?
     var desc:String?
     var url:String?
-    
-    
-    
     func share(){
                 let params = NSMutableDictionary()
                 params["userId"] = UserAccount.loadUserAccount()?.user_Id
@@ -30,9 +27,7 @@ class shareViewMode: NSObject {
             }
             
             self.getShare(url: url)
-            
-            
-        }
+            }
     }
     func getShare(url:String){
         
@@ -50,7 +45,6 @@ class shareViewMode: NSObject {
         WXApi.send(req)
     }
     func shareHotel(){
-        
         let message = WXMediaMessage()
         message.title = title
         message.description = desc

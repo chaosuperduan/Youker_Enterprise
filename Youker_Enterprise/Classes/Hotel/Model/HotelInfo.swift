@@ -30,7 +30,7 @@ class OrderMode: BaseMode {
         }
         self.roomInfo = RoomInfo.init(dict:roomDic)
         self.room = Room.init(dict:roomDic)
-}
+      }
 }
 class HotelInfo: BaseMode {
    @objc var auto:NSInteger = 0

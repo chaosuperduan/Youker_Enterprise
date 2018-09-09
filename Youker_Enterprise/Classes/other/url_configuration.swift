@@ -66,3 +66,28 @@ let DeleteURL = rootURL + "v2/booking/delete/order/user"
 //注册企业。
 
 let RegisterMerchant = rootURL + "v3/cpy/add/cpyInfo"
+//邀请用户。
+let InviteURL = "v3/cpy/invite/user"
+
+
+//添加企业分组信息。
+let addGroupInfo = "v3/cpy/add/groupInfo"
+//修改企业分组信息。
+let UpdateGroupInfo = "v3/cpy/add/groupInfo"
+//获取企业分组信息。
+let GetGroupInfo = "v3/cpy/get/groupInfo/cpyId"
+//删除企业分组信息。
+let DeleteGroupInfo = "v3/cpy/del/groupInfo/groupId"
+//添加企业管理员。
+let AddEnterAdmURL = "v3/cpy/grant/user/purview"
+
+//删除企业管理员。
+let DeleteEnterAdmURL = "v3/cpy/grant/user/purview"
+//批量添加员工到分组。
+let AddUserToGropURL = "v3/cpy/add/users/group"
+//批量添加员工到分组
+let DeleteUserToGroupURL = "v3/cpy/del/users/group"
+//获取企业管理员。
+let GetAdminInfoURL = "v3/cpy/get/admins/info"
+//获取邀请url
+let GetInviteURL = "v3/cpy/get/inviteUrl"
