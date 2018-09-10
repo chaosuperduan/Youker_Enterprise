@@ -17,9 +17,17 @@ class GroupInfoViewModel: NSObject {
         NetworkTools.requestData(.post, URLString:  RegisterMerchant, parameters: params as? [String : Any]) { (response,mes) in
             print(response)
             if  response == nil{
-                //                orVC?.errorMessage = mes
-                //                orVC?.ReqType = RequestResultType.ERROR
-                return
+                guard let mode:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
+               
+                  
+                    
+                    
+            }
+                
+                
+                
+                
+             
                 
             }else{
               

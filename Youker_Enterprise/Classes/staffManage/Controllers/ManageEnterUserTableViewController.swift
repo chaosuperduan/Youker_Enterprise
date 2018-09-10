@@ -11,6 +11,9 @@ import UIKit
 class ManageEnterUserTableViewController: BaseTableViewController{
     
     
+    var dataArray:[UserGroupModel] = [UserGroupModel]()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,13 @@ class ManageEnterUserTableViewController: BaseTableViewController{
     
     override func loadDatas() {
         let params = NSMutableDictionary()
-        params[""] = ""
+        params["companyId"] = UserAccount.loadUserAccount()?.company_Id
+        params["userId"] = UserAccount.loadUserAccount()?.user_Id
+        GroupInfoViewModel.sharedInstance.GetUserGroup(params: params as! [String : AnyObject], orVC: self) {
+            SVProgressHUD.showSuccess(withStatus: "数据加载成功")
+        }
+        
+        
         
     }
 
@@ -32,12 +41,13 @@ class ManageEnterUserTableViewController: BaseTableViewController{
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 0
+        return self.dataArray.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        return 0
+        return (self.dataArray[section].users?.count)!
+        
     }
 
   
