@@ -35,6 +35,10 @@ class ManagementViewController: BaseViewController {
         header.addSubview(heView)
         self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "ii")
         self.tableview.tableFooterView = UIView()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "left"), style: .plain, target: self, action: #selector(back))
+    }
+    @objc func back(){
+        dismiss(animated: true, completion: nil)
     }
     
 }
@@ -62,7 +66,7 @@ extension ManagementViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            self.navigationController?.pushViewController(LimitationViewController(), animated: true)
+            self.navigationController?.pushViewController(ManageEnterUserTableViewController(), animated: true)
             break
         case 1:
             self.navigationController?.pushViewController(LimitationViewController(), animated: true)

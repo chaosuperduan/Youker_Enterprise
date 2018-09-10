@@ -21,7 +21,8 @@ class ManageEnterUserTableViewController: BaseTableViewController{
     }
     
     override func loadDatas() {
-        
+        let params = NSMutableDictionary()
+        params[""] = ""
         
     }
 

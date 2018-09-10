@@ -1,9 +1,5 @@
 //
-//  StaffAddTableViewController.swift
-//  Youker_Enterprise
-//
-//  Created by keelon on 2018/9/3.
-//  Copyright © 2018年 apple. All rights reserved.
+
 //
 
 import UIKit
@@ -68,10 +64,17 @@ class StaffAddTableViewController: UITableViewController {
      tableView.register(UITableViewCell.self, forCellReuseIdentifier: "staff")
      tableView.tableFooterView = UIView()
      self.tableView.rowHeight = 64
+     self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "left"), style: .plain, target: self, action: #selector(back))
         
     }
+    
+    @objc func back(){
+        dismiss(animated: true, completion: nil)
+    }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if indexPath.row == 0 {
+            self.navigationController?.pushViewController(AddViewController(), animated: true)
             
             
         }else{

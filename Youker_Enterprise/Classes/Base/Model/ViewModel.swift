@@ -44,15 +44,35 @@ class LoginViewModel: NSObject {
                
                 let   dicAount:[String:AnyObject] = dicts["userInfo"]!
                 
+               
+                
+                
+               
+                
                 if(orVC != nil ){
                     orVC?.ReqType = RequestResultType.SUCCESS
                     
                     
                     let account = UserAccount.init(dic: dicAount )
                     account.user_Pwd = orVC?.pwTF.text
-                    account.savaAccout()
-                    orVC?.callBack!()
+                   
+                   
                     
+                    
+                    if(dicts.keys.contains("cpyInfo")){
+                        
+                        let copDic:[String:AnyObject] = dicts["cpyInfo"]!
+                        
+                        let copMode:cpyInfo = cpyInfo.init(dict: copDic)
+                        print(copMode)
+                        print(cpyInfo.getDic(mode: copMode))
+                        
+                         account.company_Id = copMode.company_Id
+                        
+                    }
+                     account.savaAccout()
+                    //orVC?.callBack1!()
+                    caBalck!("登录成功.")
                     orVC?.dismiss(animated: true, completion: nil)
                     
                 }else{

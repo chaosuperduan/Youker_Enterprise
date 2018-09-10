@@ -99,7 +99,7 @@ class UpdateInfoViewController: UIViewController {
         
         buInfo.company_Name = self.copNameTF.text
         buInfo.company_Phone = copPhoneTF.text
-        buInfo.userCount = countPhone.text
+        buInfo.userCount1 = countPhone.text
         buInfo.usccode = CodeTF.text
         buInfo.company_Address = detailAddress.text
         buInfo.law_person_Name = lawPerson.text

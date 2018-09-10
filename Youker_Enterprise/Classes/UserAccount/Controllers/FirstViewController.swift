@@ -40,7 +40,16 @@ class FirstViewController: UIViewController {
     @IBAction func Login(_ sender: Any) {
         
         let vc = LoginViewController()
+        vc.callback1 = { str in
+            
+            
+            SVProgressHUD.showSuccess(withStatus: str)
+            UIApplication.shared.keyWindow?.rootViewController = HomeViewController()
+        }
         
+      
+            
+            
         present(FWNavigationController(rootViewController: vc), animated: true, completion: nil)
         
     }

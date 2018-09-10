@@ -13,6 +13,10 @@ class UserAccount: NSObject,NSCoding {
     
    @objc var token:String?
    @objc var role_Id:NSNumber?
+    
+    @objc var company_Id:NSNumber?
+    @objc var isvaild:NSNumber?
+    
    @objc var nick_Name:String?
    @objc var user_Id:NSNumber?
    @objc var login_Type:NSNumber?
@@ -79,6 +83,10 @@ class UserAccount: NSObject,NSCoding {
         aCoder.encode(latitude, forKey: "latitude")
         aCoder.encode(card, forKey: "card")
         aCoder.encode(user_Name, forKey: "user_Name")
+         aCoder.encode(company_Id, forKey: "company_Id")
+         aCoder.encode(isvaild, forKey: "isvaild")
+        
+        
 
     }
     required init?(coder aDecoder: NSCoder) {
@@ -103,7 +111,9 @@ class UserAccount: NSObject,NSCoding {
         self.longtitude = aDecoder.decodeObject(forKey: "longtitude") as? String
         self.card = aDecoder.decodeObject(forKey: "card") as? String
         self.user_Name = aDecoder.decodeObject(forKey: "user_Name") as? String
+        self.company_Id = aDecoder.decodeObject(forKey: "company_Id") as? NSNumber
         
+        self.isvaild = aDecoder.decodeObject(forKey: "isvaild") as? NSNumber
     }
     func savaAccout()->Bool{
     

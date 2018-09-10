@@ -18,18 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
        let vc = HomeViewController()
-//        if UserAccount.loadUserAccount() !=  nil{
-//           let vc = HomeViewController()
-//        self.window?.rootViewController = vc
-//
-//
-//        }else{
-//
-//           let vc = FirstViewController()
-//
-//            self.window?.rootViewController = vc
-//        }
+        if UserAccount.loadUserAccount() !=  nil{
+           let vc = HomeViewController()
         self.window?.rootViewController = vc
+
+
+        }else{
+
+           let vc = FirstViewController()
+
+            self.window?.rootViewController = vc
+        }
+        self.window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
         return true
     }

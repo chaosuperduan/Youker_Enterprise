@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: BaseViewController{
     var manger :WXApiManager = WXApiManager.shared()
+    var callback1:PassBak?
 
     @IBOutlet weak var PhoneTF: UITextField!
     
@@ -40,7 +41,8 @@ class LoginViewController: BaseViewController{
             }
           
         }
-        LoginViewModel.sharedInstance.Login(params: param as! [String : AnyObject], orVC: self, caBalck: nil)
+        param["registerId"] = "dfakfkjk"
+        LoginViewModel.sharedInstance.Login(params: param as! [String : AnyObject], orVC: self, caBalck: self.callback1)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

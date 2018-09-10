@@ -59,6 +59,9 @@ class HomeViewController: BaseViewController {
             present(vc, animated: true, completion: nil)
         }
        
+        print("find")
+        print(UserAccount.loadUserAccount()?.company_Id)
+        print("findX")
     }
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        present(RegisterViewController(), animated: true, completion: nil)
