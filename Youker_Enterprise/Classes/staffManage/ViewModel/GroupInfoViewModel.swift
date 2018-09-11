@@ -13,27 +13,36 @@ class GroupInfoViewModel: NSObject {
     static let sharedInstance = GroupInfoViewModel()
     
     func GetUserGroup(params:[String:AnyObject],orVC:ManageEnterUserTableViewController?,callback1:@escaping (()->())){
-        print(RegisterMerchant)
-        NetworkTools.requestData(.post, URLString:  RegisterMerchant, parameters: params as? [String : Any]) { (response,mes) in
+        print(GetGroupInfoAndUser)
+        NetworkTools.requestData(.get, URLString:  GetGroupInfoAndUser, parameters: params as? [String : Any]) { (response,mes) in
             print(response)
-            if  response == nil{
-                guard let mode:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
-               
-                  
+            if  response != nil{
+                
+            guard let modeDic:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
+                
+//                
+//               orVC?.ReqType = RequestResultType.NODATA
+//             orVC?.header.endRefreshing()
+//            callback1()
+           return
+           }
+           for dic in modeDic{
                     
-                    
-            }
+            let mode = UserGroupModel.init(dict: dic as! [String : NSObject])
+            orVC?.dataArray.append(mode)
+           }
+                if((orVC?.dataArray.count)!<1){
+                   orVC?.header.endRefreshing()
+                    orVC?.ReqType = RequestResultType.NODATA
+                }
                 
+           orVC?.tableView.reloadData()
                 
-                
-                
-             
                 
             }else{
               
                
                 callback1()
-                
             }
         }
     }

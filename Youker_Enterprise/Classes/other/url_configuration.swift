@@ -68,12 +68,12 @@ let DeleteURL = rootURL + "v2/booking/delete/order/user"
 let RegisterMerchant = rootURL + "v3/cpy/add/cpyInfo"
 //邀请用户。
 let InviteURL = "v3/cpy/invite/user"
-
-
+//根据公司ID获取所有分组和与员工信息
+let GetGroupInfoAndUser = rootURL+"v3/cpy/get/groupInfo/cpyId"
 //添加企业分组信息。
-let addGroupInfo = "v3/cpy/add/groupInfo"
+let addGroupInfo = rootURL + "v3/cpy/add/groupInfo"
 //修改企业分组信息。
-let UpdateGroupInfo = "v3/cpy/add/groupInfo"
+let UpdateGroupInfo = rootURL + "v3/cpy/add/groupInfo"
 //获取企业分组信息。
 let GetGroupInfo = "v3/cpy/get/groupInfo/cpyId"
 //删除企业分组信息。

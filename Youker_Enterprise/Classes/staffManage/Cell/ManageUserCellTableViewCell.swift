@@ -9,6 +9,17 @@
 import UIKit
 
 class ManageUserCellTableViewCell: UITableViewCell {
+    @IBOutlet weak var subTitleLabel: UILabel!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    var mode:User?{
+        didSet{
+          self.titleLabel.text = mode?.employee_Name
+            self.subTitleLabel.text = String.init(format: "(@%)", (mode?.phoneNumber)!)
+            
+        }
+        
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

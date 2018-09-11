@@ -18,7 +18,8 @@ class ManageEnterUserTableViewController: BaseTableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
        setUpUI()
-        
+       self.header.beginRefreshing()
+       self.tableView.tableFooterView = UIView()
 
         
     }
@@ -26,14 +27,18 @@ class ManageEnterUserTableViewController: BaseTableViewController{
     override func loadDatas() {
         let params = NSMutableDictionary()
         params["companyId"] = UserAccount.loadUserAccount()?.company_Id
+        
         params["userId"] = UserAccount.loadUserAccount()?.user_Id
+        params["token"] = UserAccount.loadUserAccount()?.token;
         GroupInfoViewModel.sharedInstance.GetUserGroup(params: params as! [String : AnyObject], orVC: self) {
+            
+            
             SVProgressHUD.showSuccess(withStatus: "数据加载成功")
+            self.header.endRefreshing()
         }
         
         
-        
-    }
+       }
 
   
 
@@ -57,6 +62,7 @@ class ManageEnterUserTableViewController: BaseTableViewController{
         if cell == nil  {
             cell = ManageUserCellTableViewCell()
         }
+        cell.mode = self.dataArray[indexPath.section].users?[indexPath.row]
         return cell
     }
     

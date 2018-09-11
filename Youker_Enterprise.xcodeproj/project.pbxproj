@@ -231,6 +231,8 @@
 		E5118209213E262E00A1CC11 /* LimitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5118207213E262E00A1CC11 /* LimitCell.xib */; };
 		E511820C213E6D0300A1CC11 /* LimitManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511820A213E6D0300A1CC11 /* LimitManageViewController.swift */; };
 		E511820D213E6D0300A1CC11 /* LimitManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E511820B213E6D0300A1CC11 /* LimitManageViewController.xib */; };
+		E5127E372147F15900979FEE /* LimitActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5127E362147F15900979FEE /* LimitActionView.swift */; };
+		E5127E392147F19F00979FEE /* LimitActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5127E382147F19F00979FEE /* LimitActionView.xib */; };
 		E52EDC8321412D8900458275 /* CityPickerVeiw.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7B21412D8900458275 /* CityPickerVeiw.m */; };
 		E52EDC8421412D8900458275 /* CityNameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7C21412D8900458275 /* CityNameModel.m */; };
 		E52EDC8521412D8900458275 /* UIView+GoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7E21412D8900458275 /* UIView+GoodView.m */; };
@@ -550,6 +552,8 @@
 		E5118207213E262E00A1CC11 /* LimitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LimitCell.xib; sourceTree = "<group>"; };
 		E511820A213E6D0300A1CC11 /* LimitManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitManageViewController.swift; sourceTree = "<group>"; };
 		E511820B213E6D0300A1CC11 /* LimitManageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LimitManageViewController.xib; sourceTree = "<group>"; };
+		E5127E362147F15900979FEE /* LimitActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitActionView.swift; sourceTree = "<group>"; };
+		E5127E382147F19F00979FEE /* LimitActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LimitActionView.xib; sourceTree = "<group>"; };
 		E52EDC7B21412D8900458275 /* CityPickerVeiw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickerVeiw.m; sourceTree = "<group>"; };
 		E52EDC7C21412D8900458275 /* CityNameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityNameModel.m; sourceTree = "<group>"; };
 		E52EDC7D21412D8900458275 /* ZSAnalysisClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSAnalysisClass.h; sourceTree = "<group>"; };
@@ -618,6 +622,8 @@
 				182EBE2F213D922400088673 /* LimitView.swift */,
 				E5118206213E262E00A1CC11 /* LimitCell.swift */,
 				E5118207213E262E00A1CC11 /* LimitCell.xib */,
+				E5127E362147F15900979FEE /* LimitActionView.swift */,
+				E5127E382147F19F00979FEE /* LimitActionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1590,6 +1596,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5127E392147F19F00979FEE /* LimitActionView.xib in Resources */,
 				E50BBE592137E72E00F09D92 /* PlaceOrderViewController.xib in Resources */,
 				E50BBDFE2137D7CF00F09D92 /* LoginViewController.xib in Resources */,
 				E50BBDF62137D6B400F09D92 /* EditView.xib in Resources */,
@@ -1817,6 +1824,7 @@
 				E50BBD9C2137A07D00F09D92 /* DViewController.m in Sources */,
 				E52EDC8421412D8900458275 /* CityNameModel.m in Sources */,
 				E50BBD7D2137A07D00F09D92 /* NSDate-Extension.swift in Sources */,
+				E5127E372147F15900979FEE /* LimitActionView.swift in Sources */,
 				E50BBDD42137CA3F00F09D92 /* WSDatePickerView.m in Sources */,
 				E50BBDBF2137A07D00F09D92 /* POISearchManager.swift in Sources */,
 				E50BBDC42137A07D00F09D92 /* FWSideMenuShadow.swift in Sources */,
