@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             self.window?.rootViewController = vc
         }
+         self.window?.rootViewController = vc
         self.window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
         return true

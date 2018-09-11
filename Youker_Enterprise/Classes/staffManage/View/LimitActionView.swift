@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LimitActionView: UIView {
+class LimitActionView: UIView,NibLoad {
     
     var callback:((NSInteger)->())?
 

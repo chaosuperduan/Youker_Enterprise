@@ -8,10 +8,20 @@
 
 import UIKit
 
-class LimitView: UIView {
+class LimitView: UIView,NibLoad {
     var collectionview:UICollectionView?
-    let titles = ["管理员","高管","普通员工","自定义"]
-    let imgs = ["blueT","redT","LanT","grayT"]
+//    let titles = ["管理员","高管","普通员工","自定义"]
+//    let imgs = ["blueT","redT","LanT","grayT"]
+ lazy    var dateArray:[EditGroup] = {
+       let mode = EditGroup()
+       mode.title = "自定义"
+       mode.imge = "grayT"
+        var datearray = [EditGroup]()
+        datearray.append(mode)
+        
+        return datearray
+        
+    }()
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpUi()
@@ -48,7 +58,7 @@ class LimitView: UIView {
 
 extension LimitView: UICollectionViewDataSource,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titles.count
+        return dateArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,8 +68,8 @@ extension LimitView: UICollectionViewDataSource,UICollectionViewDelegate {
             cell = LimitCell()
             cell.backgroundColor = UIColor.randomColor()
         }
-        cell.titleLabel.text = titles[indexPath.row]
-        cell.imgView.image = UIImage.init(named: imgs[indexPath.row])
+        cell.titleLabel.text = dateArray[indexPath.item].title
+        cell.imgView.image = UIImage.init(named: dateArray[indexPath.item].imge!) //dateArray[indexPath.item].imge
 
         return cell
         

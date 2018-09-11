@@ -34,6 +34,7 @@
 		186109D4213EF349002D0BC1 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186109D3213EF349002D0BC1 /* AccountViewModel.swift */; };
 		187ED77E2142DD6C00681240 /* InviteTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187ED77D2142DD6C00681240 /* InviteTotalViewController.swift */; };
 		187ED7802142DD9C00681240 /* InviteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187ED77F2142DD9C00681240 /* InviteTableViewController.swift */; };
+		18A16F8B2148264600811900 /* EditGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A16F8A2148264600811900 /* EditGroup.swift */; };
 		18B8CD9B21452B650060DB6B /* ManageEnterUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CD9A21452B650060DB6B /* ManageEnterUserTableViewController.swift */; };
 		18B8CD9F21452C4F0060DB6B /* ManageUserCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CD9D21452C4F0060DB6B /* ManageUserCellTableViewCell.swift */; };
 		18B8CDA021452C4F0060DB6B /* ManageUserCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B8CD9E21452C4F0060DB6B /* ManageUserCellTableViewCell.xib */; };
@@ -294,6 +295,7 @@
 		186109D3213EF349002D0BC1 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		187ED77D2142DD6C00681240 /* InviteTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTotalViewController.swift; sourceTree = "<group>"; };
 		187ED77F2142DD9C00681240 /* InviteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTableViewController.swift; sourceTree = "<group>"; };
+		18A16F8A2148264600811900 /* EditGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroup.swift; sourceTree = "<group>"; };
 		18B8CD9A21452B650060DB6B /* ManageEnterUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageEnterUserTableViewController.swift; sourceTree = "<group>"; };
 		18B8CD9D21452C4F0060DB6B /* ManageUserCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageUserCellTableViewCell.swift; sourceTree = "<group>"; };
 		18B8CD9E21452C4F0060DB6B /* ManageUserCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageUserCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -650,6 +652,7 @@
 			children = (
 				185D5A8721403F920085E559 /* cpyInfo.swift */,
 				18B8CDA1214531E30060DB6B /* UserGroupModel.swift */,
+				18A16F8A2148264600811900 /* EditGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1860,6 +1863,7 @@
 				182EBE2B213D8D9200088673 /* LimitationViewController.swift in Sources */,
 				E50BBDBE2137A07D00F09D92 /* CGXPickerView.m in Sources */,
 				186109D2213EF0C6002D0BC1 /* imageExtension.swift in Sources */,
+				18A16F8B2148264600811900 /* EditGroup.swift in Sources */,
 				E50BBDA12137A07D00F09D92 /* WXApiRequestHandler.m in Sources */,
 				E50BBDC12137A07D00F09D92 /* TimeTool.swift in Sources */,
 				E52EDC8321412D8900458275 /* CityPickerVeiw.m in Sources */,

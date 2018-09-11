@@ -7,8 +7,8 @@
 //
 
 import UIKit
-let titles = ["企业员工管理","限额管理","权限管理"]
-let imgs = ["yuangong","xianer","quanxian"]
+private let titles = ["企业员工管理","限额管理","权限管理"]
+private let imgs = ["yuangong","xianer","quanxian"]
 class ManagementViewController: BaseViewController {
 
     @IBOutlet weak var header: UIView!
