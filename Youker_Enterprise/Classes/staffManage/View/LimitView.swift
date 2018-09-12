@@ -12,11 +12,11 @@ class LimitView: UIView,NibLoad {
     var collectionview:UICollectionView?
 //    let titles = ["管理员","高管","普通员工","自定义"]
 //    let imgs = ["blueT","redT","LanT","grayT"]
- lazy    var dateArray:[EditGroup] = {
-       let mode = EditGroup()
-       mode.title = "自定义"
+ lazy    var dateArray:[UserGroupModel] = {
+    let mode = UserGroupModel(dict: [String:AnyObject]() as! [String : NSObject] )
+       mode.group_Name = "自定义"
        mode.imge = "grayT"
-        var datearray = [EditGroup]()
+        var datearray = [UserGroupModel]()
         datearray.append(mode)
         
         return datearray
@@ -68,8 +68,8 @@ extension LimitView: UICollectionViewDataSource,UICollectionViewDelegate {
             cell = LimitCell()
             cell.backgroundColor = UIColor.randomColor()
         }
-        cell.titleLabel.text = dateArray[indexPath.item].title
-        cell.imgView.image = UIImage.init(named: dateArray[indexPath.item].imge!) //dateArray[indexPath.item].imge
+        cell.titleLabel.text = dateArray[indexPath.item].group_Name
+        cell.imgView.image = UIImage.init(named: dateArray[indexPath.item].imge) //dateArray[indexPath.item].imge
 
         return cell
         

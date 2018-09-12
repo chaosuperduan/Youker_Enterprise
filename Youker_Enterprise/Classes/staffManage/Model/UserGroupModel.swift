@@ -10,7 +10,10 @@ import UIKit
 //企业员工和分组信息。
 
 class UserGroupModel: BaseMode {
-    var company_Id:NSInteger = 0
+    var imge:String = ""
+    var company_Id:NSInteger = -1
+    var group_Id
+        :NSInteger = -1
     var group_Name :String?
     var maxPrice:NSInteger = 0
     var minPrice:NSInteger = 0
@@ -31,6 +34,25 @@ class UserGroupModel: BaseMode {
         
         
     }
+    class func getDic(mode:UserGroupModel)->NSDictionary{
+        var dic:[String:AnyObject] = [String:AnyObject]()
+        if mode.company_Id != -1 {
+             dic["company_Id"] = mode.company_Id as AnyObject
+        }
+        if mode.group_Id != -1 {
+            dic["group_Id"] = mode.group_Id as AnyObject
+        }
+       
+        dic["group_Name"] = mode.group_Name as AnyObject
+        if mode.maxPrice>0&&mode.minPrice>0 {
+            dic["maxPrice"] = mode.maxPrice as AnyObject
+            dic["minPrice"] = mode.minPrice as AnyObject
+        }
+       
+        return dic as NSDictionary
+    }
+    
+    
 
 }
 
@@ -45,5 +67,6 @@ class User: BaseMode {
     var record_Id:NSInteger = 0
     var role_Type:NSInteger = 0
     var user_Id:NSInteger = 0
+    
     
 }

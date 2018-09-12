@@ -11,7 +11,7 @@ import Foundation
 //103
 let rootURL = "http://192.168.31.203:8080/Maxwell/"
 let rootURL2 = "http://www.iyouker.com/Maxwell/"
-
+//let rootURL = "http://jjfly.ngrok.iyouker.com:8080/Maxwell/"
 //MARK:-登录
 let LoginURL = rootURL+"v3/cpy/login"
 //MARK:-注册
@@ -75,7 +75,7 @@ let addGroupInfo = rootURL + "v3/cpy/add/groupInfo"
 //修改企业分组信息。
 let UpdateGroupInfo = rootURL + "v3/cpy/add/groupInfo"
 //获取企业分组信息。
-let GetGroupInfo = "v3/cpy/get/groupInfo/cpyId"
+let GetGroupInfo = rootURL + "v3/cpy/get/groupInfo/cpyId"
 //删除企业分组信息。
 let DeleteGroupInfo = "v3/cpy/del/groupInfo/groupId"
 //添加企业管理员。

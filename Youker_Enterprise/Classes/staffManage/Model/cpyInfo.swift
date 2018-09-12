@@ -107,3 +107,38 @@ class districts:BaseMode{
     
     
 }
+
+
+//groupInfo
+
+class groupInfo: BaseMode{
+    
+    @objc   var group_Id:NSNumber?
+    @objc   var company_Id:NSNumber?
+    @objc   var company_Address:String?
+    @objc   var company_Name:String?
+    @objc    var company_Phone:String?
+    @objc    var law_person_Name:String?
+    @objc    var reg_Address:String?
+    @objc    var usccode:String?
+    @objc    var userCount:NSInteger = 0
+    @objc    var userCount1:String?
+    
+    
+    class func getDic(mode:cpyInfo)->NSDictionary{
+        var dic:[String:AnyObject] = [String:AnyObject]()
+        dic["company_Address"] = mode.company_Address as AnyObject
+        dic["company_Name"] = mode.company_Name as AnyObject
+        dic["company_Phone"] = mode.company_Phone as AnyObject
+        dic["law_person_Name"] = mode.law_person_Name as AnyObject
+        dic["reg_Address"] = mode.reg_Address as AnyObject
+        dic["usccode"] = mode.usccode as AnyObject
+        dic["userCount"] = mode.userCount as AnyObject
+        
+        return dic as NSDictionary
+    }
+
+
+}
+
+
