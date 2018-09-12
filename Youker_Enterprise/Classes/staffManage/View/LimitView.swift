@@ -16,6 +16,7 @@ class LimitView: UIView,NibLoad {
     let mode = UserGroupModel(dict: [String:AnyObject]() as! [String : NSObject] )
        mode.group_Name = "自定义"
        mode.imge = "grayT"
+       mode.company_Id = -7
         var datearray = [UserGroupModel]()
         datearray.append(mode)
         
@@ -68,9 +69,8 @@ extension LimitView: UICollectionViewDataSource,UICollectionViewDelegate {
             cell = LimitCell()
             cell.backgroundColor = UIColor.randomColor()
         }
-        cell.titleLabel.text = dateArray[indexPath.item].group_Name
-        cell.imgView.image = UIImage.init(named: dateArray[indexPath.item].imge) //dateArray[indexPath.item].imge
-
+        cell.mode = dateArray[indexPath.item]
+        
         return cell
         
     }
@@ -79,7 +79,13 @@ extension LimitView: UICollectionViewDataSource,UICollectionViewDelegate {
             
             return
         }
-        self.callback!(indexPath.item)
+        
+        let mode = self.dateArray[indexPath.item]
+        if mode.company_Id == -7 {
+             self.callback!(indexPath.item)
+        }
+        
+       
     }
 
     

@@ -23,6 +23,15 @@ class LimitationViewController: BaseViewController {
         self.navigationItem.title = "限额管理"
         Lv.callback = { index  in
             
+            if index == Lv.dateArray.count-1 {
+                
+            }else{
+                
+                
+                
+                
+            }
+            
             let popview = ZXPopView.init(frame: self.view.bounds)
             
             let vlView = LimitActionView.LoadFromNib()
@@ -41,7 +50,11 @@ class LimitationViewController: BaseViewController {
                         //Lv.dateArray.insert(mode, at: 0)
                        // Lv.collectionview?.reloadData()
                         self.addGroupInfo(vi: Lv, mode: mode, callback: {
-                            self.loadData()
+                            self.loadData(callback: {
+                                Lv.dateArray = self.dataArray
+                                Lv.collectionview?.reloadData()
+                                
+                            })
                             
                             
                         })
@@ -57,6 +70,9 @@ class LimitationViewController: BaseViewController {
             
         }
         view.addSubview(Lv)
+        loadData(callback: nil)
+        Lv.dateArray = self.dataArray
+        Lv.collectionview?.reloadData()
     }
     //添加企业分组信息。
     func  addGroupInfo(vi:LimitView,mode:UserGroupModel,callback:()->()){
@@ -76,7 +92,7 @@ class LimitationViewController: BaseViewController {
 
 extension LimitationViewController{
     
-    func loadData(){
+    func loadData(callback:(()->())?){
         
         let params = NSMutableDictionary()
         params["companyId"] = UserAccount.loadUserAccount()?.company_Id
@@ -84,6 +100,11 @@ extension LimitationViewController{
         params["userId"] = UserAccount.loadUserAccount()?.user_Id
         params["token"] = UserAccount.loadUserAccount()?.token;
         GroupInfoViewModel.sharedInstance.GetGroupInfomation(params: params as! [String : AnyObject], orVC: self, callback1: {
+            
+            if(callback != nil){
+               callback!()
+                
+            }
             
             
         })

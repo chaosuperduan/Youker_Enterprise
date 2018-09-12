@@ -96,14 +96,21 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
                 for dic in modeDic{
                     
                     let mode = UserGroupModel.init(dict: dic as! [String : NSObject])
+                    orVC?.dataArray.removeAll()
                     orVC?.dataArray.append(mode)
                 }
-                if((orVC?.dataArray.count)!<1){
-                    //orVC?.header.endRefreshing()
-                    orVC?.ReqType = RequestResultType.NODATA
-                }
+//                if((orVC?.dataArray.count)!<1){
+//                    //orVC?.header.endRefreshing()
+//                    orVC?.ReqType = RequestResultType.NODATA
+//                }
                 
                 //orVC?.tableView.reloadData()
+                
+                let mode = UserGroupModel(dict: [String:AnyObject]() as! [String : NSObject] )
+                mode.group_Name = "自定义"
+                mode.imge = "grayT"
+                mode.company_Id = -7
+                callback1()
                 
             }else{
                 

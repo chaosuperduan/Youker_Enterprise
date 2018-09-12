@@ -22,7 +22,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LanT" translatesAutoresizingMaskIntoConstraints="NO" id="DLK-hb-BY5">
                         <rect key="frame" x="31.5" y="17.5" width="90" height="90"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryh-zd-7fy">
+                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryh-zd-7fy">
                         <rect key="frame" x="64" y="26.5" width="25" height="24"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="jAm-7p-ZxB"/>
@@ -42,6 +42,7 @@
                 <constraint firstItem="DLK-hb-BY5" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="5my-sR-Cyx"/>
                 <constraint firstItem="ecK-Us-bic" firstAttribute="top" secondItem="Ryh-zd-7fy" secondAttribute="bottom" constant="7.5" id="6KB-WH-Qan"/>
                 <constraint firstItem="ecK-Us-bic" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="8Tk-cG-wEF"/>
+                <constraint firstItem="Ryh-zd-7fy" firstAttribute="leading" secondItem="DLK-hb-BY5" secondAttribute="trailing" constant="-57.5" id="SyI-K1-iBz"/>
                 <constraint firstItem="Ryh-zd-7fy" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="Whe-AN-dxj"/>
                 <constraint firstItem="DLK-hb-BY5" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="f2N-er-68v"/>
                 <constraint firstItem="ecK-Us-bic" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" constant="6.5" id="hq2-zQ-yAD"/>
@@ -49,6 +50,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="153" height="124"/>
             <connections>
+                <outlet property="addBTN" destination="Ryh-zd-7fy" id="JJZ-Cm-1vH"/>
                 <outlet property="imgView" destination="DLK-hb-BY5" id="YhP-Ko-MfF"/>
                 <outlet property="titleLabel" destination="ecK-Us-bic" id="qB4-iY-RMm"/>
             </connections>
