@@ -75,15 +75,16 @@ extension LimitView: UICollectionViewDataSource,UICollectionViewDelegate {
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         if self.callback == nil {
             
             return
+        }else{
+            
+            self.callback!(indexPath.item)
+            
         }
-        
-        let mode = self.dateArray[indexPath.item]
-        if mode.company_Id == -7 {
-             self.callback!(indexPath.item)
-        }
+       
         
        
     }

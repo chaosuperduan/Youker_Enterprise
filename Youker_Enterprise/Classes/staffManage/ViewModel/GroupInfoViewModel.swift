@@ -37,7 +37,7 @@ class GroupInfoViewModel: NSObject {
                 }
                 
            orVC?.tableView.reloadData()
-                
+              callback1()
                 
             }else{
               
@@ -67,7 +67,7 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
                 if(code == 200) {
                     orVC?.ReqType = RequestResultType.SUCCESS
                     
-                    
+                     callback1()
                 }
                 
             }else{
@@ -87,29 +87,24 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
                 
                 guard let modeDic:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
                     
-                    //
-                    //               orVC?.ReqType = RequestResultType.NODATA
-                    //             orVC?.header.endRefreshing()
-                    //            callback1()
+                    
                     return
                 }
+                orVC?.dataArray.removeAll()
                 for dic in modeDic{
                     
                     let mode = UserGroupModel.init(dict: dic as! [String : NSObject])
-                    orVC?.dataArray.removeAll()
+                    mode.imge = "blueT"
+                    
                     orVC?.dataArray.append(mode)
                 }
-//                if((orVC?.dataArray.count)!<1){
-//                    //orVC?.header.endRefreshing()
-//                    orVC?.ReqType = RequestResultType.NODATA
-//                }
-                
-                //orVC?.tableView.reloadData()
+
                 
                 let mode = UserGroupModel(dict: [String:AnyObject]() as! [String : NSObject] )
                 mode.group_Name = "自定义"
                 mode.imge = "grayT"
                 mode.company_Id = -7
+                orVC?.dataArray.append(mode)
                 callback1()
                 
             }else{

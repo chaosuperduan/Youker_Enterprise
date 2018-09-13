@@ -69,7 +69,7 @@ let RegisterMerchant = rootURL + "v3/cpy/add/cpyInfo"
 //邀请用户。
 let InviteURL = "v3/cpy/invite/user"
 //根据公司ID获取所有分组和与员工信息
-let GetGroupInfoAndUser = rootURL+"v3/cpy/get/groupInfo/cpyId"
+let GetGroupInfoAndUser = rootURL+"v3/cpy/get/groups/users/cpyId"
 //添加企业分组信息。
 let addGroupInfo = rootURL + "v3/cpy/add/groupInfo"
 //修改企业分组信息。

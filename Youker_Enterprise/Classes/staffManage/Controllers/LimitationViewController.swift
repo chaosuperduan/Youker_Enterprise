@@ -25,67 +25,78 @@ class LimitationViewController: BaseViewController {
             
             if index == Lv.dateArray.count-1 {
                 
+                self.showActionSheetView(Lv: Lv)
+                
             }else{
+              let vc = LimitManageViewController()
                 
-                
+              self.navigationController?.pushViewController(vc, animated: true)
                 
                 
             }
             
-            let popview = ZXPopView.init(frame: self.view.bounds)
             
-            let vlView = LimitActionView.LoadFromNib()
-            vlView.frame = CGRect.init(x: (KScreenW-315)/2, y: (KScreenH-156)/2, width: 315, height: 156)
-            vlView.callback = { index in
-                popview.removeFromSuperview()
-                if index == 1 {
-                    
-                    if((vlView.NameTF.text?.count)!>0){
-                        let mode  = UserGroupModel(dict: [String:AnyObject]() as! [String : NSObject])
-                        mode.group_Name = vlView.NameTF.text
-                        mode.company_Id = UserAccount.loadUserAccount()?.company_Id as! NSInteger
-                        mode.maxPrice = 50
-                        mode.minPrice = 20
-                        //mode.imge = "blueT"
-                        //Lv.dateArray.insert(mode, at: 0)
-                       // Lv.collectionview?.reloadData()
-                        self.addGroupInfo(vi: Lv, mode: mode, callback: {
-                            self.loadData(callback: {
-                                Lv.dateArray = self.dataArray
-                                Lv.collectionview?.reloadData()
-                                
-                            })
-                            
-                            
-                        })
-                        
-                        
-                    }
-                }
-                
-            }
-            popview.isCenter = true
-            popview.contenView = vlView
-            popview.showInView(view: self.view)
             
         }
         view.addSubview(Lv)
-        loadData(callback: nil)
-        Lv.dateArray = self.dataArray
-        Lv.collectionview?.reloadData()
+        loadData {
+            Lv.dateArray = self.dataArray
+            
+            
+            Lv.collectionview?.reloadData()
+        }
+        
     }
     //添加企业分组信息。
-    func  addGroupInfo(vi:LimitView,mode:UserGroupModel,callback:()->()){
+    func  addGroupInfo(vi:LimitView,mode:UserGroupModel,callback:@escaping ()->()){
     let params = NSMutableDictionary()
     params["token"] = UserAccount.loadUserAccount()?.token!
-    print(params["token"])
+        print(params["token"] ?? "d")
     params["groupInfo"] = String.getJSONStringFromDictionary(dictionary: UserGroupModel.getDic(mode: mode))
         
     params["userId"] = UserAccount.loadUserAccount()?.user_Id
    GroupInfoViewModel.sharedInstance.AddGroupInfo(params:params as! [String : AnyObject] , orVC: self) {
-        
+    if(callback != nil){
+        callback()
+    }
     }
     
+    }
+    //显示分组弹窗页面。
+    func showActionSheetView(Lv:LimitView){
+        let popview = ZXPopView.init(frame: self.view.bounds)
+        let vlView = LimitActionView.LoadFromNib()
+        vlView.frame = CGRect.init(x: (KScreenW-315)/2, y: (KScreenH-156)/2, width: 315, height: 156)
+        vlView.callback = { index in
+            popview.removeFromSuperview()
+            if index == 1 {
+                
+                if((vlView.NameTF.text?.count)!>0){
+                    let mode  = UserGroupModel(dict: [String:AnyObject]() as! [String : NSObject])
+                    mode.group_Name = vlView.NameTF.text
+                    mode.company_Id = UserAccount.loadUserAccount()?.company_Id as! NSInteger
+                    mode.maxPrice = 50
+                    mode.minPrice = 20
+                    //mode.imge = "blueT"
+                    //Lv.dateArray.insert(mode, at: 0)
+                    // Lv.collectionview?.reloadData()
+                    self.addGroupInfo(vi: Lv, mode: mode, callback: {
+                        self.loadData(callback: {
+                            Lv.dateArray = self.dataArray
+                            Lv.collectionview?.reloadData()
+                            
+                        })
+                        
+                        
+                    })
+                    
+                    
+                }
+            }
+        }
+        popview.isCenter = true
+        popview.contenView = vlView
+        popview.showInView(view: self.view)
     }
 }
 //加载数据。
@@ -110,8 +121,6 @@ extension LimitationViewController{
         })
         
     }
-    
-    
 }
 
 

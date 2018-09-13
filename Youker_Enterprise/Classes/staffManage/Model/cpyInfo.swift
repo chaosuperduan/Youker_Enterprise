@@ -33,6 +33,7 @@ class cpyInfo: NSObject,NSCoding{
         dic["usccode"] = mode.usccode as AnyObject
         dic["userCount"] = mode.userCount as AnyObject
         
+        
         return dic as NSDictionary
     }
     

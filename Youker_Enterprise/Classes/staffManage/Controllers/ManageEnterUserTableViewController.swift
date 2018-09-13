@@ -51,7 +51,7 @@ class ManageEnterUserTableViewController: BaseTableViewController{
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        return (self.dataArray[section].users?.count)!
+        return (self.dataArray[section].users.count)
         
     }
 
@@ -62,7 +62,12 @@ class ManageEnterUserTableViewController: BaseTableViewController{
         if cell == nil  {
             cell = ManageUserCellTableViewCell()
         }
-        cell.mode = self.dataArray[indexPath.section].users?[indexPath.row]
+        let group:UserGroupModel = self.dataArray[indexPath.section]
+        let mode :User = group.users[indexPath.row]
+        
+        //let mode = group[indexPath.row]
+        cell.mode = mode
+//        cell.mode = self.dataArray[indexPath.section].users[indexPath.row]
         return cell
     }
     

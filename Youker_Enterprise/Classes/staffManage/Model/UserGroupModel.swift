@@ -10,24 +10,26 @@ import UIKit
 //企业员工和分组信息。
 
 class UserGroupModel: BaseMode {
-    var imge:String = ""
-    var company_Id:NSInteger = -1
-    var group_Id
+  @objc  var imge:String = ""
+  @objc  var company_Id:NSInteger = -1
+  @objc  var group_Id
         :NSInteger = -1
-    var group_Name :String?
-    var maxPrice:NSInteger = 0
-    var minPrice:NSInteger = 0
-    var users:[User]?
-    override init(dict: [String : NSObject]) {
+  @objc  var group_Name :String?
+  @objc  var maxPrice:NSInteger = 0
+ @objc   var minPrice:NSInteger = 0
+ @objc   var users:[User] = [User]()
+   override init(dict: [String : NSObject]) {
         super.init(dict: dict)
-        if (dict.keys.contains("user")) {
-            guard let dicts:[[String:AnyObject]] = dict["user"] as? [[String : AnyObject]] else {
+    
+        if (dict.keys.contains("users")) {
+            guard let dicts:[[String:AnyObject]] = dict["users"] as? [[String : AnyObject]] else {
                 return
             }
+            users.removeAll()
             for dic  in dicts{
                 
                 let mode = User.init(dict: dic as! [String : NSObject])
-                users?.append(mode)
+                users.append(mode)
                 
             }
         }
@@ -58,15 +60,15 @@ class UserGroupModel: BaseMode {
 
 class User: BaseMode {
     
-    var company_Id:NSInteger = 0
-    var employee_Name:String?
-    var group_Id:NSInteger = 0
-    var invite_Time:NSInteger = 0
-    var invite_User:NSInteger = 0
-    var phoneNumber:String?
-    var record_Id:NSInteger = 0
-    var role_Type:NSInteger = 0
-    var user_Id:NSInteger = 0
+@objc    var company_Id:NSInteger = 0
+@objc    var employee_Name:String?
+@objc    var group_Id:NSInteger = 0
+@objc    var invite_Time:NSInteger = 0
+@objc    var invite_User:NSInteger = 0
+@objc    var phoneNumber:String?
+@objc    var record_Id:NSInteger = 0
+@objc    var role_Type:NSInteger = 0
+@objc    var user_Id:NSInteger = 0
     
     
 }

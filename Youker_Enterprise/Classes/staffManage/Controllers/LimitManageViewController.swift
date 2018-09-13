@@ -9,18 +9,20 @@
 import UIKit
 
 class LimitManageViewController: UIViewController {
-
+    var mode:UserGroupModel?
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUi()
 
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setUpUi(){
+      self.navigationItem.title = mode?.group_Name
+        
+        
     }
-    
+
+   
 
    
 
