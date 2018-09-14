@@ -26,6 +26,11 @@ class HomeViewController: BaseViewController {
        let header = UserHeaderView.LoadFromNib()
         header.frame = CGRect.init(x: 0, y: 0, width: KScreenW, height: 260)
         print(header.frame)
+        header.callback = {
+            let navi = FWNavigationController.init(rootViewController: UserCenterTableViewController())
+            self.present(navi, animated: true, completion: nil)
+            
+        }
        let secView = HomeHeaderView.init(frame: CGRect.init(x: 0, y: 270, width: KScreenW, height: 164))
         secView.callback = { index in
             self.doWithIndex(index: index)

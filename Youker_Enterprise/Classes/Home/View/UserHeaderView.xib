@@ -25,11 +25,24 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNr-4E-NJR">
+                    <rect key="frame" x="148.5" y="58" width="78" height="76"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="78" id="3cn-z3-ROT"/>
+                        <constraint firstAttribute="height" constant="76" id="p71-v6-9Pr"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="Setting:" destination="iN0-l3-epB" eventType="touchUpInside" id="UK3-7l-uWa"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.23529411764705882" green="0.72156862745098038" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="QkB-Ei-3wy" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="E07-Tm-yzK"/>
                 <constraint firstItem="QkB-Ei-3wy" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="HWK-DG-8CS"/>
+                <constraint firstItem="vNr-4E-NJR" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="HrF-gQ-pwc"/>
+                <constraint firstItem="vNr-4E-NJR" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="YRx-6P-Hxz"/>
                 <constraint firstItem="5M0-pz-eQn" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="wyr-y6-9x9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5M0-pz-eQn" secondAttribute="bottom" constant="8" id="xGB-F8-HeZ"/>
             </constraints>

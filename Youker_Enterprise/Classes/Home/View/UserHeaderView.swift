@@ -9,9 +9,17 @@
 import UIKit
 
 class UserHeaderView: UIView,NibLoad {
+    var callback:(()->())?
 
     @IBOutlet weak var ImageIcon: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    
    
-
+    @IBAction func Setting(_ sender: Any) {
+        
+        if self.callback != nil {
+            callback!()
+        }
+    }
+    
 }

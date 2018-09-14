@@ -40,6 +40,11 @@
 		18B8CDA021452C4F0060DB6B /* ManageUserCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B8CD9E21452C4F0060DB6B /* ManageUserCellTableViewCell.xib */; };
 		18B8CDA2214531E30060DB6B /* UserGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CDA1214531E30060DB6B /* UserGroupModel.swift */; };
 		18B8CDA421453D750060DB6B /* GroupInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CDA321453D750060DB6B /* GroupInfoViewModel.swift */; };
+		18CBB624214C216500F1C807 /* UserCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBB623214C216400F1C807 /* UserCenterTableViewController.swift */; };
+		18CBB627214C21D200F1C807 /* UserImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBB625214C21D100F1C807 /* UserImageViewCell.swift */; };
+		18CBB628214C21D200F1C807 /* UserImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CBB626214C21D100F1C807 /* UserImageViewCell.xib */; };
+		18CBB62B214C220A00F1C807 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBB629214C220A00F1C807 /* UserTableViewCell.swift */; };
+		18CBB62C214C220A00F1C807 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CBB62A214C220A00F1C807 /* UserTableViewCell.xib */; };
 		E50BBD742137A07D00F09D92 /* FWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBCDC2137A07C00F09D92 /* FWNavigationController.swift */; };
 		E50BBD752137A07D00F09D92 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBCDE2137A07C00F09D92 /* NetworkTools.swift */; };
 		E50BBD762137A07D00F09D92 /* YoukerImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBCDF2137A07C00F09D92 /* YoukerImageExtension.swift */; };
@@ -302,6 +307,11 @@
 		18B8CDA1214531E30060DB6B /* UserGroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupModel.swift; sourceTree = "<group>"; };
 		18B8CDA321453D750060DB6B /* GroupInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInfoViewModel.swift; sourceTree = "<group>"; };
 		18C021F587FB603B0CD8AF52 /* Pods_Youker_EnterpriseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_EnterpriseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CBB623214C216400F1C807 /* UserCenterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterTableViewController.swift; sourceTree = "<group>"; };
+		18CBB625214C21D100F1C807 /* UserImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImageViewCell.swift; sourceTree = "<group>"; };
+		18CBB626214C21D100F1C807 /* UserImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserImageViewCell.xib; sourceTree = "<group>"; };
+		18CBB629214C220A00F1C807 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		18CBB62A214C220A00F1C807 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		471D5A34D043E02BE5EB61D0 /* Pods-Youker_EnterpriseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_EnterpriseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_EnterpriseUITests/Pods-Youker_EnterpriseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9B76D3D624BB23299B80417E /* Pods_Youker_EnterpriseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_EnterpriseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A875D962FD1D5EE5C5CE6162 /* Pods-Youker_Enterprise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_Enterprise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_Enterprise/Pods-Youker_Enterprise.debug.xcconfig"; sourceTree = "<group>"; };
@@ -818,6 +828,10 @@
 		185233082136FDA1009927D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18CBB629214C220A00F1C807 /* UserTableViewCell.swift */,
+				18CBB62A214C220A00F1C807 /* UserTableViewCell.xib */,
+				18CBB625214C21D100F1C807 /* UserImageViewCell.swift */,
+				18CBB626214C21D100F1C807 /* UserImageViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -825,6 +839,7 @@
 		185233092136FDA1009927D2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				18CBB623214C216400F1C807 /* UserCenterTableViewController.swift */,
 				186109CE213EEF22002D0BC1 /* UpdateInfoViewController.swift */,
 				186109CD213EEF22002D0BC1 /* UpdateInfoViewController.xib */,
 				E50BBE012137D86400F09D92 /* ModifyPasswordViewController.swift */,
@@ -1603,6 +1618,7 @@
 				E50BBE592137E72E00F09D92 /* PlaceOrderViewController.xib in Resources */,
 				E50BBDFE2137D7CF00F09D92 /* LoginViewController.xib in Resources */,
 				E50BBDF62137D6B400F09D92 /* EditView.xib in Resources */,
+				18CBB62C214C220A00F1C807 /* UserTableViewCell.xib in Resources */,
 				E50BBDBC2137A07D00F09D92 /* CGXBasicInfoPicker.plist in Resources */,
 				E50BBE1C2137DC3400F09D92 /* HotelViewController.xib in Resources */,
 				E5118209213E262E00A1CC11 /* LimitCell.xib in Resources */,
@@ -1617,6 +1633,7 @@
 				E50BBE2A2137DF4600F09D92 /* HotelImageView.xib in Resources */,
 				E50BBE312137E01A00F09D92 /* PayView.xib in Resources */,
 				185232DC2136FCF9009927D2 /* LaunchScreen.storyboard in Resources */,
+				18CBB628214C21D200F1C807 /* UserImageViewCell.xib in Resources */,
 				186109CF213EEF23002D0BC1 /* UpdateInfoViewController.xib in Resources */,
 				185232D92136FCF9009927D2 /* Assets.xcassets in Resources */,
 				E50BBDD32137CA3F00F09D92 /* WSDatePickerView.xib in Resources */,
@@ -1808,6 +1825,7 @@
 				E50BBE132137D9D300F09D92 /* HotelListTableViewController.swift in Sources */,
 				E50BBD872137A07D00F09D92 /* MJRefreshBackNormalFooter.m in Sources */,
 				E50BBDC52137A07D00F09D92 /* UIViewController+FWSideMenuExtension.swift in Sources */,
+				18CBB62B214C220A00F1C807 /* UserTableViewCell.swift in Sources */,
 				E5118208213E262E00A1CC11 /* LimitCell.swift in Sources */,
 				E50BBE5C2137E76700F09D92 /* OrderViewModel.swift in Sources */,
 				E50BBE322137E01A00F09D92 /* ZXPopView.swift in Sources */,
@@ -1872,6 +1890,7 @@
 				E50BBE1F2137DE8D00F09D92 /* businessInfo.swift in Sources */,
 				E50BBD802137A07D00F09D92 /* MJRefreshConst.m in Sources */,
 				E50BBD7F2137A07D00F09D92 /* UIScrollView+MJRefresh.m in Sources */,
+				18CBB624214C216500F1C807 /* UserCenterTableViewController.swift in Sources */,
 				E50BBDE22137CB2000F09D92 /* SYCitySelectionController.m in Sources */,
 				E50BBE562137E6CE00F09D92 /* HotelInfo.swift in Sources */,
 				E50BBD922137A07D00F09D92 /* MJRefreshComponent.m in Sources */,
@@ -1916,6 +1935,7 @@
 				E50BBDF32137D66900F09D92 /* TypeView.swift in Sources */,
 				E50BBE5A2137E72E00F09D92 /* PlaceOrderViewController.swift in Sources */,
 				18B8CD9B21452B650060DB6B /* ManageEnterUserTableViewController.swift in Sources */,
+				18CBB627214C21D200F1C807 /* UserImageViewCell.swift in Sources */,
 				E50BBD9E2137A07D00F09D92 /* PageContentView.swift in Sources */,
 				E50BBD8D2137A07D00F09D92 /* MJRefreshGifHeader.m in Sources */,
 				E50BBE3C2137E28500F09D92 /* shareViewMode.swift in Sources */,
