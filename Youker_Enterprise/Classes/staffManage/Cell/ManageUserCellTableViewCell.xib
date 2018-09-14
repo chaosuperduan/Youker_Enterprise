@@ -38,12 +38,17 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselected" translatesAutoresizingMaskIntoConstraints="NO" id="5k3-fB-wc0">
+                        <rect key="frame" x="270" y="11" width="21" height="21"/>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="5k3-fB-wc0" secondAttribute="trailing" constant="29" id="D7l-TX-noM"/>
                     <constraint firstItem="qCi-TW-Pqu" firstAttribute="leading" secondItem="W9b-wh-fAp" secondAttribute="trailing" constant="20" id="Rp3-bC-ICj"/>
                     <constraint firstItem="W9b-wh-fAp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hvA-zA-gpq"/>
                     <constraint firstItem="qCi-TW-Pqu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qX0-UO-tdy"/>
                     <constraint firstItem="W9b-wh-fAp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sJ1-lg-7Cl"/>
+                    <constraint firstItem="5k3-fB-wc0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zrC-Uh-lqc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -53,4 +58,7 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="unselected" width="21" height="21"/>
+    </resources>
 </document>

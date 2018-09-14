@@ -109,6 +109,7 @@ extension LimitationViewController{
         params["companyId"] = UserAccount.loadUserAccount()?.company_Id
         
         params["userId"] = UserAccount.loadUserAccount()?.user_Id
+        
         params["token"] = UserAccount.loadUserAccount()?.token;
         GroupInfoViewModel.sharedInstance.GetGroupInfomation(params: params as! [String : AnyObject], orVC: self, callback1: {
             

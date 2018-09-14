@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LimitManageViewController" customModule="Youker_Enterprise" customModuleProvider="target">
             <connections>
+                <outlet property="maxTF" destination="Nul-ZJ-UU0" id="UVz-3Z-j8i"/>
+                <outlet property="minTF" destination="Om0-Pe-AVm" id="PpL-Hd-six"/>
+                <outlet property="nameTF" destination="zI0-gv-fbv" id="16i-Qy-hAi"/>
+                <outlet property="tableview" destination="9U0-5y-Dxt" id="Lob-cq-Aao"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

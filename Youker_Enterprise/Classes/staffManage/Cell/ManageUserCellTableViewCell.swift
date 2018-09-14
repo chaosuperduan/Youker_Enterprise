@@ -15,18 +15,25 @@ class ManageUserCellTableViewCell: UITableViewCell {
     var mode:User?{
         didSet{
             
-            self.titleLabel.text = mode?.employee_Name
-            self.subTitleLabel.text = String.init(format: "(@%)", (mode?.phoneNumber)!)
+            
+           
             }
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+      
+        
+    }
+    
+    func setupui(){
+        self.titleLabel.text = mode?.employee_Name
+        self.subTitleLabel.text = "("+(mode?.phoneNumber)!+")"
         
         
     }
-
+  
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

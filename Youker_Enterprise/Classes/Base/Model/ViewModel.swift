@@ -24,6 +24,7 @@ class LoginViewModel: NSObject {
         print(LoginURL)
         NetworkTools.requestData(.post, URLString: LoginURL, parameters: params) { (response,mes) in
             print(response ?? "")
+            
             if  response == nil{
                 if (orVC != nil){
                     
@@ -50,6 +51,7 @@ class LoginViewModel: NSObject {
                
                 
                 if(orVC != nil ){
+                    
                     orVC?.ReqType = RequestResultType.SUCCESS
                     
                     
@@ -78,6 +80,19 @@ class LoginViewModel: NSObject {
                 }else{
                     let account = UserAccount.init(dic: dicAount as! [String : AnyObject])
                     account.user_Pwd = UserAccount.account?.user_Pwd
+                    
+                    
+                    if(dicts.keys.contains("cpyInfo")){
+                        
+                        let copDic:[String:AnyObject] = dicts["cpyInfo"]!
+                        
+                        let copMode:cpyInfo = cpyInfo.init(dict: copDic)
+                        print(copMode)
+                        print(cpyInfo.getDic(mode: copMode))
+                        
+                        account.company_Id = copMode.company_Id
+                        
+                    }
                     account.savaAccout()
                     
                     if(caBalck != nil){

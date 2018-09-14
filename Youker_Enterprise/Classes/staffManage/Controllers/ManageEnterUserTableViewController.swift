@@ -65,18 +65,32 @@ class ManageEnterUserTableViewController: BaseTableViewController{
         let group:UserGroupModel = self.dataArray[indexPath.section]
         let mode :User = group.users[indexPath.row]
         
+        
         //let mode = group[indexPath.row]
         cell.mode = mode
 //        cell.mode = self.dataArray[indexPath.section].users[indexPath.row]
+        cell.setupui()
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel.init(frame: CGRect.init(x: 20, y: 0, width: 120, height: 20))
+        
+        
+        label.text =  "  " + self.dataArray[section].group_Name!
+        label.textColor = naviColor
+        return label
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
     func setUpUI(){
       self.navigationItem.title = "企业员工管理"
-        self.tableView.register(ManageUserCellTableViewCell.self, forCellReuseIdentifier: "manageCell")
+        self.tableView.register(UINib.init(nibName: "ManageUserCellTableViewCell", bundle: nil), forCellReuseIdentifier: "manageCell")
         
         
     }
