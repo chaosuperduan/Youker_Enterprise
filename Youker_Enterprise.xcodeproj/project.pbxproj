@@ -243,6 +243,8 @@
 		E52EDC8421412D8900458275 /* CityNameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7C21412D8900458275 /* CityNameModel.m */; };
 		E52EDC8521412D8900458275 /* UIView+GoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7E21412D8900458275 /* UIView+GoodView.m */; };
 		E52EDC8621412D8900458275 /* ZSAnalysisClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC8121412D8900458275 /* ZSAnalysisClass.m */; };
+		E5795DCD214CA061000F1EEB /* SystemableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5795DCB214CA061000F1EEB /* SystemableViewController.swift */; };
+		E5795DCE214CA061000F1EEB /* SystemableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5795DCC214CA061000F1EEB /* SystemableViewController.xib */; };
 		E5804AAB2142B550006AFBCE /* province_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E5804AAA2142B550006AFBCE /* province_data.json */; };
 		E5A5A4B9213A8C1200BAA166 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */; };
 		E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */; };
@@ -574,6 +576,8 @@
 		E52EDC8021412D8900458275 /* UIView+GoodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GoodView.h"; sourceTree = "<group>"; };
 		E52EDC8121412D8900458275 /* ZSAnalysisClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSAnalysisClass.m; sourceTree = "<group>"; };
 		E52EDC8221412D8900458275 /* CityNameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityNameModel.h; sourceTree = "<group>"; };
+		E5795DCB214CA061000F1EEB /* SystemableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemableViewController.swift; sourceTree = "<group>"; };
+		E5795DCC214CA061000F1EEB /* SystemableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemableViewController.xib; sourceTree = "<group>"; };
 		E5804AAA2142B550006AFBCE /* province_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province_data.json; sourceTree = "<group>"; };
 		E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementViewController.xib; sourceTree = "<group>"; };
@@ -850,6 +854,8 @@
 				E50BBDF82137D7CF00F09D92 /* RegisterViewController.xib */,
 				186109C9213EE5A2002D0BC1 /* FirstViewController.swift */,
 				186109CA213EE5A2002D0BC1 /* FirstViewController.xib */,
+				E5795DCB214CA061000F1EEB /* SystemableViewController.swift */,
+				E5795DCC214CA061000F1EEB /* SystemableViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1652,6 +1658,7 @@
 				E50BBE6A2137E99100F09D92 /* OrderDetailHeader.xib in Resources */,
 				E5804AAB2142B550006AFBCE /* province_data.json in Resources */,
 				E50BBDB82137A07D00F09D92 /* CGXPickerView.bundle in Resources */,
+				E5795DCE214CA061000F1EEB /* SystemableViewController.xib in Resources */,
 				18511F792139A88F00DF7BAD /* HomeFootView.xib in Resources */,
 				E50BBE392137E1EB00F09D92 /* RoomViewController.xib in Resources */,
 				E50BBE832137EAD200F09D92 /* SelectCouponView.xib in Resources */,
@@ -1888,6 +1895,7 @@
 				E50BBD762137A07D00F09D92 /* YoukerImageExtension.swift in Sources */,
 				E50BBD752137A07D00F09D92 /* NetworkTools.swift in Sources */,
 				E50BBE1F2137DE8D00F09D92 /* businessInfo.swift in Sources */,
+				E5795DCD214CA061000F1EEB /* SystemableViewController.swift in Sources */,
 				E50BBD802137A07D00F09D92 /* MJRefreshConst.m in Sources */,
 				E50BBD7F2137A07D00F09D92 /* UIScrollView+MJRefresh.m in Sources */,
 				18CBB624214C216500F1C807 /* UserCenterTableViewController.swift in Sources */,

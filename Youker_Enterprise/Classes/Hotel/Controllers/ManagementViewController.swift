@@ -69,6 +69,8 @@ extension ManagementViewController:UITableViewDelegate,UITableViewDataSource{
             self.navigationController?.pushViewController(ManageEnterUserTableViewController(), animated: true)
             break
         case 1:
+            let vc = LimitationViewController()
+            
             self.navigationController?.pushViewController(LimitationViewController(), animated: true)
             break
         default:

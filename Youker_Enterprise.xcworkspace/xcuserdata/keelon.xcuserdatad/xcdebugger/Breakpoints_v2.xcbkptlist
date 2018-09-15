@@ -35,5 +35,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Youker_Enterprise/Classes/staffManage/ViewModel/GroupInfoViewModel.swift"
+            timestampString = "558692895.412653"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "GetGroupAndUser(params:orVC:callback1:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Youker_Enterprise/Classes/staffManage/Controllers/LimitManageViewController.swift"
+            timestampString = "558692895.4127949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Youker_Enterprise.LimitManageViewController.loadData() -&gt; ()"
+                  moduleName = "Youker_Enterprise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keelon/Desktop/youke/YOUKER_ENTER/Youker_Enterprise/Youker_Enterprise/Classes/staffManage/Controllers/LimitManageViewController.swift"
+                  timestampString = "558692895.4823689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "3290">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Youker_Enterprise.LimitManageViewController.loadData() -&gt; ()"
+                  moduleName = "Youker_Enterprise"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keelon/Desktop/youke/YOUKER_ENTER/Youker_Enterprise/Youker_Enterprise/Classes/staffManage/Controllers/LimitManageViewController.swift"
+                  timestampString = "558692895.485245"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

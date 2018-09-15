@@ -33,20 +33,13 @@ class LimitManageViewController: UIViewController {
         params["groupId"] = mode?.group_Id
         params["operateUser"] = UserAccount.loadUserAccount()?.user_Id
         
-       params["token"] = UserAccount.loadUserAccount()?.token
+       params["token"] = UserAccount.loadUserAccount()?.token!
         
         GroupInfoViewModel.sharedInstance.GetGroupAndUser(params: params as! [String : AnyObject], orVC: self, callback1: {
             
             
             
         })
-        
-        
-        
     }
-
-   
-
-   
 
 }
