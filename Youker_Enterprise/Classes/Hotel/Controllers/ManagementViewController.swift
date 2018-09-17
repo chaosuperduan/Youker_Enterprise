@@ -23,15 +23,7 @@ class ManagementViewController: BaseViewController {
     }
     
     
-     func loadData(){
-          let params = NSMutableDictionary()
-        params["companyId"] = UserAccount.loadUserAccount()?.company_Id
-        
-        
-        
-      GroupInfoViewModel.sharedInstance.GetCompanyAdmin(params: <#T##[String : AnyObject]#>, orVC: <#T##AddAdminTableViewController?#>, callback1: <#T##(() -> ())##(() -> ())##() -> ()#>)
-    
-    }
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

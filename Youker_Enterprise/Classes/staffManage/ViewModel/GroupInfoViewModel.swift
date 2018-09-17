@@ -147,7 +147,7 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
     }
     
     
-    //获取分组和员工列表。
+    //获取管理员列表。
     func GetCompanyAdmin(params:[String:AnyObject],orVC:AddAdminTableViewController?,callback1:@escaping (()->())){
         print(GetGroupByID)
         NetworkTools.requestData(.get, URLString:  GetAdminInfoURL, parameters: params as? [String : Any]) { (response,mes) in
@@ -173,6 +173,50 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
             }
         }
     }
+    
+    //添加管理员
+    
+    
+    func ADDCompanyAdmin(params:[String:AnyObject],orVC:AddViewController?,callback1:@escaping (()->())){
+        print(GetGroupByID)
+        NetworkTools.requestData(.get, URLString:  AddEnterAdmURL, parameters: params as? [String : Any]) { (response,mes) in
+            print(response)
+            if  response != nil{
+                
+                guard let responseDic:[String:AnyObject] = response as! [String : AnyObject] else{
+                    
+                    
+                    return
+                }
+                let code:NSInteger = responseDic["code"] as! NSInteger
+                
+                if(code == 200){
+                    
+                    orVC?.ReqType =  RequestResultType.SUCCESS
+                    callback1()
+                }else{
+                    
+                    orVC?.ReqType  = RequestResultType.ERROR
+                    orVC?.errorMessage = responseDic["message"] as! String
+                    
+                }
+                
+                
+                
+                
+                
+            }else{
+                
+                
+                callback1()
+            }
+        }
+    }
+    
+    
+    
+    
+    
     
 }
 

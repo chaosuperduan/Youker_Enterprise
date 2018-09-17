@@ -16,7 +16,13 @@ class SystemableViewController: UITableViewController {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "settting")
       self.navigationItem.title = "系统设置"
       self.tableView.tableFooterView = UIView()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "left"), style: .plain, target: self, action: #selector(back))
 
+    }
+    
+    @objc func back(){
+        
+        dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
