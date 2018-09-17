@@ -243,6 +243,7 @@
 		E52EDC8421412D8900458275 /* CityNameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7C21412D8900458275 /* CityNameModel.m */; };
 		E52EDC8521412D8900458275 /* UIView+GoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7E21412D8900458275 /* UIView+GoodView.m */; };
 		E52EDC8621412D8900458275 /* ZSAnalysisClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC8121412D8900458275 /* ZSAnalysisClass.m */; };
+		E55CC9B0214F9CE400EA4E5B /* AddAdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CC9AF214F9CE400EA4E5B /* AddAdminTableViewController.swift */; };
 		E5795DCD214CA061000F1EEB /* SystemableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5795DCB214CA061000F1EEB /* SystemableViewController.swift */; };
 		E5795DCE214CA061000F1EEB /* SystemableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5795DCC214CA061000F1EEB /* SystemableViewController.xib */; };
 		E5804AAB2142B550006AFBCE /* province_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E5804AAA2142B550006AFBCE /* province_data.json */; };
@@ -576,6 +577,7 @@
 		E52EDC8021412D8900458275 /* UIView+GoodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GoodView.h"; sourceTree = "<group>"; };
 		E52EDC8121412D8900458275 /* ZSAnalysisClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSAnalysisClass.m; sourceTree = "<group>"; };
 		E52EDC8221412D8900458275 /* CityNameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityNameModel.h; sourceTree = "<group>"; };
+		E55CC9AF214F9CE400EA4E5B /* AddAdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdminTableViewController.swift; sourceTree = "<group>"; };
 		E5795DCB214CA061000F1EEB /* SystemableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemableViewController.swift; sourceTree = "<group>"; };
 		E5795DCC214CA061000F1EEB /* SystemableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemableViewController.xib; sourceTree = "<group>"; };
 		E5804AAA2142B550006AFBCE /* province_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province_data.json; sourceTree = "<group>"; };
@@ -657,6 +659,7 @@
 				187ED77D2142DD6C00681240 /* InviteTotalViewController.swift */,
 				187ED77F2142DD9C00681240 /* InviteTableViewController.swift */,
 				18B8CD9A21452B650060DB6B /* ManageEnterUserTableViewController.swift */,
+				E55CC9AF214F9CE400EA4E5B /* AddAdminTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1883,6 +1886,7 @@
 				E50BBDA02137A07D00F09D92 /* WXApiResponseHandler.m in Sources */,
 				E50BBE822137EAD200F09D92 /* SelectCouponView.swift in Sources */,
 				E50BBE1D2137DC3400F09D92 /* HotelViewController.swift in Sources */,
+				E55CC9B0214F9CE400EA4E5B /* AddAdminTableViewController.swift in Sources */,
 				E52EDC8521412D8900458275 /* UIView+GoodView.m in Sources */,
 				E50BBDB62137A07D00F09D92 /* NSDate+CGXPicker.m in Sources */,
 				182EBE2B213D8D9200088673 /* LimitationViewController.swift in Sources */,

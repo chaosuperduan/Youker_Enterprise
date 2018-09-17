@@ -16,6 +16,8 @@ class LimitationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        setUp()
+        
+        
     }
     func setUp(){
         
@@ -29,13 +31,13 @@ class LimitationViewController: BaseViewController {
                 
             }else{
               let vc = LimitManageViewController()
-                
+              vc.mode = self.dataArray[index]
               self.navigationController?.pushViewController(vc, animated: true)
                 
                 
             }
             
-            
+         
             
         }
         view.addSubview(Lv)
@@ -45,7 +47,7 @@ class LimitationViewController: BaseViewController {
             
             Lv.collectionview?.reloadData()
         }
-        
+    
     }
     //添加企业分组信息。
     func  addGroupInfo(vi:LimitView,mode:UserGroupModel,callback:@escaping ()->()){

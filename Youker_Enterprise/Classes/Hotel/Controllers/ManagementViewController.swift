@@ -21,6 +21,17 @@ class ManagementViewController: BaseViewController {
         setUpUi()
         
     }
+    
+    
+     func loadData(){
+          let params = NSMutableDictionary()
+        params["companyId"] = UserAccount.loadUserAccount()?.company_Id
+        
+        
+        
+      GroupInfoViewModel.sharedInstance.GetCompanyAdmin(params: <#T##[String : AnyObject]#>, orVC: <#T##AddAdminTableViewController?#>, callback1: <#T##(() -> ())##(() -> ())##() -> ()#>)
+    
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -72,6 +83,11 @@ extension ManagementViewController:UITableViewDelegate,UITableViewDataSource{
             let vc = LimitationViewController()
             
             self.navigationController?.pushViewController(LimitationViewController(), animated: true)
+            break
+        case 2:
+            let vc = AddAdminTableViewController()
+            
+            self.navigationController?.pushViewController(vc, animated: true)
             break
         default:
             break

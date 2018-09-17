@@ -126,24 +126,46 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
             print(response)
             if  response != nil{
                 
-                guard let modeDic:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
+                guard let modeDic:[String:AnyObject] = response?["data"] as! [String : AnyObject] else{
                     
                    
                     return
                 }
-                for dic in modeDic{
-                    
-//                    let mode = UserGroupModel.init(dict: dic as! [String : NSObject])
-//                    orVC?.dataArray.append(mode)
-                }
-//                if((orVC?.dataArray.count)!<1){
-//                    orVC?.header.endRefreshing()
-//                    orVC?.ReqType = RequestResultType.NODATA
-//                }
-//
-//                orVC?.tableView.reloadData()
-//                callback1()
+          
+
                 
+                 let mode = UserGroupModel.init(dict: modeDic as! [String : NSObject])
+                orVC?.DataMode = mode
+                
+                orVC?.tableview.reloadData()
+            }else{
+                
+                
+                callback1()
+            }
+        }
+    }
+    
+    
+    //获取分组和员工列表。
+    func GetCompanyAdmin(params:[String:AnyObject],orVC:AddAdminTableViewController?,callback1:@escaping (()->())){
+        print(GetGroupByID)
+        NetworkTools.requestData(.get, URLString:  GetAdminInfoURL, parameters: params as? [String : Any]) { (response,mes) in
+            print(response)
+            if  response != nil{
+                
+                guard let modeDic:[String:AnyObject] = response?["data"] as! [String : AnyObject] else{
+                    
+                    
+                    return
+                }
+                
+                
+                
+                let mode = UserGroupModel.init(dict: modeDic as! [String : NSObject])
+                orVC?.DataMode = mode
+                
+                orVC?.tableView.reloadData()
             }else{
                 
                 

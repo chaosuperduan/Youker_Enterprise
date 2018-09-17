@@ -14,7 +14,7 @@ class ManageUserCellTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     var mode:User?{
         didSet{
-            
+           setupui()
             
            
             }
