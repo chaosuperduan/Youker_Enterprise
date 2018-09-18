@@ -22,8 +22,10 @@ class AddAdminTableViewController: BaseTableViewController {
     
     func loadData(){
         let params = NSMutableDictionary()
+        params["token"] = UserAccount.loadUserAccount()?.token!
         params["companyId"] = UserAccount.loadUserAccount()?.company_Id
-        GroupInfoViewModel.sharedInstance.GetCompanyAdmin(params: params as! [String : AnyObject], orVC: self) {
+        params["userId"] = UserAccount.loadUserAccount()?.user_Id;
+         AdminViewModel.sharedInstance.GetCompanyAdmin(params: params as! [String : AnyObject], orVC: self) {
             
         }
         

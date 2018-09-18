@@ -74,7 +74,9 @@ class StaffAddTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 0 {
-            self.navigationController?.pushViewController(AddViewController(), animated: true)
+            let vc = AddViewController()
+            vc.type = addType.ADD_EMPLOYEE
+            self.navigationController?.pushViewController(vc, animated: true)
             
             
         }else{

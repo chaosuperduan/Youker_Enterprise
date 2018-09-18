@@ -7,8 +7,9 @@
 //
 
 import UIKit
-private let titles = ["企业员工管理","限额管理","权限管理"]
-private let imgs = ["yuangong","xianer","quanxian"]
+private let titles = ["企业员工管理","限额管理","权限管理","邀请记录"]
+
+private let imgs = ["yuangong","xianer","quanxian","quanxian"]
 class ManagementViewController: BaseViewController {
 
     @IBOutlet weak var header: UIView!
@@ -25,7 +26,7 @@ class ManagementViewController: BaseViewController {
     
   
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {   
         super.didReceiveMemoryWarning()
        
     }
@@ -81,6 +82,11 @@ extension ManagementViewController:UITableViewDelegate,UITableViewDataSource{
             
             self.navigationController?.pushViewController(vc, animated: true)
             break
+        case 3:
+            let vc = InviteTotalViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+        
         default:
             break
         }

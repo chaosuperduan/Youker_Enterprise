@@ -67,7 +67,7 @@ let DeleteURL = rootURL + "v2/booking/delete/order/user"
 
 let RegisterMerchant = rootURL + "v3/cpy/add/cpyInfo"
 //邀请用户。
-let InviteURL = "v3/cpy/invite/user"
+let InviteURL = rootURL + "v3/cpy/invite/user"
 //根据公司ID获取所有分组和与员工信息
 let GetGroupInfoAndUser = rootURL+"v3/cpy/get/groups/users/cpyId"
 
@@ -91,6 +91,6 @@ let AddUserToGropURL = "v3/cpy/add/users/group"
 //批量添加员工到分组
 let DeleteUserToGroupURL = "v3/cpy/del/users/group"
 //获取企业管理员。
-let GetAdminInfoURL = "v3/cpy/get/admins/info"
+let GetAdminInfoURL = rootURL + "v3/cpy/get/admins/info"
 //获取邀请url
 let GetInviteURL = "v3/cpy/get/inviteUrl"

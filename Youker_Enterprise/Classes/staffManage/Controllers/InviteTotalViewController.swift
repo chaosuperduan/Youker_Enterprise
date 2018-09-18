@@ -43,7 +43,7 @@ class InviteTotalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       setUpUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,7 +61,7 @@ extension InviteTotalViewController{
         view.addSubview(pageTitleView)
         // 2.添加ContentView
         view.addSubview(pageContentView)
-        self.navigationItem.title  = "我的订单"
+        self.navigationItem.title  = "邀请记录"
         let item = UIBarButtonItem.init(image: UIImage.init(named: "left"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "editItem"), style: .done, target: self, action: #selector(editDone))
         self.navigationItem.leftBarButtonItem  = item;

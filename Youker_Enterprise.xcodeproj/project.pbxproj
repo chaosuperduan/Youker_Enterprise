@@ -244,6 +244,7 @@
 		E52EDC8521412D8900458275 /* UIView+GoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC7E21412D8900458275 /* UIView+GoodView.m */; };
 		E52EDC8621412D8900458275 /* ZSAnalysisClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E52EDC8121412D8900458275 /* ZSAnalysisClass.m */; };
 		E55CC9B0214F9CE400EA4E5B /* AddAdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55CC9AF214F9CE400EA4E5B /* AddAdminTableViewController.swift */; };
+		E56DE31921509AFE0035BC03 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56DE31821509AFE0035BC03 /* AdminViewModel.swift */; };
 		E5795DCD214CA061000F1EEB /* SystemableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5795DCB214CA061000F1EEB /* SystemableViewController.swift */; };
 		E5795DCE214CA061000F1EEB /* SystemableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5795DCC214CA061000F1EEB /* SystemableViewController.xib */; };
 		E5804AAB2142B550006AFBCE /* province_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E5804AAA2142B550006AFBCE /* province_data.json */; };
@@ -578,6 +579,7 @@
 		E52EDC8121412D8900458275 /* ZSAnalysisClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSAnalysisClass.m; sourceTree = "<group>"; };
 		E52EDC8221412D8900458275 /* CityNameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityNameModel.h; sourceTree = "<group>"; };
 		E55CC9AF214F9CE400EA4E5B /* AddAdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdminTableViewController.swift; sourceTree = "<group>"; };
+		E56DE31821509AFE0035BC03 /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
 		E5795DCB214CA061000F1EEB /* SystemableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemableViewController.swift; sourceTree = "<group>"; };
 		E5795DCC214CA061000F1EEB /* SystemableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemableViewController.xib; sourceTree = "<group>"; };
 		E5804AAA2142B550006AFBCE /* province_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province_data.json; sourceTree = "<group>"; };
@@ -678,6 +680,7 @@
 			isa = PBXGroup;
 			children = (
 				18B8CDA321453D750060DB6B /* GroupInfoViewModel.swift */,
+				E56DE31821509AFE0035BC03 /* AdminViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1833,6 +1836,7 @@
 				E50BBDF02137D66900F09D92 /* BaseViewController.swift in Sources */,
 				18B8CDA421453D750060DB6B /* GroupInfoViewModel.swift in Sources */,
 				E50BBE132137D9D300F09D92 /* HotelListTableViewController.swift in Sources */,
+				E56DE31921509AFE0035BC03 /* AdminViewModel.swift in Sources */,
 				E50BBD872137A07D00F09D92 /* MJRefreshBackNormalFooter.m in Sources */,
 				E50BBDC52137A07D00F09D92 /* UIViewController+FWSideMenuExtension.swift in Sources */,
 				18CBB62B214C220A00F1C807 /* UserTableViewCell.swift in Sources */,
