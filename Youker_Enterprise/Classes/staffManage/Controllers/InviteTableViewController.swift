@@ -8,17 +8,33 @@
 
 import UIKit
 
-class InviteTableViewController: UITableViewController {
+class InviteTableViewController: BaseTableViewController {
+    var isJoin:Bool = false
+    var dataArray:[User] = [User]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadDatas()
+        self.tableView.register(UINib.init(nibName: "InviteTableViewCell", bundle: nil), forCellReuseIdentifier: "invite")
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       
     }
+    override func loadDatas() {
+        let params = NSMutableDictionary()
+        params["companyId"] = UserAccount.loadUserAccount()?.company_Id
+        
+        params["state"] = isJoin ? 134:133
+        params["operateUser"] = UserAccount.loadUserAccount()?.user_Id
+        
+        InviteViewModel.sharedInstance.GetInviteUsers(params: params as! [String : AnyObject], orVC: self) {
+            
+        }
+        
+        
+        
+    }
+    
+    
     
     
 
@@ -31,23 +47,25 @@ class InviteTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.dataArray.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "invite", for: indexPath) as! InviteTableViewCell
+
+        if cell == nil  {
+            cell == InviteTableViewCell()
+        }
+        cell.user = self.dataArray[indexPath.row]
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

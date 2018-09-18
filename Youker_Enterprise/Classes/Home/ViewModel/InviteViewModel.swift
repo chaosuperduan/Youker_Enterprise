@@ -12,14 +12,25 @@ class InviteViewModel: NSObject {
     
     static let sharedInstance = InviteViewModel()
     
-    func InviteUser(params:[String:AnyObject],orVC:UpdateInfoViewController?,callback1:@escaping (()->())){
+    func GetInviteUsers(params:[String:AnyObject],orVC:InviteTableViewController?,callback1:@escaping (()->())){
         print(RegisterMerchant)
-        NetworkTools.requestData(.post, URLString:  RegisterMerchant, parameters: params as? [String : Any]) { (response,mes) in
+        NetworkTools.requestData(.get, URLString:  GetUsersList, parameters: params as? [String : Any]) { (response,mes) in
             print(response)
             if  response == nil{
-                //                orVC?.errorMessage = mes
-                //                orVC?.ReqType = RequestResultType.ERROR
-                return
+                
+                guard let responseArrays:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
+                    return
+                }
+                
+                for  dic in responseArrays{
+                    
+                   // let 
+                    
+                    
+                }
+               
+                
+                
                 
             }else{
                 

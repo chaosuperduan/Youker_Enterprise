@@ -26,7 +26,10 @@ class InviteTotalViewController: UIViewController {
         // 2.确定所有的子控制器
         var childVcs = [UIViewController]()
         let vc1 = InviteTableViewController()
+        
+        
         let vc2 = InviteTableViewController()
+        vc2.isJoin = true
         //0是未入住。1是已入住。
 //        vc2.state = 0
 //

@@ -35,6 +35,8 @@
 		187ED77E2142DD6C00681240 /* InviteTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187ED77D2142DD6C00681240 /* InviteTotalViewController.swift */; };
 		187ED7802142DD9C00681240 /* InviteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187ED77F2142DD9C00681240 /* InviteTableViewController.swift */; };
 		18A16F8B2148264600811900 /* EditGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A16F8A2148264600811900 /* EditGroup.swift */; };
+		18AF3286215161F300064571 /* InviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF3284215161F300064571 /* InviteTableViewCell.swift */; };
+		18AF3287215161F300064571 /* InviteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AF3285215161F300064571 /* InviteTableViewCell.xib */; };
 		18B8CD9B21452B650060DB6B /* ManageEnterUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CD9A21452B650060DB6B /* ManageEnterUserTableViewController.swift */; };
 		18B8CD9F21452C4F0060DB6B /* ManageUserCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CD9D21452C4F0060DB6B /* ManageUserCellTableViewCell.swift */; };
 		18B8CDA021452C4F0060DB6B /* ManageUserCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B8CD9E21452C4F0060DB6B /* ManageUserCellTableViewCell.xib */; };
@@ -305,6 +307,8 @@
 		187ED77D2142DD6C00681240 /* InviteTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTotalViewController.swift; sourceTree = "<group>"; };
 		187ED77F2142DD9C00681240 /* InviteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTableViewController.swift; sourceTree = "<group>"; };
 		18A16F8A2148264600811900 /* EditGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroup.swift; sourceTree = "<group>"; };
+		18AF3284215161F300064571 /* InviteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTableViewCell.swift; sourceTree = "<group>"; };
+		18AF3285215161F300064571 /* InviteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviteTableViewCell.xib; sourceTree = "<group>"; };
 		18B8CD9A21452B650060DB6B /* ManageEnterUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageEnterUserTableViewController.swift; sourceTree = "<group>"; };
 		18B8CD9D21452C4F0060DB6B /* ManageUserCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageUserCellTableViewCell.swift; sourceTree = "<group>"; };
 		18B8CD9E21452C4F0060DB6B /* ManageUserCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageUserCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -871,6 +875,8 @@
 			children = (
 				18B8CD9D21452C4F0060DB6B /* ManageUserCellTableViewCell.swift */,
 				18B8CD9E21452C4F0060DB6B /* ManageUserCellTableViewCell.xib */,
+				18AF3284215161F300064571 /* InviteTableViewCell.swift */,
+				18AF3285215161F300064571 /* InviteTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1684,6 +1690,7 @@
 				E511820D213E6D0300A1CC11 /* LimitManageViewController.xib in Resources */,
 				E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */,
 				E50BBDAC2137A07D00F09D92 /* ContentView.xib in Resources */,
+				18AF3287215161F300064571 /* InviteTableViewCell.xib in Resources */,
 				185232D72136FCF8009927D2 /* Main.storyboard in Resources */,
 				E50BBE072137D8B600F09D92 /* HomeViewController.xib in Resources */,
 				E50BBEC52139399100F09D92 /* UserHeaderView.xib in Resources */,
@@ -1831,6 +1838,7 @@
 				E50BBE452137E4F800F09D92 /* TotalTableViewController.swift in Sources */,
 				E50BBE192137DA2C00F09D92 /* SearchParamModel.swift in Sources */,
 				E50BBD7B2137A07D00F09D92 /* String+Extension.swift in Sources */,
+				18AF3286215161F300064571 /* InviteTableViewCell.swift in Sources */,
 				E50BBE4D2137E5AE00F09D92 /* CycleCell.swift in Sources */,
 				E50BBE652137E97400F09D92 /* OrderDetailSecondView.swift in Sources */,
 				E50BBDF02137D66900F09D92 /* BaseViewController.swift in Sources */,

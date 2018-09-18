@@ -24,6 +24,7 @@ class UserGroupModel: BaseMode {
         if (dict.keys.contains("users")) {
             guard let dicts:[[String:AnyObject]] = dict["users"] as? [[String : AnyObject]] else {
                 return
+                
             }
             users.removeAll()
             for dic  in dicts{
@@ -63,12 +64,17 @@ class User: BaseMode {
 @objc    var company_Id:NSInteger = 0
 @objc    var employee_Name:String?
 @objc    var group_Id:NSInteger = 0
-@objc    var invite_Time:NSInteger = 0
+    @objc    var invite_Time:NSInteger = 0{
+        didSet{
+            timestr = TimeTool.getTimeStrWithInt(time: invite_Time)
+            
+        }
+    }
 @objc    var invite_User:NSInteger = 0
 @objc    var phoneNumber:String?
 @objc    var record_Id:NSInteger = 0
 @objc    var role_Type:NSInteger = 0
 @objc    var user_Id:NSInteger = 0
-    
+var timestr:String?
     
 }
