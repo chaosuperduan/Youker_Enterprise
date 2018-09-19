@@ -17,7 +17,10 @@ class InviteTableViewCell: UITableViewCell {
         
         didSet{
             titleLabel.text = (user?.employee_Name!)! + "(" + (user?.phoneNumber!)! + ")"
-            subtitleLabel.text = user?.timestr!
+            if user?.timestr != nil {
+                subtitleLabel.text = user?.timestr!
+            }
+            
             
         }
     }

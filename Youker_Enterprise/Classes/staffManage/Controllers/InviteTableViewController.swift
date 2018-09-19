@@ -16,13 +16,14 @@ class InviteTableViewController: BaseTableViewController {
         super.viewDidLoad()
         loadDatas()
         self.tableView.register(UINib.init(nibName: "InviteTableViewCell", bundle: nil), forCellReuseIdentifier: "invite")
+        self.tableView.tableFooterView  = UIView()
 
        
     }
     override func loadDatas() {
         let params = NSMutableDictionary()
         params["companyId"] = UserAccount.loadUserAccount()?.company_Id
-        
+        params["token"] = UserAccount.loadUserAccount()?.token!
         params["state"] = isJoin ? 134:133
         params["operateUser"] = UserAccount.loadUserAccount()?.user_Id
         

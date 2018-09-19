@@ -18,6 +18,7 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QkB-Ei-3wy">
                     <rect key="frame" x="153.5" y="62" width="68" height="68"/>
+                    <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M0-pz-eQn">
                     <rect key="frame" x="166" y="163" width="42" height="21"/>
@@ -31,7 +32,6 @@
                         <constraint firstAttribute="width" constant="78" id="3cn-z3-ROT"/>
                         <constraint firstAttribute="height" constant="76" id="p71-v6-9Pr"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
                     <connections>
                         <action selector="Setting:" destination="iN0-l3-epB" eventType="touchUpInside" id="UK3-7l-uWa"/>
                     </connections>

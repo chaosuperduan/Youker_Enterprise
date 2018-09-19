@@ -16,7 +16,7 @@ class InviteViewModel: NSObject {
         print(RegisterMerchant)
         NetworkTools.requestData(.get, URLString:  GetUsersList, parameters: params as? [String : Any]) { (response,mes) in
             print(response)
-            if  response == nil{
+            if  response != nil{
                 
                 guard let responseArrays:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
                     return
@@ -24,17 +24,21 @@ class InviteViewModel: NSObject {
                 
                 for  dic in responseArrays{
                     
-                   // let 
-                    
+                    let user = User.init(dict: dic as! [String : NSObject])
+                   orVC?.dataArray.append(user)
                     
                 }
                
-                
+                orVC?.tableView.reloadData()
+                orVC?.tableView.mj_header.endRefreshing()
+                orVC?.ReqType = RequestResultType.SUCCESS
                 
                 
             }else{
                 
                 //                orVC?.ReqType = RequestResultType.SUCCESS
+                orVC?.tableView.mj_header.endRefreshing()
+                orVC?.errorMessage = mes
                 callback1()
                 
             }

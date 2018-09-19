@@ -52,7 +52,7 @@ class HomeFootView: UIView {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        priceTF.delegate = self
+        //priceTF.delegate = self
         setStartTime()
         NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange), name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
         
@@ -67,9 +67,15 @@ class HomeFootView: UIView {
     
     @objc func textFieldDidChange(){
         
-        print(priceTF.text ?? "00")
-        submit!(priceTF.text!)
+//        print(priceTF.text ?? "00")
+//        submit!(priceTF.text!)
     }
+    
+    @IBAction func submit1(_ sender: Any) {
+        
+        callBak!()
+    }
+    
     
 }
 extension HomeFootView:UITextFieldDelegate{

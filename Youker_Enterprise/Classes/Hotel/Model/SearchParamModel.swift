@@ -21,7 +21,7 @@ class SearchParamModel: NSObject {
         var dic:[String:AnyObject] = [String:AnyObject]()
         dic["checkInDate"] = mode.checkInDate as AnyObject
         dic["leaveDate"] = mode.leaveDate as AnyObject
-        dic["price"] = mode.price as AnyObject
+        //dic["price"] = mode.price as AnyObject
         dic["detailPositionX"] = mode.detailPositionX as AnyObject
         dic["detailPositionY"] = mode.detailPositionY as AnyObject
         return dic as NSDictionary

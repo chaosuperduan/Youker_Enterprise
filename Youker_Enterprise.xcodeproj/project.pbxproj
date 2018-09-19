@@ -47,6 +47,9 @@
 		18CBB628214C21D200F1C807 /* UserImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CBB626214C21D100F1C807 /* UserImageViewCell.xib */; };
 		18CBB62B214C220A00F1C807 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBB629214C220A00F1C807 /* UserTableViewCell.swift */; };
 		18CBB62C214C220A00F1C807 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CBB62A214C220A00F1C807 /* UserTableViewCell.xib */; };
+		E507ED772152475C00592C40 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507ED762152475C00592C40 /* AddressViewController.swift */; };
+		E507ED7A215248DC00592C40 /* AddressNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507ED78215248DC00592C40 /* AddressNaviView.swift */; };
+		E507ED7B215248DC00592C40 /* AddressNaviView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E507ED79215248DC00592C40 /* AddressNaviView.xib */; };
 		E50BBD742137A07D00F09D92 /* FWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBCDC2137A07C00F09D92 /* FWNavigationController.swift */; };
 		E50BBD752137A07D00F09D92 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBCDE2137A07C00F09D92 /* NetworkTools.swift */; };
 		E50BBD762137A07D00F09D92 /* YoukerImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBCDF2137A07C00F09D92 /* YoukerImageExtension.swift */; };
@@ -326,6 +329,9 @@
 		ACF245780FCE0AC2E83E7DE9 /* Pods-Youker_EnterpriseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_EnterpriseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_EnterpriseUITests/Pods-Youker_EnterpriseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE66DD4637D7970B8CCB1F93 /* Pods-Youker_Enterprise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_Enterprise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_Enterprise/Pods-Youker_Enterprise.release.xcconfig"; sourceTree = "<group>"; };
 		D73F6F4425E2AE63FBF2D089 /* Pods-Youker_EnterpriseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_EnterpriseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_EnterpriseTests/Pods-Youker_EnterpriseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E507ED762152475C00592C40 /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		E507ED78215248DC00592C40 /* AddressNaviView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressNaviView.swift; sourceTree = "<group>"; };
+		E507ED79215248DC00592C40 /* AddressNaviView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressNaviView.xib; sourceTree = "<group>"; };
 		E50BBCDA2137A07C00F09D92 /* DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DViewController.h; sourceTree = "<group>"; };
 		E50BBCDC2137A07C00F09D92 /* FWNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWNavigationController.swift; sourceTree = "<group>"; };
 		E50BBCDE2137A07C00F09D92 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
@@ -791,6 +797,8 @@
 		185233032136FDA1009927D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E507ED78215248DC00592C40 /* AddressNaviView.swift */,
+				E507ED79215248DC00592C40 /* AddressNaviView.xib */,
 				E50BBE482137E5AE00F09D92 /* CycleView */,
 				E50BBE252137DF1C00F09D92 /* PriceView.swift */,
 				E50BBE242137DF1C00F09D92 /* PriceView.xib */,
@@ -805,6 +813,7 @@
 		185233042136FDA1009927D2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E507ED762152475C00592C40 /* AddressViewController.swift */,
 				E50BBE1B2137DC3400F09D92 /* HotelViewController.swift */,
 				E50BBE1A2137DC3300F09D92 /* HotelViewController.xib */,
 				E50BBE042137D8B600F09D92 /* HomeViewController.swift */,
@@ -1596,6 +1605,11 @@
 					185232CD2136FCF8009927D2 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					185232E12136FCF9009927D2 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -1632,6 +1646,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E507ED7B215248DC00592C40 /* AddressNaviView.xib in Resources */,
 				E5127E392147F19F00979FEE /* LimitActionView.xib in Resources */,
 				E50BBE592137E72E00F09D92 /* PlaceOrderViewController.xib in Resources */,
 				E50BBDFE2137D7CF00F09D92 /* LoginViewController.xib in Resources */,
@@ -1882,6 +1897,7 @@
 				E50BBDFF2137D7CF00F09D92 /* LoginViewController.swift in Sources */,
 				E50BBDBD2137A07D00F09D92 /* CGXStringPickerView.m in Sources */,
 				E50BBDAD2137A07D00F09D92 /* FDAlertView.m in Sources */,
+				E507ED7A215248DC00592C40 /* AddressNaviView.swift in Sources */,
 				18B8CDA2214531E30060DB6B /* UserGroupModel.swift in Sources */,
 				E50BBD882137A07D00F09D92 /* MJRefreshAutoStateFooter.m in Sources */,
 				186109CB213EE5A2002D0BC1 /* FirstViewController.swift in Sources */,
@@ -1954,6 +1970,7 @@
 				E50BBE862137EB0000F09D92 /* TitleTableViewCell.swift in Sources */,
 				E50BBE2B2137DF4600F09D92 /* HotelImageView.swift in Sources */,
 				E50BBDF22137D66900F09D92 /* ViewModel.swift in Sources */,
+				E507ED772152475C00592C40 /* AddressViewController.swift in Sources */,
 				E50BBE762137EA1600F09D92 /* OrdersTableViewCell.swift in Sources */,
 				E50BBD8F2137A07D00F09D92 /* MJRefreshHeader.m in Sources */,
 				E50BBDF32137D66900F09D92 /* TypeView.swift in Sources */,

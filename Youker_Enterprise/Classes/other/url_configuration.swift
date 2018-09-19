@@ -9,15 +9,15 @@
 
 import Foundation
 //103
-let rootURL2 = "http://192.168.31.203:8080/Maxwell/"
-let rootURL = "http://www.iyouker.com/Maxwell/"
+let rootURL = "http://192.168.31.203:8080/Maxwell/"
+let rootURL2 = "http://www.iyouker.com/Maxwell/"
 //let rootURL = "http://jjfly.ngrok.iyouker.com:8080/Maxwell/"
 //MARK:-登录
 let LoginURL = rootURL+"v3/cpy/login"
 //MARK:-注册
 let registerURL = rootURL+"reg/regNewUser"
 //MARK:-搜索附近的酒店
-let searchHotelURL = rootURL+"booking/search/hotel"
+let searchHotelURL = rootURL+"v3/"+"booking/search/hotel"
 //MARK:-获取酒店详情
 let HotelDetailURL = rootURL + "booking/search/room/factor"
 //MARK:-获取订单。
