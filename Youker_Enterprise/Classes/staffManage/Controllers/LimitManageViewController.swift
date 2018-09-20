@@ -28,8 +28,23 @@ class LimitManageViewController: UIViewController {
       
       
         tableview.register(UINib.init(nibName: "ManageUserCellTableViewCell", bundle: nil), forCellReuseIdentifier: "lm")
-        self.tableview.tableFooterView = UIView()
+        
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "pl"), style: .plain, target: self, action: #selector(add))
+        self.tableview.tableFooterView =  UIView()
         self.tableview.dataSource = self
+    }
+    
+    
+   @objc  func add(){
+        self.navigationController?.pushViewController(AddGroupToUsersViewController(), animated: true)
+        
+        
+    }
+    
+    func next(){
+    
+    self.navigationController?.pushViewController(AddGroupToUsersViewController(), animated: true)
     }
     
     func loadData(){

@@ -11,7 +11,7 @@
 
 
 import UIKit
-let homeH = 185+tabBarbottomHeight//44+10+10;
+let homeH = 198+tabBarbottomHeight//44+10+10;
 class HomeViewController: BaseViewController {
      var hotellist:[HotelModel] = [HotelModel]()
      var param :SearchParamModel = SearchParamModel()
@@ -142,11 +142,12 @@ extension HomeViewController{
     
     func setUpUifootView(){
         
-        footView.frame = CGRect.init(x: 0, y: KScreenH-185-tabBarbottomHeight,width: KScreenW, height:homeH )
+        footView.frame = CGRect.init(x: 0, y: KScreenH-198-tabBarbottomHeight,width: KScreenW, height:homeH )
         footView.submit = { str in
             let price:Double = Double(str) ?? 0
             self.param.price = NSInteger(price)
         }
+        print(footView.frame)
         footView.callBak = {
             
             SearchHotelViewModel.sharedInstance.getHotel(params: nil, origionVc: self)

@@ -11,10 +11,12 @@ import UIKit
 class ManageUserCellTableViewCell: UITableViewCell {
     @IBOutlet weak var subTitleLabel: UILabel!
     
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     var mode:User?{
         didSet{
            setupui()
+            
             
            
             }
@@ -30,7 +32,13 @@ class ManageUserCellTableViewCell: UITableViewCell {
     func setupui(){
         self.titleLabel.text = mode?.employee_Name
         self.subTitleLabel.text = "("+(mode?.phoneNumber)!+")"
-        
+        if mode?.isAdd == true {
+            iconImageView.image = UIImage(named: "selected")
+        }else{
+            
+             iconImageView.image = UIImage(named: "unselected")
+            
+        }
         
     }
   

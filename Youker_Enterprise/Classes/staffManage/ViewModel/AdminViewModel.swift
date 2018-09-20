@@ -18,16 +18,20 @@ class AdminViewModel: NSObject {
             print(response)
             if  response != nil{
                 
-                guard let modeDic:[String:AnyObject] = response?["data"] as! [String : AnyObject] else{
+                guard let modeDic:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
                     
                     
                     return
                 }
                 
+                for dic in modeDic{
+                    
+                    let mode = User.init(dict: dic as! [String : NSObject])
+                    orVC?.admins.append(mode)
+                    
+                }
                 
-                
-                let mode = UserGroupModel.init(dict: modeDic as! [String : NSObject])
-                orVC?.DataMode = mode
+               
                 
                 orVC?.tableView.reloadData()
             }else{

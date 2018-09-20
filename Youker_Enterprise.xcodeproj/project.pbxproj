@@ -238,6 +238,8 @@
 		E50BBEC3213932A600F09D92 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC1213932A600F09D92 /* ButtonCell.xib */; };
 		E50BBEC52139399100F09D92 /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50BBEC42139399100F09D92 /* UserHeaderView.xib */; };
 		E50BBEC7213939AE00F09D92 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */; };
+		E510D54F21539273008AE817 /* AddGroupToUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510D54D21539273008AE817 /* AddGroupToUsersViewController.swift */; };
+		E510D55021539273008AE817 /* AddGroupToUsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E510D54E21539273008AE817 /* AddGroupToUsersViewController.xib */; };
 		E5118208213E262E00A1CC11 /* LimitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5118206213E262E00A1CC11 /* LimitCell.swift */; };
 		E5118209213E262E00A1CC11 /* LimitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5118207213E262E00A1CC11 /* LimitCell.xib */; };
 		E511820C213E6D0300A1CC11 /* LimitManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511820A213E6D0300A1CC11 /* LimitManageViewController.swift */; };
@@ -574,6 +576,8 @@
 		E50BBEC1213932A600F09D92 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		E50BBEC42139399100F09D92 /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
 		E50BBEC6213939AE00F09D92 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
+		E510D54D21539273008AE817 /* AddGroupToUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroupToUsersViewController.swift; sourceTree = "<group>"; };
+		E510D54E21539273008AE817 /* AddGroupToUsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddGroupToUsersViewController.xib; sourceTree = "<group>"; };
 		E5118206213E262E00A1CC11 /* LimitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCell.swift; sourceTree = "<group>"; };
 		E5118207213E262E00A1CC11 /* LimitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LimitCell.xib; sourceTree = "<group>"; };
 		E511820A213E6D0300A1CC11 /* LimitManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitManageViewController.swift; sourceTree = "<group>"; };
@@ -672,6 +676,8 @@
 				187ED77F2142DD9C00681240 /* InviteTableViewController.swift */,
 				18B8CD9A21452B650060DB6B /* ManageEnterUserTableViewController.swift */,
 				E55CC9AF214F9CE400EA4E5B /* AddAdminTableViewController.swift */,
+				E510D54D21539273008AE817 /* AddGroupToUsersViewController.swift */,
+				E510D54E21539273008AE817 /* AddGroupToUsersViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1698,6 +1704,7 @@
 				E50BBE952137EFA100F09D92 /* AddAcountViewController.xib in Resources */,
 				E50BBE8A2137EB3900F09D92 /* SelectCouponTableViewCell.xib in Resources */,
 				E50BBE662137E97400F09D92 /* OrderDetailSecondView.xib in Resources */,
+				E510D55021539273008AE817 /* AddGroupToUsersViewController.xib in Resources */,
 				E50BBDA42137A07D00F09D92 /* README.txt in Resources */,
 				E50BBE102137D9C900F09D92 /* HotelListTableViewCell.xib in Resources */,
 				E50BBE722137E9A100F09D92 /* BookInfoView.xib in Resources */,
@@ -1920,6 +1927,7 @@
 				182EBE2B213D8D9200088673 /* LimitationViewController.swift in Sources */,
 				E50BBDBE2137A07D00F09D92 /* CGXPickerView.m in Sources */,
 				186109D2213EF0C6002D0BC1 /* imageExtension.swift in Sources */,
+				E510D54F21539273008AE817 /* AddGroupToUsersViewController.swift in Sources */,
 				18A16F8B2148264600811900 /* EditGroup.swift in Sources */,
 				E50BBDA12137A07D00F09D92 /* WXApiRequestHandler.m in Sources */,
 				E50BBDC12137A07D00F09D92 /* TimeTool.swift in Sources */,

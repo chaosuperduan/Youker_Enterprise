@@ -150,7 +150,7 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
     
     //添加员工。
     func ADDCompanyUser(params:[String:AnyObject],orVC:AddViewController?,callback1:@escaping (()->())){
-        print(GetGroupByID)
+        print(InviteURL)
         NetworkTools.requestData(.post, URLString:  InviteURL , parameters: params as? [String : Any]) { (response,mes) in
             print(response)
             if  response != nil{
@@ -181,6 +181,46 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
             }
         }
     }
+    //获取未分组的员工。
+    
+    func GetUserGroupOnGroupde(params:[String:AnyObject],orVC:AddGroupToUsersViewController?,callback1:@escaping (()->())){
+        print(GetGroupInfoAndUser)
+        NetworkTools.requestData(.get, URLString:  GetGroupInfoAndUser, parameters: params as? [String : Any]) { (response,mes) in
+            print(response)
+            if  response != nil{
+                
+                guard let modeDic:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
+                    
+                    //
+                    //               orVC?.ReqType = RequestResultType.NODATA
+                    //             orVC?.header.endRefreshing()
+                    //            callback1()
+                    return
+                }
+                for dic in modeDic{
+                    
+                    let mode = UserGroupModel.init(dict: dic as! [String : NSObject])
+                    if(mode.group_Name == "未分组"){
+                       orVC?.mode = mode
+                        
+                    }
+                }
+                
+                orVC?.tableview.reloadData()
+                
+
+                callback1()
+                
+            }else{
+                
+                
+                callback1()
+            }
+        }
+    }
+    
+    
+    
     
     
 }

@@ -61,6 +61,8 @@ class UserGroupModel: BaseMode {
 
 class User: BaseMode {
     
+    
+@objc var isAdd:Bool = false
 @objc    var company_Id:NSInteger = 0
 @objc    var employee_Name:String?
 @objc    var group_Id:NSInteger = 0

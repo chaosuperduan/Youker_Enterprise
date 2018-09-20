@@ -10,6 +10,8 @@ import UIKit
 
 class AddAdminTableViewController: BaseTableViewController {
     var DataMode:UserGroupModel?
+    
+    var admins:[User] = [User]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +65,7 @@ class AddAdminTableViewController: BaseTableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return DataMode?.users.count ?? 0
+        return admins.count
     }
 
 
@@ -78,7 +80,7 @@ class AddAdminTableViewController: BaseTableViewController {
             
         
         }
-        cell.mode = self.DataMode?.users[indexPath.row]
+        cell.mode = self.admins[indexPath.row]
 
        
 
