@@ -33,7 +33,11 @@ class LoginViewModel: NSObject {
                     return
                 }else{
                     
-                    caBalck!("登录失败")
+                    if(self.callBack != nil){
+                        
+                        caBalck!("登录失败")
+                    }
+                    
                     return
                 }
                 
@@ -41,9 +45,9 @@ class LoginViewModel: NSObject {
                 
                 print(response)
                 
-                let dicts:[String:[String:AnyObject]] =  response!["data"]!  as! [String : [String : AnyObject]]
+                let dicts:[String:AnyObject] =  response!["data"]!  as!  [String : AnyObject]
                
-                let   dicAount:[String:AnyObject] = dicts["userInfo"]!
+                let   dicAount:[String:AnyObject] = dicts["userInfo"]! as! [String : AnyObject]
                 
                
                 
@@ -62,8 +66,8 @@ class LoginViewModel: NSObject {
                     
                     
                     if(dicts.keys.contains("cpyInfo")){
-                        
-                        let copDic:[String:AnyObject] = dicts["cpyInfo"]!
+                        //MARK://大坑
+                        let copDic:[String:AnyObject] = dicts["cpyInfo"]! as! [String : AnyObject]
                         
                         let copMode:cpyInfo = cpyInfo.init(dict: copDic)
                         print(copMode)
@@ -84,7 +88,7 @@ class LoginViewModel: NSObject {
                     
                     if(dicts.keys.contains("cpyInfo")){
                         
-                        let copDic:[String:AnyObject] = dicts["cpyInfo"]!
+                        let copDic:[String:AnyObject] = dicts["cpyInfo"]! as! [String : AnyObject]
                         
                         let copMode:cpyInfo = cpyInfo.init(dict: copDic)
                         print(copMode)

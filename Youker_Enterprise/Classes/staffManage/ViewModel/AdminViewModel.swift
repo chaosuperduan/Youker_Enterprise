@@ -79,15 +79,13 @@ class AdminViewModel: NSObject {
     }
     
     //删除管理员。
-    func DELETECompanyAdmin(params:[String:AnyObject],orVC:AddViewController?,callback1:@escaping (()->())){
+    func DELETECompanyAdmin(params:[String:AnyObject],orVC:AddAdminTableViewController?,callback1:@escaping (()->())){
         print(GetGroupByID)
         NetworkTools.requestData(.get, URLString:  DeleteEnterAdmURL, parameters: params as? [String : Any]) { (response,mes) in
             print(response)
             if  response != nil{
                 
                 guard let responseDic:[String:AnyObject] = response as! [String : AnyObject] else{
-                    
-                    
                     return
                 }
                 let code:NSInteger = responseDic["code"] as! NSInteger
@@ -100,19 +98,11 @@ class AdminViewModel: NSObject {
                     
                     orVC?.ReqType  = RequestResultType.ERROR
                     orVC?.errorMessage = responseDic["message"] as! String
-                    
                 }
                 
-                
             }else{
-                
-                
                 callback1()
             }
         }
     }
-    
-    
-
-
 }

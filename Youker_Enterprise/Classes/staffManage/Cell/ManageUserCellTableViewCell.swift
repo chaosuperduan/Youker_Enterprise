@@ -21,6 +21,16 @@ class ManageUserCellTableViewCell: UITableViewCell {
            
             }
     }
+    var delete:Bool = false{
+        
+        didSet{
+            
+            if delete == true {
+                self.iconImageView.image = UIImage.init(named: "delete")
+            }
+            
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,13 +42,20 @@ class ManageUserCellTableViewCell: UITableViewCell {
     func setupui(){
         self.titleLabel.text = mode?.employee_Name
         self.subTitleLabel.text = "("+(mode?.phoneNumber)!+")"
-        if mode?.isAdd == true {
-            iconImageView.image = UIImage(named: "selected")
-        }else{
+        
+        if delete {
             
-             iconImageView.image = UIImage(named: "unselected")
+        }else{
+            if mode?.isAdd == true {
+                iconImageView.image = UIImage(named: "selected")
+            }else{
+                
+                iconImageView.image = UIImage(named: "unselected")
+                
+            }
             
         }
+        
         
     }
   

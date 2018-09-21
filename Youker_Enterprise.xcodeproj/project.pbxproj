@@ -255,6 +255,8 @@
 		E5795DCD214CA061000F1EEB /* SystemableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5795DCB214CA061000F1EEB /* SystemableViewController.swift */; };
 		E5795DCE214CA061000F1EEB /* SystemableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5795DCC214CA061000F1EEB /* SystemableViewController.xib */; };
 		E5804AAB2142B550006AFBCE /* province_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E5804AAA2142B550006AFBCE /* province_data.json */; };
+		E5908D872154A17200BE355A /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5908D862154A17200BE355A /* ActionView.swift */; };
+		E5908D892154A18000BE355A /* ActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5908D882154A18000BE355A /* ActionView.xib */; };
 		E5A5A4B9213A8C1200BAA166 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */; };
 		E5A5A4BA213A8C1200BAA166 /* ManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */; };
 		FE7AC1702897CFE1D85DAFDB /* Pods_Youker_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */; };
@@ -597,6 +599,8 @@
 		E5795DCB214CA061000F1EEB /* SystemableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemableViewController.swift; sourceTree = "<group>"; };
 		E5795DCC214CA061000F1EEB /* SystemableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemableViewController.xib; sourceTree = "<group>"; };
 		E5804AAA2142B550006AFBCE /* province_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province_data.json; sourceTree = "<group>"; };
+		E5908D862154A17200BE355A /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		E5908D882154A18000BE355A /* ActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionView.xib; sourceTree = "<group>"; };
 		E5A5A4B7213A8C1200BAA166 /* ManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
 		E5A5A4B8213A8C1200BAA166 /* ManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementViewController.xib; sourceTree = "<group>"; };
 		F18BD24C788F8B6C50C017DA /* Pods_Youker_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youker_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1261,6 +1265,8 @@
 				E50BBDF52137D6B400F09D92 /* EditView.swift */,
 				E50BBDF42137D6B400F09D92 /* EditView.xib */,
 				E50BBDCB2137CA3F00F09D92 /* WSDaePickerView */,
+				E5908D862154A17200BE355A /* ActionView.swift */,
+				E5908D882154A18000BE355A /* ActionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1699,6 +1705,7 @@
 				18B8CDA021452C4F0060DB6B /* ManageUserCellTableViewCell.xib in Resources */,
 				E50BBDA82137A07D00F09D92 /* 5-160914192R6-52.gif in Resources */,
 				E50BBEC3213932A600F09D92 /* ButtonCell.xib in Resources */,
+				E5908D892154A18000BE355A /* ActionView.xib in Resources */,
 				E50BBE022137D86400F09D92 /* ModifyPasswordViewController.xib in Resources */,
 				E50BBE872137EB0000F09D92 /* TitleTableViewCell.xib in Resources */,
 				E50BBE952137EFA100F09D92 /* AddAcountViewController.xib in Resources */,
@@ -1954,6 +1961,7 @@
 				E50BBE6F2137E9A100F09D92 /* BookInfoView.swift in Sources */,
 				187ED7802142DD9C00681240 /* InviteTableViewController.swift in Sources */,
 				E50BBD7E2137A07D00F09D92 /* rounderImageView.swift in Sources */,
+				E5908D872154A17200BE355A /* ActionView.swift in Sources */,
 				E50BBE692137E99100F09D92 /* OrderDetailHeader.swift in Sources */,
 				E50BBE302137E01A00F09D92 /* PayView.swift in Sources */,
 				E50BBD792137A07D00F09D92 /* IntExtension.swift in Sources */,

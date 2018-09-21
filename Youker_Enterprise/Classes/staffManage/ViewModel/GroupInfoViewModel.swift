@@ -220,6 +220,86 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
     }
     
     
+    //批量添加员工到分组。
+    
+    //添加员工。
+    func ADDUserToGroup(params:[String:AnyObject],orVC:AddGroupToUsersViewController?,callback1:@escaping (()->())){
+        print(AddUserToGropURL)
+        NetworkTools.requestData(.get, URLString:  AddUserToGropURL , parameters: params as? [String : Any]) { (response,mes) in
+            print(response)
+            if  response != nil{
+                
+                guard let responseDic:[String:AnyObject] = response as! [String : AnyObject] else{
+                    
+                    
+                    return
+                }
+                let code:NSInteger = responseDic["code"] as! NSInteger
+                
+                if(code == 200){
+                    
+                    orVC?.ReqType =  RequestResultType.SUCCESS
+                    callback1()
+                }else{
+                    
+                    orVC?.ReqType  = RequestResultType.ERROR
+                    orVC?.errorMessage = responseDic["message"] as! String
+                    
+                }
+                
+         }else{
+                
+                
+                callback1()
+            }
+        }
+    }
+    
+    //删除员工。
+    
+    //添加员工。
+    func DELETECompanyUser(params:[String:AnyObject],orVC: ManageEnterUserTableViewController?,callback1:@escaping (()->())){
+        print(DeleteEmployeeURL)
+        NetworkTools.requestData(.get, URLString:  DeleteEmployeeURL , parameters: params as? [String : Any]) { (response,mes) in
+            print(response)
+            if  response != nil{
+                
+                guard let responseDic:[String:AnyObject] = response as! [String : AnyObject] else{
+                    
+                    
+                    return
+                }
+                let code:NSInteger = responseDic["code"] as! NSInteger
+                
+                if(code == 200){
+                    
+                    orVC?.ReqType =  RequestResultType.SUCCESS
+                    callback1()
+                }else{
+                    
+                    orVC?.ReqType  = RequestResultType.ERROR
+                    orVC?.errorMessage = responseDic["message"] as! String
+                     callback1()
+                }
+                
+               
+                
+                
+            }else{
+                
+                
+                callback1()
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
