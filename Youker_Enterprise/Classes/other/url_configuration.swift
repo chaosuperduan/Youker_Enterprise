@@ -85,7 +85,7 @@ let DeleteGroupInfo = "v3/cpy/del/groupInfo/groupId"
 let AddEnterAdmURL = "v3/cpy/grant/user/purview"
 
 //删除企业管理员。
-let DeleteEnterAdmURL = "v3/cpy/grant/user/purview"
+let DeleteEnterAdmURL = rootURL + "v3/cpy/cancel/user/purview"
 //批量添加员工到分组。
 let AddUserToGropURL = rootURL +  "v3/cpy/add/users/group"
 //批量添加员工到分组
@@ -96,4 +96,5 @@ let GetAdminInfoURL = rootURL + "v3/cpy/get/admins/info"
 let GetInviteURL = "v3/cpy/get/inviteUrl"
 //根据员工状态获取员工列表
 let GetUsersList = rootURL + "v3/cpy/get/user/state"
-
+//删除企业员工信息。
+let DeleteEmployeeURL = rootURL + "v3/cpy/del/user/userId"

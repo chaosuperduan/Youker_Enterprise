@@ -12,19 +12,16 @@ class ManageEnterUserTableViewController: BaseTableViewController{
     
     
     var dataArray:[UserGroupModel] = [UserGroupModel]()
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
        setUpUI()
        self.header.beginRefreshing()
        self.tableView.tableFooterView = UIView()
 
-        
     }
     
     override func loadDatas() {
+        self.dataArray.removeAll()
         let params = NSMutableDictionary()
         params["companyId"] = UserAccount.loadUserAccount()?.company_Id
         
@@ -32,13 +29,11 @@ class ManageEnterUserTableViewController: BaseTableViewController{
         params["token"] = UserAccount.loadUserAccount()?.token;
         GroupInfoViewModel.sharedInstance.GetUserGroup(params: params as! [String : AnyObject], orVC: self) {
             
-            
             SVProgressHUD.showSuccess(withStatus: "数据加载成功")
             self.header.endRefreshing()
         }
-        
-        
-       }
+    
+    }
 
     // MARK: - Table view data source
 
@@ -66,8 +61,6 @@ class ManageEnterUserTableViewController: BaseTableViewController{
         let group:UserGroupModel = self.dataArray[indexPath.section]
         let mode :User = group.users[indexPath.row]
         
-        
-     
         cell.mode = mode
          cell.delete = true
 
@@ -76,12 +69,16 @@ class ManageEnterUserTableViewController: BaseTableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let group:UserGroupModel = self.dataArray[indexPath.section]
+        let mode :User = group.users[indexPath.row]
         //删除员工。
       let popView = ZXPopView.init(frame: self.view.bounds)
       let actionView = ActionView.LoadFromNib()
         actionView.callBack = { isdone in
             if isdone {
-                self.deleteEmployee()
+                self.deleteEmployee(mode: mode)
+                popView.dismissView()
             }else{
                 
               popView.removeFromSuperview()
@@ -115,10 +112,18 @@ class ManageEnterUserTableViewController: BaseTableViewController{
         
         
     }
-    //删除员工
-    func deleteEmployee(){
+    //MARK:-删除员工
+    func deleteEmployee(mode:User){
         
-       
+         // MARK: - -这里还需要填坑
+        let params = NSMutableDictionary()
+        params["token"] = UserAccount.loadUserAccount()?.token
+        params["companyId"] = UserAccount.loadUserAccount()?.company_Id
+      params["userId"] = mode.user_Id
+     params["operateUser"]  = UserAccount.loadUserAccount()?.user_Id;
+        GroupInfoViewModel.sharedInstance.DELETECompanyUser(params: params as! [String : AnyObject], orVC: self) {
+            self.loadDatas()
+        }
         
     }
 }

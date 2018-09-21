@@ -76,17 +76,29 @@ class AddAdminTableViewController: BaseTableViewController {
             cell = ManageUserCellTableViewCell()
             
             
-            
-        
         }
         cell.mode = self.admins[indexPath.row]
-
-       
-
+        cell.delete = true
         return cell
     }
-
-
-   
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let mode:User = self.admins[indexPath.row]
+        
+        deleteAdmin(user: mode)
+        
+    }
+    
+    //MARK:-删除管理
+    func deleteAdmin(user:User){
+        let params = NSMutableDictionary()
+        params["companyId"] = UserAccount.loadUserAccount()?.company_Id
+        params["userId"] = user.user_Id
+        params["token"] = UserAccount.loadUserAccount()?.token
+        params["operateUser"] = UserAccount.loadUserAccount()?.user_Id
+        AdminViewModel.sharedInstance.DELETECompanyAdmin(params: params as! [String : AnyObject], orVC: self) {
+           self.loadDatas()
+        }
+    }
 }

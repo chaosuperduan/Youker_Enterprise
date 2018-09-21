@@ -258,9 +258,9 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
     //删除员工。
     
     //添加员工。
-    func DELETECompanyUser(params:[String:AnyObject],orVC:AddViewController?,callback1:@escaping (()->())){
-        print(InviteURL)
-        NetworkTools.requestData(.post, URLString:  InviteURL , parameters: params as? [String : Any]) { (response,mes) in
+    func DELETECompanyUser(params:[String:AnyObject],orVC: ManageEnterUserTableViewController?,callback1:@escaping (()->())){
+        print(DeleteEmployeeURL)
+        NetworkTools.requestData(.get, URLString:  DeleteEmployeeURL , parameters: params as? [String : Any]) { (response,mes) in
             print(response)
             if  response != nil{
                 
@@ -279,8 +279,10 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
                     
                     orVC?.ReqType  = RequestResultType.ERROR
                     orVC?.errorMessage = responseDic["message"] as! String
-                    
+                     callback1()
                 }
+                
+               
                 
                 
             }else{

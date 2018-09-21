@@ -64,7 +64,14 @@ class NetworkTools {
                     }
                 }
                 
-                
+                if(code == 415){
+                    let params = NSMutableDictionary()
+                    params["userNum"] = UserAccount.loadUserAccount()?.phone_Number
+                    params["pwd"] = UserAccount.loadUserAccount()?.user_Pwd
+                    params["registerId"] = UserAccount.loadUserAccount()?.registration_ID
+                    LoginViewModel.sharedInstance.Login(params: params as! [String : AnyObject], orVC: nil, caBalck: nil)
+                    
+                }
                
                
                 
