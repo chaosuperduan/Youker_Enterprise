@@ -21,6 +21,15 @@ class ManageUserCellTableViewCell: UITableViewCell {
            
             }
     }
+    var delete:Bool = false{
+        
+        didSet{
+            if delete == true {
+                self.iconImageView.image = UIImage.init(named: "delete")
+            }
+            
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

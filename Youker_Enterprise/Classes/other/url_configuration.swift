@@ -87,7 +87,7 @@ let AddEnterAdmURL = "v3/cpy/grant/user/purview"
 //删除企业管理员。
 let DeleteEnterAdmURL = "v3/cpy/grant/user/purview"
 //批量添加员工到分组。
-let AddUserToGropURL = "v3/cpy/add/users/group"
+let AddUserToGropURL = rootURL +  "v3/cpy/add/users/group"
 //批量添加员工到分组
 let DeleteUserToGroupURL = "v3/cpy/del/users/group"
 //获取企业管理员。

@@ -40,8 +40,6 @@ class ManageEnterUserTableViewController: BaseTableViewController{
         
        }
 
-  
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,6 +52,8 @@ class ManageEnterUserTableViewController: BaseTableViewController{
         return (self.dataArray[section].users.count)
         
     }
+    
+    
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,20 +62,41 @@ class ManageEnterUserTableViewController: BaseTableViewController{
         if cell == nil  {
             cell = ManageUserCellTableViewCell()
         }
+       
         let group:UserGroupModel = self.dataArray[indexPath.section]
         let mode :User = group.users[indexPath.row]
         
         
-        //let mode = group[indexPath.row]
+     
         cell.mode = mode
-//        cell.mode = self.dataArray[indexPath.section].users[indexPath.row]
+         cell.delete = true
+
         cell.setupui()
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //删除员工。
+      let popView = ZXPopView.init(frame: self.view.bounds)
+      let actionView = ActionView.LoadFromNib()
+        actionView.callBack = { isdone in
+            if isdone {
+                self.deleteEmployee()
+            }else{
+                
+              popView.removeFromSuperview()
+            
+            }
+            
+        }
         
-    }
+        actionView.frame = CGRect.init(x: (KScreenW-325)/2, y: (KScreenH-167)/2, width: 325, height: 167)
+        popView.contenView = actionView
+        popView.isCenter = true
+        popView.showInView(view: self.view)
+        
+        
+        }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel.init(frame: CGRect.init(x: 20, y: 0, width: 120, height: 20))
@@ -92,6 +113,12 @@ class ManageEnterUserTableViewController: BaseTableViewController{
       self.navigationItem.title = "企业员工管理"
         self.tableView.register(UINib.init(nibName: "ManageUserCellTableViewCell", bundle: nil), forCellReuseIdentifier: "manageCell")
         
+        
+    }
+    //删除员工
+    func deleteEmployee(){
+        
+       
         
     }
 }

@@ -8,10 +8,13 @@
 
 import UIKit
 
-class AddGroupToUsersViewController: UIViewController {
+class AddGroupToUsersViewController: BaseViewController {
     
     
     var mode:UserGroupModel?
+    var users:[NSInteger] = [NSInteger]()
+    
+    
     
     @IBOutlet weak var groupBTN: UIButton!
     
@@ -29,6 +32,19 @@ class AddGroupToUsersViewController: UIViewController {
     }
     
     @objc func submit(){
+      let params = NSMutableDictionary()
+      params["companyId"] = UserAccount.loadUserAccount()?.company_Id
+        
+        let data = try? JSONSerialization.data(withJSONObject: users, options: JSONSerialization.WritingOptions.prettyPrinted)
+        let strJson = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+      params["users"] = strJson
+      params["operateUser"] = UserAccount.loadUserAccount()?.user_Id
+      params["groupId"] = mode?.group_Id
+      params["token"] = UserAccount.loadUserAccount()?.token!
+        
+        GroupInfoViewModel.sharedInstance.ADDUserToGroup(params: params as! [String : AnyObject], orVC: self) {
+            self.dismiss(animated: true, completion: nil)
+        }
         
         
         
@@ -44,8 +60,6 @@ GroupInfoViewModel.sharedInstance.GetUserGroupOnGroupde(params: params as! [Stri
             
         }
     }
-
-
 }
 
 
@@ -75,14 +89,35 @@ extension AddGroupToUsersViewController:UITableViewDataSource,UITableViewDelegat
         let mode:User = (self.mode?.users[indexPath.row])!
         mode.isAdd = !mode.isAdd
         
-        
+        if mode.isAdd == true {
+            users.append(mode.user_Id)
+            
+        }else{
+            if(users.contains(mode.user_Id)){
+                var index = 0
+                for i in users{
+                    if(mode.user_Id == i){
+                        break
+                        
+                    }else{
+                        index = index + 1
+                    }
+                    
+                }
+                users.remove(at: index)
+               
+                
+            }else{
+                
+                
+            }
+           
+            
+        }
         
         
         
         self.tableview.reloadRows(at: [indexPath], with: .automatic)
-        
-        
-        
         
     }
 }

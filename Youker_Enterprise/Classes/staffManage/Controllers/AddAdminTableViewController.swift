@@ -16,7 +16,6 @@ class AddAdminTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUi()
-        
         loadData()
     }
     
@@ -41,7 +40,7 @@ class AddAdminTableViewController: BaseTableViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "pl"), style: .plain, target: self, action: #selector(add))
         self.tableView.register(UINib.init(nibName: "ManageUserCellTableViewCell", bundle: nil), forCellReuseIdentifier: "add")
-        
+        self.tableView.tableFooterView = UIView()
     }
     @objc func add(){
         
