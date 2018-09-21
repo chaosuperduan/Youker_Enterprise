@@ -81,8 +81,5 @@ extension AddGroupToUsersViewController:UITableViewDataSource,UITableViewDelegat
         
         self.tableview.reloadRows(at: [indexPath], with: .automatic)
         
-        
-        
-        
-    }
+        }
 }
