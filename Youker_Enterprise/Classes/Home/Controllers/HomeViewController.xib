@@ -1,26 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Youker_Enterprise" customModuleProvider="target">
             <connections>
+                <outlet property="thirdV" destination="SBC-Iv-2MO" id="RHN-de-3Gm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view1" destination="OHD-3b-s8D" id="rth-ck-Kix"/>
+                <outlet property="view2" destination="9UU-ho-9rN" id="oHW-en-E2u"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHD-3b-s8D">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="oiG-vU-OHF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UU-ho-9rN">
+                    <rect key="frame" x="0.0" y="270" width="414" height="164"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="164" id="gob-8x-iiq"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBC-Iv-2MO">
+                    <rect key="frame" x="0.0" y="538" width="414" height="198"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="198" id="NTK-GC-793"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OHD-3b-s8D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7OC-DB-qyK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SBC-Iv-2MO" secondAttribute="bottom" id="8jl-qK-hvE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OHD-3b-s8D" secondAttribute="trailing" id="A73-Wq-UYB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SBC-Iv-2MO" secondAttribute="trailing" id="Css-Vq-aeM"/>
+                <constraint firstItem="9UU-ho-9rN" firstAttribute="top" secondItem="OHD-3b-s8D" secondAttribute="bottom" constant="10" id="Hph-11-Zoh"/>
+                <constraint firstItem="SBC-Iv-2MO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qix-ce-bcj"/>
+                <constraint firstItem="OHD-3b-s8D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VSO-WE-L4m"/>
+                <constraint firstItem="9UU-ho-9rN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dwY-8N-M5Z"/>
+                <constraint firstItem="9UU-ho-9rN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xJ8-Gw-1nV"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="52.173913043478265" y="51.358695652173914"/>
         </view>
     </objects>
 </document>

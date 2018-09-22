@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,18 +23,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJQ-8G-8C1">
-                    <rect key="frame" x="30" y="30" width="315" height="30"/>
+                    <rect key="frame" x="30" y="50" width="315" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="Shz-cr-afa"/>
+                        <constraint firstAttribute="height" constant="40" id="Shz-cr-afa"/>
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JUp-Mf-42q">
-                    <rect key="frame" x="30" y="80" width="315" height="30"/>
+                    <rect key="frame" x="30" y="110" width="315" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="thl-91-e7J"/>
+                        <constraint firstAttribute="height" constant="40" id="thl-91-e7J"/>
                     </constraints>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -47,7 +47,7 @@
                 <constraint firstItem="JUp-Mf-42q" firstAttribute="top" secondItem="PJQ-8G-8C1" secondAttribute="bottom" constant="20" id="b87-IC-baJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PJQ-8G-8C1" secondAttribute="trailing" constant="30" id="bX8-JR-ngC"/>
                 <constraint firstItem="JUp-Mf-42q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ddF-ku-lXN"/>
-                <constraint firstItem="PJQ-8G-8C1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="hMG-Ff-Y0k"/>
+                <constraint firstItem="PJQ-8G-8C1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="hMG-Ff-Y0k"/>
                 <constraint firstItem="PJQ-8G-8C1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="sPB-7i-xms"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

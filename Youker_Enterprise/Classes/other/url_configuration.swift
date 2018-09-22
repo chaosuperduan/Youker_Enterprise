@@ -82,7 +82,7 @@ let GetGroupInfo = rootURL + "v3/cpy/get/groupInfo/cpyId"
 //删除企业分组信息。
 let DeleteGroupInfo = "v3/cpy/del/groupInfo/groupId"
 //添加企业管理员。
-let AddEnterAdmURL = "v3/cpy/grant/user/purview"
+let AddEnterAdmURL = rootURL +  "v3/cpy/grant/user/purview"
 
 //删除企业管理员。
 let DeleteEnterAdmURL = rootURL + "v3/cpy/cancel/user/purview"

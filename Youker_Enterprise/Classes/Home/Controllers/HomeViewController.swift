@@ -8,8 +8,6 @@
 
 //head_Url    String?    "http://thirdwx.qlogo.cn/mmopen/vi_32/f77qC1elcRmeIN54OQBXEJlXiaDMrnaBXYGibFSux8Cwxdzeu7dSsnd0icZIu6SWPjLgQIPIicP4gsANuVlQNNlu3w/132"    some
 
-
-
 import UIKit
 let homeH = 198+tabBarbottomHeight//44+10+10;
 class HomeViewController: BaseViewController {
@@ -19,8 +17,11 @@ class HomeViewController: BaseViewController {
     var endDate:NSDate?
     var location:CLLocation?
     
+    @IBOutlet weak var thirdV: UIView!
+    @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var view1: UIView!
     var poi:AMapPOI?
-     lazy var locationManager = AMapLocationManager()
+    lazy var locationManager = AMapLocationManager()
     var addressBlock:PassBak?
     var currentCity:String = "定位中"{
         didSet{
@@ -29,16 +30,18 @@ class HomeViewController: BaseViewController {
         }
     }
     
-    
-    
     var footView:HomeFootView = {
         return HomeFootView.LoadView()
     }()
     var isLogin:Bool?{
         didSet{
             if isLogin == true {
-                header?.ImageIcon.kf.setImage(with: URL.init(string: (UserAccount.loadUserAccount()?.head_Url)!))
-                header?.titleLabel.text = UserAccount.loadUserAccount()?.nick_Name
+                if(UserAccount.loadUserAccount()?.head_Url != nil){
+                    
+                    header?.ImageIcon.kf.setImage(with: URL.init(string: (UserAccount.loadUserAccount()?.head_Url)!))
+                    header?.titleLabel.text = UserAccount.loadUserAccount()?.nick_Name
+                }
+                
             }else{
                 
               // header?.ImageIcon.image = UIImage.init(named: "userIcon")
@@ -56,13 +59,13 @@ class HomeViewController: BaseViewController {
             self.present(navi, animated: true, completion: nil)
             
         }
-       let secView = HomeHeaderView.init(frame: CGRect.init(x: 0, y: 270, width: KScreenW, height: 164))
+       let secView = HomeHeaderView.init(frame: CGRect.init(x: 0, y:0, width: KScreenW, height: 164))
         secView.callback = { index in
             self.doWithIndex(index: index)
         }
       print(secView.frame)
-        view.addSubview(header!)
-      view.addSubview(secView)
+        view1.addSubview(header!)
+      view2.addSubview(secView)
        setUpUifootView()
     }
 
@@ -109,19 +112,15 @@ class HomeViewController: BaseViewController {
         default:
             break
         }
-        
     }
 }
 
 extension HomeViewController{
-    
-    
     func QuickLogin(account:UserAccount){
         let param = NSMutableDictionary()
         param["userNum"] = account.phone_Number
         param["pwd"] = account.user_Pwd
         account.savaAccout()
-        
         if account.registration_ID == nil {
             let str:String = UserDefaults.standard.value(forKey: "registration_ID") as! String
             if(str == nil){
@@ -133,25 +132,23 @@ extension HomeViewController{
         }else{
             param["registerId"] = account.registration_ID
         }
-        
         LoginViewModel.sharedInstance.Login(params: param as! [String : AnyObject], orVC: nil, caBalck: { (str) in
             self.isLogin = true
             SVProgressHUD.showSuccess(withStatus: str)
         })
     }
-    
+    //MARK:-设置的尾部。
     func setUpUifootView(){
-        
-        footView.frame = CGRect.init(x: 0, y: KScreenH-198-tabBarbottomHeight,width: KScreenW, height:homeH )
+        footView.frame = CGRect.init(x: 0, y: 0,width: KScreenW, height:homeH )
         footView.submit = { str in
             let price:Double = Double(str) ?? 0
             self.param.price = NSInteger(price)
         }
+        print("+++++66&"+"\(footView.frame)")
         print(footView.frame)
         footView.callBak = {
             
             SearchHotelViewModel.sharedInstance.getHotel(params: nil, origionVc: self)
-            
         }
         footView.operationBlock = {(methodType,str,closureblock)
             in
@@ -169,9 +166,7 @@ extension HomeViewController{
                     self.param.detailPositionX = Double(poi.location.longitude)
                     self.param.detailPositionY = Double(poi.location.latitude)
                     let annotation = POIAnnotation.init(poi: poi)
-//                    self.mapView.addAnnotation(annotation)
-//                    self.mapView.centerCoordinate = CLLocationCoordinate2D.init(latitude: CLLocationDegrees(poi.location.latitude), longitude: CLLocationDegrees(poi.location.longitude))
-                    //self.mapView.selectAnnotation(annotation, animated: true)
+
                 }
                 UIView.animate(withDuration: 0.5, animations: {
                     self.view.frame.origin.y = self.view.frame.origin.y - 300
@@ -233,12 +228,10 @@ extension HomeViewController{
             default: break
             }
         }
-        self.KeyWordview = footView
-        self.view.addSubview(footView)
+       // self.KeyWordview = footView
+       // self.view.addSubview(footView)
+        thirdV.addSubview(footView)
     }
-    
-    
-    
 }
 extension HomeViewController:AMapLocationManagerDelegate{
     
@@ -248,10 +241,7 @@ extension HomeViewController:AMapLocationManagerDelegate{
             acc?.latitude = "\(location.coordinate.latitude)"
             acc?.longtitude = "\(location.coordinate.longitude)"
             acc?.savaAccout()
-            
         }
-       
-        
         self.param.detailPositionX = location.coordinate.longitude
         self.param.detailPositionY = location.coordinate.latitude
         if reGeocode != nil {
@@ -269,9 +259,6 @@ extension HomeViewController:AMapLocationManagerDelegate{
             print(reGeocode.city)
         }
         self.location = location
-        
     }
-    
-    
 }
 

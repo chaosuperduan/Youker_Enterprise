@@ -44,7 +44,8 @@ class AddAdminTableViewController: BaseTableViewController {
     }
     @objc func add(){
         
-        let vc :UIViewController = UIViewController()
+        let vc  = AddViewController()
+        vc.type  = addType.ADD_ADMIN
         
         
         self.navigationController?.pushViewController(vc, animated: true)

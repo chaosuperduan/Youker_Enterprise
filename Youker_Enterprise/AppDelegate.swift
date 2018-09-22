@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
        let vc = HomeViewController()
-        if UserAccount.loadUserAccount() !=  nil{
+        if UserAccount.loadUserAccount()?.token !=  nil{
            let vc = HomeViewController()
         self.window?.rootViewController = vc
 

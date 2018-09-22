@@ -67,7 +67,13 @@ class LoginViewModel: NSObject {
                     
                     if(dicts.keys.contains("cpyInfo")){
                         //MARK://大坑
-                        let copDic:[String:AnyObject] = dicts["cpyInfo"]! as! [String : AnyObject]
+                        guard  let copDic:[String:AnyObject] = dicts["cpyInfo"]! as? [String : AnyObject] else{
+                            account.savaAccout()
+                            
+                            caBalck!("登录成功.")
+                            orVC?.dismiss(animated: true, completion: nil)
+                            return
+                        }
                         
                         let copMode:cpyInfo = cpyInfo.init(dict: copDic)
                         print(copMode)

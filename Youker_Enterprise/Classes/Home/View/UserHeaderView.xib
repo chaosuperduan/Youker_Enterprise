@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,29 +13,39 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserHeaderView" customModule="Youker_Enterprise" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="192"/>
+            <rect key="frame" x="0.0" y="0.0" width="386" height="192"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QkB-Ei-3wy">
-                    <rect key="frame" x="153.5" y="62" width="68" height="68"/>
+                    <rect key="frame" x="151" y="54" width="84" height="84"/>
                     <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M0-pz-eQn">
-                    <rect key="frame" x="166" y="163" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNr-4E-NJR">
-                    <rect key="frame" x="148.5" y="58" width="78" height="76"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="78" id="3cn-z3-ROT"/>
+                        <constraint firstAttribute="height" constant="84" id="EAt-hp-5iT"/>
+                        <constraint firstAttribute="width" constant="84" id="QF4-tI-H9W"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="42"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNr-4E-NJR">
+                    <rect key="frame" x="155" y="58" width="76" height="76"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="76" id="3cn-z3-ROT"/>
                         <constraint firstAttribute="height" constant="76" id="p71-v6-9Pr"/>
                     </constraints>
                     <connections>
                         <action selector="Setting:" destination="iN0-l3-epB" eventType="touchUpInside" id="UK3-7l-uWa"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M0-pz-eQn">
+                    <rect key="frame" x="172" y="151" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.23529411764705882" green="0.72156862745098038" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -44,7 +54,7 @@
                 <constraint firstItem="vNr-4E-NJR" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="HrF-gQ-pwc"/>
                 <constraint firstItem="vNr-4E-NJR" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="YRx-6P-Hxz"/>
                 <constraint firstItem="5M0-pz-eQn" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="wyr-y6-9x9"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5M0-pz-eQn" secondAttribute="bottom" constant="8" id="xGB-F8-HeZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5M0-pz-eQn" secondAttribute="bottom" constant="20" id="xGB-F8-HeZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -52,7 +62,7 @@
                 <outlet property="ImageIcon" destination="QkB-Ei-3wy" id="HEk-cy-YGu"/>
                 <outlet property="titleLabel" destination="5M0-pz-eQn" id="U5J-JM-jVe"/>
             </connections>
-            <point key="canvasLocation" x="80.5" y="232"/>
+            <point key="canvasLocation" x="88" y="231.18440779610197"/>
         </view>
     </objects>
     <resources>
