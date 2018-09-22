@@ -121,11 +121,8 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl2-r2-BOU">
-                    <rect key="frame" x="0.0" y="126" width="375" height="72"/>
+                    <rect key="frame" x="0.0" y="117" width="375" height="81"/>
                     <color key="backgroundColor" red="0.23529411759999999" green="0.72156862749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="72" id="jeO-qe-Lnf"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="一键下单">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -194,6 +191,7 @@
                 <constraint firstItem="Sl2-r2-BOU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mAg-WE-2kN"/>
                 <constraint firstItem="WGs-a3-jAB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="mlB-SC-Y8w"/>
                 <constraint firstItem="ZFQ-Cb-g5L" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="qRo-aA-ioH"/>
+                <constraint firstItem="Sl2-r2-BOU" firstAttribute="top" secondItem="x7J-Ib-7oo" secondAttribute="bottom" constant="1" id="ul2-C8-BzP"/>
                 <constraint firstItem="x7J-Ib-7oo" firstAttribute="top" secondItem="JKf-Rz-XXF" secondAttribute="bottom" constant="2" id="wgz-ac-aPz"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
