@@ -155,6 +155,9 @@ class UserAccount: NSObject,NSCoding {
             print("文件存在")
            try? FileManager.default.removeItem(atPath: "useraccount.plist".cachesDir())
             
+            UIApplication.shared.keyWindow?.rootViewController = FirstViewController()
+            
+            
         }else{
             
             

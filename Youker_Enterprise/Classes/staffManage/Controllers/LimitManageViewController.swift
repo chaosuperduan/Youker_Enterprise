@@ -8,18 +8,27 @@
 
 import UIKit
 
-class LimitManageViewController: UIViewController {
+class LimitManageViewController: BaseViewController,UITextFieldDelegate {
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var minTF: UITextField!
     @IBOutlet weak var maxTF: UITextField!
     @IBOutlet weak var nameTF: UITextField!
-    var mode:UserGroupModel?
+    var mode:UserGroupModel?{
+        didSet{
+            
+            minTF.text = "\(mode?.minPrice)"
+            maxTF.text  = "\(mode?.maxPrice)"
+        }
+        
+    }
     
     var DataMode:UserGroupModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUi()
         loadData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange), name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
 
         
     }
@@ -33,6 +42,8 @@ class LimitManageViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "pl"), style: .plain, target: self, action: #selector(add))
         self.tableview.tableFooterView =  UIView()
         self.tableview.dataSource = self
+        minTF.delegate = self
+        maxTF.delegate = self
     }
     
     
@@ -61,6 +72,24 @@ class LimitManageViewController: UIViewController {
             
         })
     }
+    
+    
+    //修改分组信息
+    
+    func editGroupInfo(){
+        
+        
+        
+    }
+    
+    //MARK:调用编辑编辑功能
+    @objc func textFieldDidChange(){
+        
+       
+    }
+    
+    
+    
 }
 
 extension LimitManageViewController:UITableViewDataSource{

@@ -63,7 +63,22 @@ class SystemableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
+        
+        switch indexPath.row {
+            
+        case 1:
+            //showCodeView()
+            
+            break
+        case 3:
+          UserAccount.loadUserAccount()?.removeAll()
+            break
+        default:
+            break
+        }
     }
-
+    
+   
     
 }

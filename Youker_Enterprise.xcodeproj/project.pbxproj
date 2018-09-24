@@ -37,6 +37,8 @@
 		18A16F8B2148264600811900 /* EditGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A16F8A2148264600811900 /* EditGroup.swift */; };
 		18AF3286215161F300064571 /* InviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF3284215161F300064571 /* InviteTableViewCell.swift */; };
 		18AF3287215161F300064571 /* InviteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AF3285215161F300064571 /* InviteTableViewCell.xib */; };
+		18B469EB2157A02B00A419B0 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B469EA2157A02B00A419B0 /* CodeView.swift */; };
+		18B469ED2157A06500A419B0 /* CodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B469EC2157A06500A419B0 /* CodeView.xib */; };
 		18B8CD9B21452B650060DB6B /* ManageEnterUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CD9A21452B650060DB6B /* ManageEnterUserTableViewController.swift */; };
 		18B8CD9F21452C4F0060DB6B /* ManageUserCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8CD9D21452C4F0060DB6B /* ManageUserCellTableViewCell.swift */; };
 		18B8CDA021452C4F0060DB6B /* ManageUserCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B8CD9E21452C4F0060DB6B /* ManageUserCellTableViewCell.xib */; };
@@ -316,6 +318,8 @@
 		18A16F8A2148264600811900 /* EditGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroup.swift; sourceTree = "<group>"; };
 		18AF3284215161F300064571 /* InviteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteTableViewCell.swift; sourceTree = "<group>"; };
 		18AF3285215161F300064571 /* InviteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviteTableViewCell.xib; sourceTree = "<group>"; };
+		18B469EA2157A02B00A419B0 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		18B469EC2157A06500A419B0 /* CodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeView.xib; sourceTree = "<group>"; };
 		18B8CD9A21452B650060DB6B /* ManageEnterUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageEnterUserTableViewController.swift; sourceTree = "<group>"; };
 		18B8CD9D21452C4F0060DB6B /* ManageUserCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageUserCellTableViewCell.swift; sourceTree = "<group>"; };
 		18B8CD9E21452C4F0060DB6B /* ManageUserCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageUserCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -1267,6 +1271,8 @@
 				E50BBDCB2137CA3F00F09D92 /* WSDaePickerView */,
 				E5908D862154A17200BE355A /* ActionView.swift */,
 				E5908D882154A18000BE355A /* ActionView.xib */,
+				18B469EA2157A02B00A419B0 /* CodeView.swift */,
+				18B469EC2157A06500A419B0 /* CodeView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1689,6 +1695,7 @@
 				E50BBE532137E62300F09D92 /* facilitiesCell.xib in Resources */,
 				E50BBE362137E1D500F09D92 /* RoomTableViewCell.xib in Resources */,
 				182EBE28213D8B1D00088673 /* AddViewController.xib in Resources */,
+				18B469ED2157A06500A419B0 /* CodeView.xib in Resources */,
 				E50BBDAE2137A07D00F09D92 /* AMap.bundle in Resources */,
 				E50BBE262137DF1C00F09D92 /* PriceView.xib in Resources */,
 				E50BBE5F2137E7AB00F09D92 /* ImgeViewCollectionViewCell.xib in Resources */,
@@ -2007,6 +2014,7 @@
 				E50BBD942137A07D00F09D92 /* SVProgressAnimatedView.m in Sources */,
 				185232D22136FCF8009927D2 /* AppDelegate.swift in Sources */,
 				E50BBD912137A07D00F09D92 /* MJRefreshAutoFooter.m in Sources */,
+				18B469EB2157A02B00A419B0 /* CodeView.swift in Sources */,
 				E50BBD9F2137A07D00F09D92 /* PageTitleView.swift in Sources */,
 				E50BBE8B2137EB3900F09D92 /* SelectCouponTableViewCell.swift in Sources */,
 				E50BBEC7213939AE00F09D92 /* UserHeaderView.swift in Sources */,

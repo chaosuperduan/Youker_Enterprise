@@ -4,7 +4,9 @@
 
 import UIKit
 import SnapKit
-class StaffAddTableViewController: UITableViewController {
+class StaffAddTableViewController: BaseTableViewController {
+    
+    var url:String?
     let titles = ["手动添加","扫码添加"]
     let imgs = ["finger","coder"]
     override func viewDidLoad() {
@@ -80,9 +82,25 @@ class StaffAddTableViewController: UITableViewController {
             
             
         }else{
-            
+           showCodeView()
             
         }
+    }
+    
+    
+    //MARK:弹出邀请URL
+    func showCodeView(){
+        let popView = ZXPopView.init(frame: self.view.bounds)
+        let codeV = CodeView.LoadFromNib()
+        codeV.frame = CGRect.init(x: 0, y: kScreenH-234, width: KScreenW, height: 234)
+        codeV.url = self.url
+        codeV.setUpUI()
+        popView.contenView = codeV
+        
+        popView.showInView(view: self.view)
+        
+        
+        
     }
     
 

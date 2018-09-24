@@ -44,4 +44,32 @@ class InviteViewModel: NSObject {
             }
         }
     }
+    
+    //获取邀请连接
+    
+    func GetInviteURL(params:[String:AnyObject],orVC:StaffAddTableViewController?,callback1:@escaping (()->())){
+        print(RegisterMerchant)
+        NetworkTools.requestData(.get, URLString:  GetUsersList, parameters: params as? [String : Any]) { (response,mes) in
+            print(response)
+            if  response != nil{
+                
+                
+                
+                guard let URLstr:String = response?["data"] as! String else{
+                    return
+                }
+                
+                orVC?.url = URLstr
+                
+                
+            }else{
+                
+                //                orVC?.ReqType = RequestResultType.SUCCESS
+                orVC?.tableView.mj_header.endRefreshing()
+                orVC?.errorMessage = mes
+                callback1()
+                
+            }
+        }
+    }
 }
