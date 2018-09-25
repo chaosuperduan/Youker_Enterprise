@@ -140,9 +140,11 @@ class RegisterViewModel: NSObject {
                 orVC.ReqType = RequestResultType.ERROR
                 return
             }else{
+                
                 orVC.ReqType = RequestResultType.SUCCESS
                 let account = UserAccount.init(dic: response!["data"] as! [String : AnyObject])
                 callback(account)
+                
                 
                 
             }
@@ -198,13 +200,13 @@ class SearchHotelViewModel: NSObject {
     func getHotel(params:[String:AnyObject]?,origionVc:HomeViewController){
         let param1 = NSMutableDictionary()
         let account = UserAccount.loadUserAccount()
-//        let registID = UserDefaults.standard.value(forKey: "registration_ID")
-//        if registID == nil {
-//            SVProgressHUD.showError(withStatus: "获取registID失败")
-//            return
-//        }
-//        SVProgressHUD.show(withStatus: "正在为您搜索酒店")
-//        param1["registration_ID"] = registID
+        let registID = UserDefaults.standard.value(forKey: "registration_ID")
+        if registID == nil {
+            SVProgressHUD.showError(withStatus: "获取registID失败")
+            return
+        }
+        SVProgressHUD.show(withStatus: "正在为您搜索酒店")
+        param1["registration_ID"] = registID
       
         param1["token"] = account?.token!
         param1["role_Id"] = account?.role_Id
@@ -226,14 +228,17 @@ class SearchHotelViewModel: NSObject {
                 origionVc.ReqType = RequestResultType.ERROR
                 return
             }else{
+                
                 if(response != nil){
-                    let str:String = response!["data"] as! String
+                   // let str:String = response!["data"] as! String
                     let vc  = HotelListTableViewController()
                     vc.hotellist = origionVc.hotellist
-                    origionVc.hotellist.removeAll()
-                    vc.priceToken = str
+//                    origionVc.hotellist.removeAll()
+//                    vc.priceToken = str
                     vc.params = origionVc.param
-            origionVc.navigationController?.pushViewController(vc, animated: true)
+            //origionVc.navigationController?.pushViewController(vc, animated: true)
+                    //FWNavigationController.init(rootViewController: vc)
+                    origionVc.present(FWNavigationController.init(rootViewController: vc), animated: true, completion: nil)
                 }
             }
         }}
@@ -245,6 +250,8 @@ class SearchHotelViewModel: NSObject {
         NetworkTools.requestData(.post, URLString: confirmHotel_URL, parameters: params as? [String : Any]) { (response,mes) in
             print(response)
             if  response == nil{
+                
+                
                 origionVc.errorMessage = mes
                 origionVc.ReqType = RequestResultType.ERROR
                 return

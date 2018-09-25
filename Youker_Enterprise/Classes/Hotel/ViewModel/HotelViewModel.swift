@@ -14,8 +14,10 @@ class HotelViewModel: NSObject {
         let account = UserAccount.loadUserAccount()
         let jsonRoom = String.getJSONStringFromDictionary(dictionary:SearchParamModel.getDict(mode: VC.params!))
         print(jsonRoom)
-        let jsparam = ["hotel_Id": VC.mode?.hotel_Id ?? 0,"factor":jsonRoom,"token":(account?.token)!] as [String : Any]
+        var jsparam = ["hotel_Id": VC.mode?.hotel_Id ?? 0,"factor":jsonRoom,"token":(account?.token)!] as [String : Any]
         print(jsparam)
+        jsparam["userId"] = UserAccount.loadUserAccount()?.user_Id
+        
         NetworkTools.requestData(.post, URLString:HotelDetailURL, parameters: jsparam as? [String : Any]) { (response,mes) in
             if  response == nil{
                 VC.errorMessage = mes

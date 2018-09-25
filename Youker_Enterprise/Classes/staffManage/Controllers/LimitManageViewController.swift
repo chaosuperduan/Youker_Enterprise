@@ -15,9 +15,15 @@ class LimitManageViewController: BaseViewController,UITextFieldDelegate {
     @IBOutlet weak var nameTF: UITextField!
     var mode:UserGroupModel?{
         didSet{
-            
+            if minTF != nil {
             minTF.text = "\(mode?.minPrice)"
-            maxTF.text  = "\(mode?.maxPrice)"
+            }
+            
+            if maxTF != nil  {
+                  maxTF.text  = "\(mode?.maxPrice)"
+            }
+            
+          
         }
         
     }
@@ -42,6 +48,8 @@ class LimitManageViewController: BaseViewController,UITextFieldDelegate {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "pl"), style: .plain, target: self, action: #selector(add))
         self.tableview.tableFooterView =  UIView()
         self.tableview.dataSource = self
+        minTF.text = "\(mode!.minPrice)"
+        maxTF.text  = "\(mode!.maxPrice)"
         minTF.delegate = self
         maxTF.delegate = self
     }
