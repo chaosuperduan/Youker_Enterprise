@@ -32,7 +32,16 @@ class HotelListTableViewController: BaseTableViewController {
         setUpUI()
         SearchHotelViewModel.sharedInstance.getConfirmHotel(origionVc: self)
         
+         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "left"), style: .plain, target: self, action: #selector(back))
+        
     }
+    
+    @objc func back(){
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     @objc func networkDidReceiveMessage(notification:NSNotification){
         imageView.stopAnimating()
         imageView.removeFromSuperview()

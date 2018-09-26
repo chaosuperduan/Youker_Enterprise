@@ -108,7 +108,7 @@ class OrderViewModel: NSObject {
 class payMode: NSObject {
      static let shareInstance = payMode()
     
-    func Book(isAliPay:Bool,priceToken:String?,roomType:NSInteger,recordOrder:orderRecord,bookSum:NSInteger){
+    func Book(isAliPay:Bool,priceToken:String?,roomType:NSInteger,recordOrder:orderRecord,bookSum:NSInteger,same_Type:NSInteger){
         
         let param = NSMutableDictionary()
         let account = UserAccount.loadUserAccount()
@@ -124,6 +124,8 @@ class payMode: NSObject {
         }
         
         param["roomType"] = roomType
+        param["sameType"] = same_Type
+        
         
         if isAliPay {
             recordOrder.pay_Type = 84

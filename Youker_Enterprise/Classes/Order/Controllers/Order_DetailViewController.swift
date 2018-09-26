@@ -190,7 +190,7 @@ self.navigationController?.pushViewController(vc, animated: true)
                 self.roomType = (self.mode?.roomInfo?.room_Type)!
                 
                 
-                payMode.shareInstance.Book(isAliPay: false, priceToken: nil, roomType: self.roomType, recordOrder: self.recordOrder, bookSum: self.recordOrder.booking_Num)
+                payMode.shareInstance.Book(isAliPay: false, priceToken: nil, roomType: self.roomType, recordOrder: self.recordOrder, bookSum: self.recordOrder.booking_Num, same_Type: 0)
                 payView.close()
                 
             }else{
@@ -206,7 +206,7 @@ self.navigationController?.pushViewController(vc, animated: true)
                 self.roomType = (self.mode?.roomInfo?.room_Type)!
                 
                 
-                payMode.shareInstance.Book(isAliPay: true, priceToken: nil, roomType: self.roomType, recordOrder: self.recordOrder, bookSum: self.recordOrder.booking_Num)
+                payMode.shareInstance.Book(isAliPay: true, priceToken: nil, roomType: self.roomType, recordOrder: self.recordOrder, bookSum: self.recordOrder.booking_Num, same_Type: 0)
                payView.close()
             }
         }

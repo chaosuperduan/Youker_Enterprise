@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.self.networkDidLogin(notification:)), name: NSNotification.Name.jpfNetworkDidLogin, object: nil)
         
         //微信支付
-        WXApi.registerApp("wx03e9d2bf62182d81", enableMTA: true)
+        WXApi.registerApp("wxdf38df43c9c9d19a", enableMTA: true)
         
         
         return true
@@ -121,6 +121,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             
         }
+    }
+    
+    
+    func  application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        
+        if (url.host == "safepay") {
+            
+            AlipaySDK.defaultService().processOrder(withPaymentResult: url) { (resultDic) in
+                
+                
+                
+                print("++++++++++++++++++++")
+                print(resultDic)
+                print("++++++++++++++++++++")
+                
+            }
+        }
+        
+        
+        WXApi.handleOpen(url, delegate: WXApiManager.shared())
+        
+        return true
+    }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        
+        if (url.host == "safepay") {
+            AlipaySDK.defaultService().processOrder(withPaymentResult: url) { (resultDic) in
+                print("++++++++4444444++++++++++++")
+                guard let dic:[String:AnyObject] = resultDic as! [String : AnyObject] else{
+                    return
+                }
+                
+                let resultCode:String = dic["resultStatus"] as! String
+                
+                if (resultCode == "9000"){
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name.init("paySuccess"), object: nil)
+                    
+                }else{
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name.init("paySuccess"), object: nil)
+                    
+                    
+                }
+            }
+        }else{
+            
+            WXApi.handleOpen(url, delegate: WXApiManager.shared())
+            
+        }
+        return true
     }
 
 

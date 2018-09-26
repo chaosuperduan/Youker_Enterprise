@@ -100,6 +100,12 @@ class HomeViewController: BaseViewController {
             
         
             break
+        case 1:
+            let naVi = FWNavigationController.init(rootViewController: MyOrdersViewController())
+            present(naVi, animated: true, completion: nil)
+            
+            
+            break
         case 3:
             let naVi = FWNavigationController.init(rootViewController: StaffAddTableViewController())
             present(naVi, animated: true, completion: nil)

@@ -246,7 +246,7 @@ class TotalTableViewController: BaseTableViewController {
                 self.roomType = (self.selectMode?.roomInfo?.room_Type)!
                 
                 
-                payMode.shareInstance.Book(isAliPay: false, priceToken: nil, roomType: self.roomType, recordOrder: self.recordOrder, bookSum: self.recordOrder.booking_Num)
+                payMode.shareInstance.Book(isAliPay: false, priceToken: nil, roomType: self.roomType, recordOrder: self.recordOrder, bookSum: self.recordOrder.booking_Num, same_Type: 0)
                 self.payView.close()
                 
             }else{
@@ -259,7 +259,7 @@ class TotalTableViewController: BaseTableViewController {
                 
                 // self.recordOrder.user_Id = self.selectMode?.orders?.user_Id as! NSNumber
                 self.roomType = (self.selectMode?.roomInfo?.room_Type)!
-                payMode.shareInstance.Book(isAliPay: true, priceToken: nil, roomType: self.roomType, recordOrder: self.recordOrder, bookSum: self.recordOrder.booking_Num)
+                payMode.shareInstance.Book(isAliPay: true, priceToken: nil, roomType: self.roomType, recordOrder: self.recordOrder, bookSum: self.recordOrder.booking_Num, same_Type: 0)
                 self.payView.close()
             }
         }
