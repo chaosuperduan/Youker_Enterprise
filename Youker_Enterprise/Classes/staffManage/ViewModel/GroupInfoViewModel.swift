@@ -87,12 +87,18 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
             print(response)
             if  response != nil{
                 
+                let code:NSInteger = response?["code"] as! NSInteger
+                
                 guard let modeDic:[[String:AnyObject]] = response?["data"] as! [[String : AnyObject]] else{
                     
                     
                     return
                 }
-                orVC?.dataArray.removeAll()
+                if(orVC?.dataArray.count > 0){
+                    
+                     orVC?.dataArray.removeAll()
+                }
+               
                 for dic in modeDic{
                     
                     let mode = UserGroupModel.init(dict: dic as! [String : NSObject])
@@ -111,7 +117,7 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
                 
             }else{
                 
-                
+                orVC?.showNoAuthority(title: mes!)
                 callback1()
             }
         }

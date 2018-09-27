@@ -29,3 +29,23 @@ let BackColor = UIColor.init(red: 247/255.0, green: 249/255.0, blue: 250/255.0, 
 typealias PassBak = (String) -> ()
 typealias AnyBack = (([String:AnyObject])->())
 typealias LoginBolock = (UserAccount)->()
+
+
+//关于角色id
+
+
+/*
+ 
+ 9 普通用户。
+ 69 子商家
+ 131企业用户
+ 36经销商
+ 130 企业员工
+ 126 企业管理员
+ 125 企业主管理员
+ 8个人商家
+ 6联合运营商
+ 110子经销商
+ 70客服。
+ 7企业。
+ */

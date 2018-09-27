@@ -8,16 +8,12 @@
 
 import UIKit
 enum RequestResultType{
-    case SUCCESS,NODATA,ERROR,NETBAD
+    case SUCCESS,NODATA,ERROR,NETBAD,LIMIT
 }
 class BaseViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    
-    
-    
     //处理网络请求结果处理。
     var ReqType:RequestResultType?{
         didSet{
@@ -34,11 +30,18 @@ class BaseViewController: UIViewController {
                 SVProgressHUD.showError(withStatus: "网络错误")
             }
                 break
+            case .LIMIT?: do{
+                
+                showNoAuthority(title: "没有权限")
+            }
+                break
             default:
                 break
             }
      }
     }
+    
+    
     var errorMessage:String?
     
     var KH:CGFloat = 0
@@ -46,6 +49,33 @@ class BaseViewController: UIViewController {
         didSet{
            KH = (KeyWordview?.frame.origin.y)!
         }
+    }
+    
+    //展示无权限的界面。
+    func showNoAuthority(title:String){
+        //删除员工。
+        let popView = ZXPopView.init(frame: self.view.bounds)
+        let actionView = ActionView.LoadFromNib()
+        actionView.title = "暂无权限，请联系管理员"
+        actionView.callBack = { isdone in
+            if isdone {
+              
+                popView.dismissView()
+            }else{
+                
+                popView.removeFromSuperview()
+                
+            }
+            
+        }
+        
+        actionView.frame = CGRect.init(x: (KScreenW-325)/2, y: (KScreenH-167)/2, width: 325, height: 167)
+        popView.contenView = actionView
+        popView.isCenter = true
+        popView.showInView(view: self.view)
+        
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +103,7 @@ class BaseViewController: UIViewController {
                 
                }
         
-            
-        }else if (name == "UIKeyboardDidHideNotification"){
+            }else if (name == "UIKeyboardDidHideNotification"){
             //收起键盘的操作
             UIView.animate(withDuration: 0.5) {
             self.KeyWordview?.frame.origin.y = self.KH
@@ -89,7 +118,5 @@ class BaseViewController: UIViewController {
             self.KeyWordview?.frame.origin.y = self.KH
             
         }
-        
-        
     }
   }

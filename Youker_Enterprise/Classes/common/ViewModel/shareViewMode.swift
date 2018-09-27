@@ -58,5 +58,4 @@ class shareViewMode: NSObject {
         req.scene = Int32(self.sence.rawValue)
         WXApi.send(req)
     }
-
 }

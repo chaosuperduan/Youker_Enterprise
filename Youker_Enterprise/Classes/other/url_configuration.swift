@@ -10,8 +10,8 @@
 import Foundation
 //103
 //let rootURL = "http://192.168.31.203:8080/Maxwell/"
-let rootURL2 = "http://www.iyouker.com/Maxwell/"
-let rootURL = "http://jjfly.ngrok.iyouker.com:8080/Maxwell/"
+let rootURL = "http://www.iyouker.com/Maxwell/"
+let rootURL2 = "http://jjfly.ngrok.iyouker.com:8080/Maxwell/"
 //MARK:-登录
 let LoginURL = rootURL+"v3/cpy/login"
 //MARK:-注册
@@ -98,3 +98,4 @@ let GetInviteURL = "v3/cpy/get/inviteUrl"
 let GetUsersList = rootURL + "v3/cpy/get/user/state"
 //删除企业员工信息。
 let DeleteEmployeeURL = rootURL + "v3/cpy/del/user/userId"
+
