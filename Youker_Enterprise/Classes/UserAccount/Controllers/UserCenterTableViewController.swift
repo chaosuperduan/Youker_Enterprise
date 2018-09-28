@@ -42,8 +42,6 @@ class UserCenterTableViewController: BaseTableViewController {
     @objc func submitCreate(){
         self.isEdit = !self.isEdit
         if isEdit {
-            
-            
             let param = NSMutableDictionary()
             let account = UserAccount.loadUserAccount()
             param["token"] = account?.token
@@ -155,6 +153,13 @@ class UserCenterTableViewController: BaseTableViewController {
         switch indexPath.row {
         case 0:
             
+            
+            self.showCanEdit(true) { (image) in
+                
+              self.uploadImageWith(imge: image)
+            }
+            
+            
             break
         case 1:
             
@@ -178,7 +183,7 @@ class UserCenterTableViewController: BaseTableViewController {
                     let paramJson = NSMutableDictionary()
                     print(jsonStr)
                     paramJson["userInfo"] = jsonStr
-                    paramJson["token"] = account?.token
+                    paramJson["token"] = account?.token!
                     UpdateUserInfo.sharedInstance.UpdateInfo(params: paramJson as! [String : AnyObject], orVC: self, callback1: {
                         self.accout?.gender = result as? String
                         self.accout?.nick_Name = self.nickName
@@ -194,4 +199,52 @@ class UserCenterTableViewController: BaseTableViewController {
             break
         }
     }
+    
+    //上传头像。
+    func uploadImageWith(imge:UIImage?){
+    
+        
+        let param = NSMutableDictionary()
+        let account = UserAccount.loadUserAccount()
+        param["token"] = account?.token
+        param["role_Id"] = account?.role_Id
+        param["user_Id"] = account?.user_Id
+        //param["user_Name"] = "HONDA"
+        let jsonStr:String = String.getJSONStringFromDictionary(dictionary: param)
+        let paramJson = NSMutableDictionary()
+        print(jsonStr)
+        paramJson["userInfo"] = jsonStr
+        paramJson["token"] = account?.token
+        print(jsonStr)
+        
+        
+        guard let imageData = UIImagePNGRepresentation(imge!) else {
+            return
+        }
+        let str = imageData.base64EncodedString()
+        
+        paramJson["picture"] = str
+        
+        
+        UpdateUserInfo.sharedInstance.UpdateInfo(params: paramJson as! [String : AnyObject], orVC: self, callback1: {
+            self.accout?.gender = self.gender
+            self.tableView.reloadData()
+        })
+        NetworkTools.requestData(.post, URLString: OPDATEUSER_URL, parameters: paramJson as? [String : Any], finishedCallback: { (response, msg) in
+            
+        })
+
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

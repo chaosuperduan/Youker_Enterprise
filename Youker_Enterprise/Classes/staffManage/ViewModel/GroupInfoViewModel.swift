@@ -94,10 +94,25 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
                     
                     return
                 }
-                if(orVC?.dataArray.count > 0){
-                    
+//                if(orVC?.dataArray.count ??  > 0){
+//
+//                     orVC?.dataArray.removeAll()
+//                }
+                
+                let count :NSInteger = orVC?.dataArray.count ?? 0
+
+                if(count>0){
+
                      orVC?.dataArray.removeAll()
                 }
+           
+//            if((orVC?.dataArray.count)!>0){
+//                orVC?.dataArray.removeAll()
+//
+//            }
+              
+            
+            
                
                 for dic in modeDic{
                     

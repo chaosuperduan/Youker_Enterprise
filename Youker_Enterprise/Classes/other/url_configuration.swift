@@ -23,7 +23,7 @@ let HotelDetailURL = rootURL + "v3/" + "booking/search/room/factor"
 //MARK:-获取订单。
 let OREDR_URL = rootURL + "userInfo/get/orders/user"
 ///MARK:更改用户资料。
-let OPDATEUSER_URL = rootURL + "userInfo/update/user"
+let OPDATEUSER_URL = rootURL  + "userInfo/update/user"
 ///MARK:下单。
 let SENDORDER_URL = rootURL + "v3/" + "booking/add/record"
 //MARK:-获取手机验证码

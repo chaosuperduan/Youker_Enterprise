@@ -59,6 +59,7 @@ class HomeViewController: BaseViewController {
             self.present(navi, animated: true, completion: nil)
             
         }
+        
        let secView = HomeHeaderView.init(frame: CGRect.init(x: 0, y:0, width: KScreenW, height: 164))
         secView.callback = { index in
             self.doWithIndex(index: index)

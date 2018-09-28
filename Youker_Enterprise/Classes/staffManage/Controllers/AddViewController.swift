@@ -42,9 +42,6 @@ class AddViewController:BaseViewController {
             }
             
         }
-        
-      
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -91,7 +88,4 @@ class AddViewController:BaseViewController {
         
     }
     
-
-   
-
 }
