@@ -14,7 +14,7 @@ class AddGroupToUsersViewController: BaseViewController {
     var mode:UserGroupModel?
     var users:[NSInteger] = [NSInteger]()
     
-    
+    var ADDmode:UserGroupModel?
     
     @IBOutlet weak var groupBTN: UIButton!
     
@@ -37,9 +37,12 @@ class AddGroupToUsersViewController: BaseViewController {
         
         let data = try? JSONSerialization.data(withJSONObject: users, options: JSONSerialization.WritingOptions.prettyPrinted)
         let strJson = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+        
+        
       params["users"] = strJson
       params["operateUser"] = UserAccount.loadUserAccount()?.user_Id
-      params["groupId"] = mode?.group_Id
+      params["groupId"] = ADDmode?.group_Id
+        
       params["token"] = UserAccount.loadUserAccount()?.token!
         
         GroupInfoViewModel.sharedInstance.ADDUserToGroup(params: params as! [String : AnyObject], orVC: self) {

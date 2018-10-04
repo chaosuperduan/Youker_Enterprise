@@ -13,6 +13,7 @@ class LimitManageViewController: BaseViewController,UITextFieldDelegate {
     @IBOutlet weak var minTF: UITextField!
     @IBOutlet weak var maxTF: UITextField!
     @IBOutlet weak var nameTF: UITextField!
+    var groupID:NSInteger = 0
     var mode:UserGroupModel?{
         didSet{
             if minTF != nil {
@@ -56,14 +57,20 @@ class LimitManageViewController: BaseViewController,UITextFieldDelegate {
     
     
    @objc  func add(){
-        self.navigationController?.pushViewController(AddGroupToUsersViewController(), animated: true)
+    let vc = AddGroupToUsersViewController()
+    vc.ADDmode = self.mode
+        self.navigationController?.pushViewController(vc, animated: true)
         
         
     }
     
     func next(){
+        
+        
+        let vc = AddGroupToUsersViewController()
+//        vc.mode = self.mode
     
-    self.navigationController?.pushViewController(AddGroupToUsersViewController(), animated: true)
+    self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func loadData(){

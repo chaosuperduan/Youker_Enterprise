@@ -32,6 +32,8 @@ class LimitationViewController: BaseViewController {
             }else{
               let vc = LimitManageViewController()
               vc.mode = self.dataArray[index]
+                
+              //vc.groupID =
               self.navigationController?.pushViewController(vc, animated: true)
                 
                 
