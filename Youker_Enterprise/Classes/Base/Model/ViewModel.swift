@@ -132,6 +132,8 @@ class RegisterViewModel: NSObject {
         
         
         let urlconf = params.keys.contains("openid")
+        
+        
         let url = urlconf ? loginOther_URL:registerURL
         NetworkTools.requestData(.post, URLString: registerURL , parameters: params as? [String : Any]) { (response,mes) in
             print(response ?? "fff")

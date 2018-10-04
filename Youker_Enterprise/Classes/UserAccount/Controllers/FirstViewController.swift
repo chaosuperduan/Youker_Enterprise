@@ -79,7 +79,13 @@ extension FirstViewController{
             self.isLogin = true
             SVProgressHUD.showSuccess(withStatus: str)
             
-            self.present(FWNavigationController(rootViewController: UpdateInfoViewController()), animated: true, completion: nil)
+            if(UserAccount.loadUserAccount()?.company_Id != nil){
+               UIApplication.shared.keyWindow?.rootViewController = HomeViewController()
+            }else{
+                
+                self.present(FWNavigationController(rootViewController: UpdateInfoViewController()), animated: true, completion: nil)
+                
+            }
             
             
         })

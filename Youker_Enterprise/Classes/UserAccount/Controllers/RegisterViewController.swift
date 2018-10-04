@@ -66,23 +66,17 @@ class RegisterViewController: BaseViewController {
         }else{
            self.navigationItem.title = "注册"
         }
-        
     }
 
     @IBAction func Register(_ sender: Any) {
         
         
         print("----注册---")
-        
         register()
-        
     }
     
   @objc  func register(){
-        
-        
         down()
-        
         self.RePwTF.resignFirstResponder()
         if PwTF.text != RePwTF.text{
             SVProgressHUD.showError(withStatus: "您输入的密码不一致")
@@ -93,7 +87,6 @@ class RegisterViewController: BaseViewController {
         //注册企业的，商户角色id是131
         param["role_Id"] = "131"
         param["login_Type"] = "72"
-        
         if isWeixinRegister {
             param["access_token"] = UserAccount.loadUserAccount()?.access_token
             param["openid"] = UserAccount.loadUserAccount()?.openid
@@ -112,7 +105,6 @@ class RegisterViewController: BaseViewController {
             let paramJson = NSMutableDictionary()
             paramJson["user"] = jsonStr
             
-            
             weChatLogin.sharedInstance.LoginByWeixin(param: param as! [String : AnyObject], RegisterBack: {
                 str in
                 
@@ -127,9 +119,7 @@ class RegisterViewController: BaseViewController {
             }
             
             self.dismiss(animated: true, completion:  nil)
-            
-            
-        }else{
+           }else{
             
             let jsonStr:String = String.getJSONStringFromDictionary(dictionary: param)
             let paramJson = NSMutableDictionary()
@@ -149,12 +139,8 @@ class RegisterViewController: BaseViewController {
                 if(self.callBack != nil){
                      self.callBack!(account)
                      self.dismiss(animated: true, completion: nil)
-                    
-                    
-                }
-              }
-        }
-        
+                  }
+              }}
     }
     
     func getIdentyCode(){

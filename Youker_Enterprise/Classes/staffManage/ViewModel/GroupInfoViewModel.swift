@@ -350,16 +350,6 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
     }
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 //添加企业的分组信息。

@@ -41,7 +41,7 @@ class UpdateInfoViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "完善信息"
         self.cpADDBTN.setTitle(self.dist.cpyCity, for: .normal)
-        
+        let item = UIBarButtonItem.init(image: UIImage.init(named: "left"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
 
     }
     @IBAction func addCommpayAdd(_ sender: Any) {
@@ -53,6 +53,11 @@ class UpdateInfoViewController: UIViewController {
             self.dist.cpyDistrict = dis
             self.cpADDBTN.setTitle(self.dist.cpyCity, for: .normal)
         }
+    }
+    
+    @objc func back(){
+        
+        dismiss(animated: true, completion: nil)
     }
     //添加注册地址.
     @IBAction func addRegAdd(_ sender: Any) {
