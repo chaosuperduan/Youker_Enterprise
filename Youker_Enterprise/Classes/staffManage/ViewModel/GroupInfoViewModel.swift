@@ -167,6 +167,48 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
         }
     }
     
+    
+    
+    //删除分组员工。
+    
+    func DelteUserToGroup(params:[String:AnyObject],orVC:LimitManageViewController?,callback1:@escaping (()->())){
+        print(GetGroupByID)
+        NetworkTools.requestData(.get, URLString:  DeleteUserToGroupURL, parameters: params as? [String : Any]) { (response,mes) in
+            print(response)
+            
+            if(response != nil){
+                
+                guard let responseDic:[String:AnyObject] = response as! [String : AnyObject] else{
+                    
+                    
+                    return
+                }
+                let code:NSInteger = responseDic["code"] as! NSInteger
+                
+                if(code == 200){
+                    
+                    orVC?.ReqType =  RequestResultType.SUCCESS
+                    callback1()
+                }else{
+                    
+                    orVC?.ReqType  = RequestResultType.ERROR
+                    orVC?.errorMessage = responseDic["message"] as! String
+                    
+                }
+            }else{
+                
+                orVC?.ReqType  = RequestResultType.ERROR
+                orVC?.errorMessage = mes
+                
+                
+            }
+            
+           
+                    
+          
+        }
+    }
+    
     //邀请员工加入
     
     //添加员工。
@@ -276,9 +318,13 @@ func AddGroupInfo(params:[String:AnyObject],orVC:LimitationViewController?,callb
         }
     }
     
+    
+    
+    
+    
     //删除员工。
     
-    //添加员工。
+  
     func DELETECompanyUser(params:[String:AnyObject],orVC: ManageEnterUserTableViewController?,callback1:@escaping (()->())){
         print(DeleteEmployeeURL)
         NetworkTools.requestData(.get, URLString:  DeleteEmployeeURL , parameters: params as? [String : Any]) { (response,mes) in

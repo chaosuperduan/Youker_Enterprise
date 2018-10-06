@@ -107,9 +107,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 UserDefaults.standard.set(str, forKey: "registration_ID")
             }
             
-            
-            
-            
             //            if (UserAccount.isLogin() && str != nil) {
             //
             //

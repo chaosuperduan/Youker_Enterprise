@@ -88,8 +88,8 @@ let AddEnterAdmURL = rootURL +  "v3/cpy/grant/user/purview"
 let DeleteEnterAdmURL = rootURL + "v3/cpy/cancel/user/purview"
 //批量添加员工到分组。
 let AddUserToGropURL = rootURL +  "v3/cpy/add/users/group"
-//批量添加员工到分组
-let DeleteUserToGroupURL = "v3/cpy/del/users/group"
+//批量将员工从分组移除
+let DeleteUserToGroupURL = rootURL + "v3/cpy/del/users/group"
 //获取企业管理员。
 let GetAdminInfoURL = rootURL + "v3/cpy/get/admins/info"
 //获取邀请url
