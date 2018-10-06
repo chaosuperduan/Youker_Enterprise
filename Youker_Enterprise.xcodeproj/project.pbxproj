@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09072006F0130A528B4BF678 /* Pods_Youker_EnterpriseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B76D3D624BB23299B80417E /* Pods_Youker_EnterpriseTests.framework */; };
 		0EB44B2013A8ED117440E33D /* Pods_Youker_EnterpriseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C021F587FB603B0CD8AF52 /* Pods_Youker_EnterpriseUITests.framework */; };
+		1814FC4E216925340046A3D3 /*  Invoice.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1814FC4D216925340046A3D3 /*  Invoice.xib */; };
 		182EBE24213D896B00088673 /* StaffAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EBE23213D896B00088673 /* StaffAddTableViewController.swift */; };
 		182EBE27213D8B1D00088673 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182EBE25213D8B1D00088673 /* AddViewController.swift */; };
 		182EBE28213D8B1D00088673 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182EBE26213D8B1D00088673 /* AddViewController.xib */; };
@@ -283,6 +284,7 @@
 
 /* Begin PBXFileReference section */
 		107212BBBD58CF04E38E5B9E /* Pods-Youker_EnterpriseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_EnterpriseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_EnterpriseTests/Pods-Youker_EnterpriseTests.release.xcconfig"; sourceTree = "<group>"; };
+		1814FC4D216925340046A3D3 /*  Invoice.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = " Invoice.xib"; sourceTree = "<group>"; };
 		182EBE23213D896B00088673 /* StaffAddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffAddTableViewController.swift; sourceTree = "<group>"; };
 		182EBE25213D8B1D00088673 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		182EBE26213D8B1D00088673 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
@@ -666,6 +668,7 @@
 				E5118207213E262E00A1CC11 /* LimitCell.xib */,
 				E5127E362147F15900979FEE /* LimitActionView.swift */,
 				E5127E382147F19F00979FEE /* LimitActionView.xib */,
+				1814FC4D216925340046A3D3 /*  Invoice.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1672,6 +1675,7 @@
 				18CBB62C214C220A00F1C807 /* UserTableViewCell.xib in Resources */,
 				E50BBDBC2137A07D00F09D92 /* CGXBasicInfoPicker.plist in Resources */,
 				E50BBE1C2137DC3400F09D92 /* HotelViewController.xib in Resources */,
+				1814FC4E216925340046A3D3 /*  Invoice.xib in Resources */,
 				E5118209213E262E00A1CC11 /* LimitCell.xib in Resources */,
 				E50BBDA62137A07D00F09D92 /* AlipaySDK.bundle in Resources */,
 				E50BBD9A2137A07D00F09D92 /* Main.storyboard in Resources */,
