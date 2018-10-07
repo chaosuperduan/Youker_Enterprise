@@ -9,6 +9,7 @@
 import UIKit
 
 class Order_DetailViewController: BaseViewController {
+    @IBOutlet weak var InvoiceBtn: UIButton!
     @IBOutlet weak var iconImageView: UIImageView!
     
     @IBOutlet weak var hotelNameLabel: UILabel!
@@ -40,7 +41,7 @@ class Order_DetailViewController: BaseViewController {
     var mode:OrderMode?{
         didSet{
             
-            refreshUI()
+          refreshUI()
         }
     }
     
@@ -63,10 +64,12 @@ class Order_DetailViewController: BaseViewController {
         paramer["y"] = UserAccount.loadUserAccount()?.latitude
         paramer["token"] = UserAccount.loadUserAccount()?.token
         OrderViewModel.shareInstance.load_detailOrders(params: paramer as! [String : AnyObject], orVC: self)
+        
     }
     
     
     func refreshUI(){
+       
         iconImageView.kf.setImage(with:URL.init(string: (mode?.url)!))
         countLabel.text = "\(String(describing: mode!.orders!.booking_Num))"
         hotelNameLabel.text = self.mode?.hotelInfo?.hotel_Name
@@ -204,8 +207,6 @@ self.navigationController?.pushViewController(vc, animated: true)
                 
                 // self.recordOrder.user_Id = self.selectMode?.orders?.user_Id as! NSNumber
                 self.roomType = (self.mode?.roomInfo?.room_Type)!
-                
-                
                 payMode.shareInstance.Book(isAliPay: true, priceToken: nil, roomType: self.roomType, recordOrder: self.recordOrder, bookSum: self.recordOrder.booking_Num, same_Type: 0)
                payView.close()
             }
@@ -230,8 +231,6 @@ self.navigationController?.pushViewController(vc, animated: true)
             }
             
            self.navigationController?.popToRootViewController(animated: true)
-            
-            
         })
     }
     //评价
@@ -247,6 +246,74 @@ self.navigationController?.pushViewController(vc, animated: true)
         popView.isCenter = true
         popView.contenView = commentV
         popView.showInView(view: view)
+    }
+    
+    
+    //预约发票。
+    
+    @IBAction func invoiceClick(_ sender: Any) {
+        
+        
+        let popView = ZXPopView.init(frame: self.view.bounds)
+        let actionView = ActionView.LoadFromNib()
+        actionView.callBack = { isdone in
+            if isdone {
+//                self.doneInvoice()
+                
+                
+                popView.dismissView()
+            }else{
+                
+                popView.removeFromSuperview()
+                
+            }
+            
+        }
+        actionView.title = "是否开具发票"
+        actionView.subtitle = "注意:开具发票之后不可退款"
+        
+         actionView.frame = CGRect.init(x: (KScreenW-325)/2, y: (KScreenH-167)/2, width: 325, height: 167)
+        popView.contenView = actionView
+        popView.isCenter = true
+        popView.showInView(view: self.view)
+        
+        
+    }
+    
+    //开发票
+    
+    func doneInvoice(){
+        let params = NSMutableDictionary()
+        params["orderId"] =
+    InvoiceViewModel.sharedInstance.GetInvoice(params: params as! [String : AnyObject], orVC: self, callback1: {
+                
+            })
+       
+    }
+    
+    func showInvoiceView(){
+        
+        let popView = ZXPopView.init(frame: self.view.bounds)
+        let acti = InvoiceView.LoadFromNib()
+        acti.callBack = { isdone in
+            if isdone {
+                
+                
+                popView.dismissView()
+            }else{
+                
+                popView.removeFromSuperview()
+                
+            }
+            
+        }
+        
+        acti.frame = CGRect.init(x: (KScreenW-346)/2, y: (KScreenH-286)/2, width: 346, height: 286)
+        
+        popView.contenView = acti
+        popView.isCenter = true
+        popView.showInView(view: self.view)
+        
     }
 }
 

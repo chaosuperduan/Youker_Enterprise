@@ -98,4 +98,9 @@ let GetInviteURL = "v3/cpy/get/inviteUrl"
 let GetUsersList = rootURL + "v3/cpy/get/user/state"
 //删除企业员工信息。
 let DeleteEmployeeURL = rootURL + "v3/cpy/del/user/userId"
+//根据订单预约发票。
+let GetInvoiceURL = rootURL + "v3/cpy/add/invoice/order"
+
+
+
 

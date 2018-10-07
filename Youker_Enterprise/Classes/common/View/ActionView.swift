@@ -12,6 +12,7 @@ class ActionView: UIView,NibLoad {
     var callBack:((Bool)->())?
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subLabel: UILabel!
     var title:String?{
         
         didSet{
@@ -19,6 +20,14 @@ class ActionView: UIView,NibLoad {
             titleLabel.text = title
         }
         
+    }
+    
+    var subtitle:String?{
+        
+        didSet{
+            
+           subLabel.text = subtitle
+        }
     }
     
     @IBAction func SureClick(_ sender: Any) {

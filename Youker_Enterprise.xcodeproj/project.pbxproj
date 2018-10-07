@@ -50,6 +50,11 @@
 		18CBB628214C21D200F1C807 /* UserImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CBB626214C21D100F1C807 /* UserImageViewCell.xib */; };
 		18CBB62B214C220A00F1C807 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBB629214C220A00F1C807 /* UserTableViewCell.swift */; };
 		18CBB62C214C220A00F1C807 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CBB62A214C220A00F1C807 /* UserTableViewCell.xib */; };
+		E50412612169A8170019213E /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50412602169A8160019213E /* Invoice.swift */; };
+		E50412632169D63E0019213E /* Order_DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50412622169D63D0019213E /* Order_DetailViewController.xib */; };
+		E5041265216A010A0019213E /* InvoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5041264216A010A0019213E /* InvoiceView.swift */; };
+		E5041267216A011D0019213E /* InvoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5041266216A011D0019213E /* InvoiceView.xib */; };
+		E5041269216A09620019213E /* InvoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5041268216A09620019213E /* InvoiceViewModel.swift */; };
 		E507ED772152475C00592C40 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507ED762152475C00592C40 /* AddressViewController.swift */; };
 		E507ED7A215248DC00592C40 /* AddressNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507ED78215248DC00592C40 /* AddressNaviView.swift */; };
 		E507ED7B215248DC00592C40 /* AddressNaviView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E507ED79215248DC00592C40 /* AddressNaviView.xib */; };
@@ -339,6 +344,11 @@
 		ACF245780FCE0AC2E83E7DE9 /* Pods-Youker_EnterpriseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_EnterpriseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_EnterpriseUITests/Pods-Youker_EnterpriseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE66DD4637D7970B8CCB1F93 /* Pods-Youker_Enterprise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_Enterprise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_Enterprise/Pods-Youker_Enterprise.release.xcconfig"; sourceTree = "<group>"; };
 		D73F6F4425E2AE63FBF2D089 /* Pods-Youker_EnterpriseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youker_EnterpriseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youker_EnterpriseTests/Pods-Youker_EnterpriseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E50412602169A8160019213E /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		E50412622169D63D0019213E /* Order_DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Order_DetailViewController.xib; sourceTree = "<group>"; };
+		E5041264216A010A0019213E /* InvoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceView.swift; sourceTree = "<group>"; };
+		E5041266216A011D0019213E /* InvoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceView.xib; sourceTree = "<group>"; };
+		E5041268216A09620019213E /* InvoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewModel.swift; sourceTree = "<group>"; };
 		E507ED762152475C00592C40 /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		E507ED78215248DC00592C40 /* AddressNaviView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressNaviView.swift; sourceTree = "<group>"; };
 		E507ED79215248DC00592C40 /* AddressNaviView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressNaviView.xib; sourceTree = "<group>"; };
@@ -669,6 +679,9 @@
 				E5127E362147F15900979FEE /* LimitActionView.swift */,
 				E5127E382147F19F00979FEE /* LimitActionView.xib */,
 				1814FC4D216925340046A3D3 /*  Invoice.xib */,
+				E50412602169A8160019213E /* Invoice.swift */,
+				E5041264216A010A0019213E /* InvoiceView.swift */,
+				E5041266216A011D0019213E /* InvoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -708,6 +721,7 @@
 			children = (
 				18B8CDA321453D750060DB6B /* GroupInfoViewModel.swift */,
 				E56DE31821509AFE0035BC03 /* AdminViewModel.swift */,
+				E5041268216A09620019213E /* InvoiceViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1487,6 +1501,7 @@
 		E50BBE412137E41A00F09D92 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E50412622169D63D0019213E /* Order_DetailViewController.xib */,
 				E50BBE982137F00800F09D92 /* BindingAccountTableViewController.swift */,
 				E50BBE7D2137EA9700F09D92 /* OrderHotelViewController.swift */,
 				E50BBE7C2137EA9600F09D92 /* OrderHotelViewController.xib */,
@@ -1711,6 +1726,7 @@
 				E5795DCE214CA061000F1EEB /* SystemableViewController.xib in Resources */,
 				18511F792139A88F00DF7BAD /* HomeFootView.xib in Resources */,
 				E50BBE392137E1EB00F09D92 /* RoomViewController.xib in Resources */,
+				E50412632169D63E0019213E /* Order_DetailViewController.xib in Resources */,
 				E50BBE832137EAD200F09D92 /* SelectCouponView.xib in Resources */,
 				E50BBE7B2137EA7F00F09D92 /* PriceDetailView.xib in Resources */,
 				18B8CDA021452C4F0060DB6B /* ManageUserCellTableViewCell.xib in Resources */,
@@ -1721,6 +1737,7 @@
 				E50BBE872137EB0000F09D92 /* TitleTableViewCell.xib in Resources */,
 				E50BBE952137EFA100F09D92 /* AddAcountViewController.xib in Resources */,
 				E50BBE8A2137EB3900F09D92 /* SelectCouponTableViewCell.xib in Resources */,
+				E5041267216A011D0019213E /* InvoiceView.xib in Resources */,
 				E50BBE662137E97400F09D92 /* OrderDetailSecondView.xib in Resources */,
 				E510D55021539273008AE817 /* AddGroupToUsersViewController.xib in Resources */,
 				E50BBDA42137A07D00F09D92 /* README.txt in Resources */,
@@ -1911,6 +1928,7 @@
 				E50BBDD42137CA3F00F09D92 /* WSDatePickerView.m in Sources */,
 				E50BBDBF2137A07D00F09D92 /* POISearchManager.swift in Sources */,
 				E50BBDC42137A07D00F09D92 /* FWSideMenuShadow.swift in Sources */,
+				E5041265216A010A0019213E /* InvoiceView.swift in Sources */,
 				E50BBDC02137A07D00F09D92 /* SpeechSynthesizer.swift in Sources */,
 				186109D4213EF349002D0BC1 /* AccountViewModel.swift in Sources */,
 				18B8CD9F21452C4F0060DB6B /* ManageUserCellTableViewCell.swift in Sources */,
@@ -2011,8 +2029,10 @@
 				E50BBD9D2137A07D00F09D92 /* DEFINE.m in Sources */,
 				E50BBE8E2137EB6C00F09D92 /* ShareCell.swift in Sources */,
 				E50BBD772137A07D00F09D92 /* UIColor-Extension.swift in Sources */,
+				E5041269216A09620019213E /* InvoiceViewModel.swift in Sources */,
 				E50BBE7F2137EA9700F09D92 /* OrderHotelViewController.swift in Sources */,
 				E50BBE912137EB9F00F09D92 /* BlindViewModel.swift in Sources */,
+				E50412612169A8170019213E /* Invoice.swift in Sources */,
 				E50BBDF72137D6B400F09D92 /* EditView.swift in Sources */,
 				E50BBD982137A07D00F09D92 /* common.swift in Sources */,
 				E50BBD942137A07D00F09D92 /* SVProgressAnimatedView.m in Sources */,

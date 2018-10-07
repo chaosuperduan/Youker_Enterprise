@@ -56,7 +56,7 @@ class AddViewController:BaseViewController {
         params["companyId"] = UserAccount.loadUserAccount()?.company_Id
         params["employeeName"] = NameTF.text
         params["token"] = UserAccount.loadUserAccount()?.token!; GroupInfoViewModel.sharedInstance.ADDCompanyUser(params: params as! [String : AnyObject], orVC: self) {
-           
+           self.navigationController?.popViewController(animated: true)
         }
         
     }
@@ -83,7 +83,9 @@ class AddViewController:BaseViewController {
     }
     
     func setUpui(){
-        
+        if (type == addType.ADD_ADMIN ){
+            self.navigationItem.title = "添加管理"
+        }
         
         
     }

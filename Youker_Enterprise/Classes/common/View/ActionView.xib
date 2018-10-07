@@ -28,11 +28,22 @@
                                     <color key="textColor" red="0.23529411759999999" green="0.72156862749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAk-64-7Bt">
+                                    <rect key="frame" x="162.5" y="70" width="0.0" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="TQR-As-6IG"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="103" id="Dfa-zK-Vko"/>
                                 <constraint firstItem="bnb-31-K5q" firstAttribute="centerX" secondItem="4X3-Sx-Duc" secondAttribute="centerX" id="azI-Zf-6EK"/>
+                                <constraint firstItem="aAk-64-7Bt" firstAttribute="top" secondItem="bnb-31-K5q" secondAttribute="bottom" constant="8" id="fdO-Bk-Ssq"/>
+                                <constraint firstItem="aAk-64-7Bt" firstAttribute="centerX" secondItem="4X3-Sx-Duc" secondAttribute="centerX" id="hQ8-cw-nHA"/>
                                 <constraint firstItem="bnb-31-K5q" firstAttribute="centerY" secondItem="4X3-Sx-Duc" secondAttribute="centerY" id="rL6-a3-19g"/>
                             </constraints>
                         </view>
@@ -83,6 +94,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="subLabel" destination="aAk-64-7Bt" id="Pov-gU-iJX"/>
                 <outlet property="titleLabel" destination="bnb-31-K5q" id="NrM-zt-jqq"/>
             </connections>
             <point key="canvasLocation" x="29.600000000000001" y="316.19190404797604"/>
