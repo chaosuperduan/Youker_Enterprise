@@ -121,7 +121,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYR-nV-qSg">
                             <rect key="frame" x="75" y="41" width="225" height="44"/>
-                            <color key="backgroundColor" red="0.3411764706" green="0.70980392160000005" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.23529411759999999" green="0.72156862749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="nPw-im-4aA"/>
                             </constraints>
@@ -223,10 +223,10 @@
         </view>
     </objects>
     <resources>
-        <image name="error" width="20" height="20"/>
-        <image name="wechat1" width="28" height="28"/>
+        <image name="error" width="20.5" height="20.5"/>
+        <image name="wechat1" width="28.5" height="28.5"/>
         <image name="yuan" width="15" height="15"/>
         <image name="yuan1" width="15" height="15"/>
-        <image name="zhifu" width="28" height="28"/>
+        <image name="zhifu" width="28.5" height="28"/>
     </resources>
 </document>

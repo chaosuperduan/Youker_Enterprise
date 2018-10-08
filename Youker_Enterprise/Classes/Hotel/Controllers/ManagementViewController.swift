@@ -35,6 +35,10 @@ class ManagementViewController: BaseViewController {
         self.tableview.delegate = self
         self.tableview.dataSource = self
         let heView = UserHeaderView.LoadFromNib()
+        if UserAccount.loadUserAccount()?.token != nil {
+            heView.ImageIcon.kf.setImage(with: URL.init(string: (UserAccount.loadUserAccount()?.head_Url)!))
+            heView.titleLabel.text = UserAccount.loadUserAccount()?.nick_Name
+        }
         heView.frame = self.header.bounds
         header.addSubview(heView)
         self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "ii")
@@ -60,7 +64,9 @@ extension ManagementViewController:UITableViewDelegate,UITableViewDataSource{
         }
         cell.imageView?.image = UIImage.init(named: imgs[indexPath.row])
         cell.textLabel?.text = titles[indexPath.row]
-        cell.accessoryType = .detailButton
+        cell.textLabel?.textColor = UIColor.gray
+        cell.accessoryType = .checkmark
+        cell.accessoryView = UIImageView.init(image: UIImage.init(named: "check"))
         return cell
         
         

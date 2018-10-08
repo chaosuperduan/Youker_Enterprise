@@ -66,7 +66,11 @@ class SystemableViewController: UITableViewController {
         
         
         switch indexPath.row {
+        case 0:
             
+         let vc  =  ModifyPasswordViewController()
+         self.navigationController?.pushViewController(vc, animated: true)
+            break
         case 1:
             //showCodeView()
             

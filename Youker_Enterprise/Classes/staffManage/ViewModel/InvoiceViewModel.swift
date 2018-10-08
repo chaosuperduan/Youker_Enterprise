@@ -31,8 +31,15 @@ class InvoiceViewModel: NSObject {
                 
                 if(code == 200){
                     
+                    
+                    
                     orVC?.ReqType =  RequestResultType.SUCCESS
-                    orVC?.doneInvoice()
+                    guard   let Dic = responseDic["data"]  as? [String:AnyObject]       else{
+                        
+                        return
+                    }
+                    
+                  orVC?.showInvoiceView(Dic as NSDictionary)
                     callback1()
                 }else{
                     

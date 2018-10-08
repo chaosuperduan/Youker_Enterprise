@@ -25,6 +25,7 @@ class AddViewController:BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "完成", style: .plain, target: self, action: #selector(submit))
+        setUpui()
     }
     @objc func  submit(){
         
@@ -85,6 +86,9 @@ class AddViewController:BaseViewController {
     func setUpui(){
         if (type == addType.ADD_ADMIN ){
             self.navigationItem.title = "添加管理"
+        }else{
+            
+            self.navigationItem.title = "添加企业员工"
         }
         
         

@@ -105,7 +105,7 @@ let titles = ["房间数","入住人","联系手机"]
                 self.mode?.same_Type
                 payMode.shareInstance.Book(isAliPay: false, priceToken: nil, roomType: (self.mode?.room_Type)!, recordOrder: self.recordOrder!, bookSum: (self.mode!.bookSUM),same_Type:(self.mode!.same_Type))
             }else{
-                payMode.shareInstance.Book(isAliPay: true, priceToken: self.priceToken!, roomType: (self.mode?.room_Type)!, recordOrder: self.recordOrder!, bookSum: (self.mode?.bookSUM)!, same_Type: (self.mode?.same_Type)!)
+                payMode.shareInstance.Book(isAliPay: true, priceToken: nil, roomType: (self.mode?.room_Type)!, recordOrder: self.recordOrder!, bookSum: (self.mode?.bookSUM)!, same_Type: (self.mode?.same_Type)!)
             }
         }
         

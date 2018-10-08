@@ -35,13 +35,13 @@ class LoginViewController: BaseViewController{
         
         param["registerId"] = registID
         if registID == nil {
-            if(PhoneTF.text == "18666208770"){
+            if(PhoneTF.text == "13764030440"){
                  param["registerId"] = "171976fa8ad31d3c8ba"
                 
             }
           
         }
-        param["registerId"] = "dfakfkjk"
+        //param["registerId"] = "dfakfkjk"
         LoginViewModel.sharedInstance.Login(params: param as! [String : AnyObject], orVC: self, caBalck: self.callback1)
     }
     override func viewDidLoad() {

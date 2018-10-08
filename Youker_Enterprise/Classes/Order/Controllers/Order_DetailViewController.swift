@@ -258,7 +258,7 @@ self.navigationController?.pushViewController(vc, animated: true)
         let actionView = ActionView.LoadFromNib()
         actionView.callBack = { isdone in
             if isdone {
-//                self.doneInvoice()
+                self.doneInvoice()
                 
                 
                 popView.dismissView()
@@ -284,15 +284,17 @@ self.navigationController?.pushViewController(vc, animated: true)
     
     func doneInvoice(){
         let params = NSMutableDictionary()
-        params["orderId"] =
+        params["orderId"] = mode?.orders?.order_Id
+        params["token"] = UserAccount.loadUserAccount()?.token!
+        
     InvoiceViewModel.sharedInstance.GetInvoice(params: params as! [String : AnyObject], orVC: self, callback1: {
                 
             })
        
     }
     
-    func showInvoiceView(){
-        
+    func showInvoiceView( _: NSDictionary){
+       
         let popView = ZXPopView.init(frame: self.view.bounds)
         let acti = InvoiceView.LoadFromNib()
         acti.callBack = { isdone in

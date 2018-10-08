@@ -38,7 +38,7 @@ class HomeHeaderView: UIView {
         self.collectionView = UICollectionView.init(frame: self.bounds, collectionViewLayout: layout)
         collectionView?.dataSource = self
         self.collectionView?.frame.size.width = KScreenW
-        self.collectionView?.height = 162
+        self.collectionView?.height = 164
         self.collectionView?.dataSource = self
         self.collectionView?.register(UINib.init(nibName: "ButtonCell", bundle: nil), forCellWithReuseIdentifier: ho)
         collectionView?.backgroundColor = bacgColor
