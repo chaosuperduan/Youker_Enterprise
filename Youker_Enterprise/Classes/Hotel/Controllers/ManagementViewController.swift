@@ -36,7 +36,12 @@ class ManagementViewController: BaseViewController {
         self.tableview.dataSource = self
         let heView = UserHeaderView.LoadFromNib()
         if UserAccount.loadUserAccount()?.token != nil {
-            heView.ImageIcon.kf.setImage(with: URL.init(string: (UserAccount.loadUserAccount()?.head_Url)!))
+            if(UserAccount.loadUserAccount()?.head_Url != nil){
+                
+                 heView.ImageIcon.kf.setImage(with: URL.init(string: (UserAccount.loadUserAccount()?.head_Url)!))
+                
+            }
+           
             heView.titleLabel.text = UserAccount.loadUserAccount()?.nick_Name
         }
         heView.frame = self.header.bounds

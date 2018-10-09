@@ -49,6 +49,13 @@ class BaseTableViewController: UITableViewController {
                 self.tableView.addSubview(self.Tpview!)
             }
                 break
+                
+            case .LIMIT?: do{
+                
+                showNoAuthority(title: "没有权限")
+            }
+                break
+                
             default:
                 break
             }
@@ -76,6 +83,34 @@ class BaseTableViewController: UITableViewController {
         
         
         footer.endRefreshing()
+        
+    }
+    
+    
+    //展示无权限的界面。
+    func showNoAuthority(title:String){
+        //删除员工。
+        let popView = ZXPopView.init(frame: self.view.bounds)
+        let actionView = ActionView.LoadFromNib()
+        actionView.title = "暂无权限，请联系管理员"
+        actionView.callBack = { isdone in
+            if isdone {
+                
+                popView.dismissView()
+            }else{
+                
+                popView.removeFromSuperview()
+                
+            }
+            
+        }
+        
+        actionView.frame = CGRect.init(x: (KScreenW-325)/2, y: (KScreenH-167)/2, width: 325, height: 167)
+        popView.contenView = actionView
+        popView.isCenter = true
+        popView.showInView(view: self.view)
+        
+        
         
     }
 

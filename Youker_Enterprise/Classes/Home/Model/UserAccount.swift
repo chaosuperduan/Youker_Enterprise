@@ -13,6 +13,7 @@ class UserAccount: NSObject,NSCoding {
     
    @objc var token:String?
    @objc var role_Id:NSNumber?
+    @objc var role_Type:NSNumber?
     
     @objc var company_Id:NSNumber?
     @objc var isvaild:NSNumber?
@@ -85,6 +86,7 @@ class UserAccount: NSObject,NSCoding {
         aCoder.encode(user_Name, forKey: "user_Name")
          aCoder.encode(company_Id, forKey: "company_Id")
          aCoder.encode(isvaild, forKey: "isvaild")
+         aCoder.encode(role_Type, forKey: "role_Type")
         
         
 
@@ -92,7 +94,7 @@ class UserAccount: NSObject,NSCoding {
     required init?(coder aDecoder: NSCoder) {
         self.head_Url = aDecoder.decodeObject(forKey: "head_Url") as? String
         self.token = aDecoder.decodeObject(forKey: "token") as? String
-        
+        self.role_Id = aDecoder.decodeObject(forKey: "role_Id") as? NSNumber
         self.user_Id = aDecoder.decodeObject(forKey: "user_Id") as? NSNumber
         self.phone_Number = aDecoder.decodeObject(forKey: "phone_Number") as? String
         self.login_Type = aDecoder.decodeObject(forKey: "login_Type") as? NSNumber
@@ -114,6 +116,8 @@ class UserAccount: NSObject,NSCoding {
         self.company_Id = aDecoder.decodeObject(forKey: "company_Id") as? NSNumber
         
         self.isvaild = aDecoder.decodeObject(forKey: "isvaild") as? NSNumber
+        
+        self.role_Type = aDecoder.decodeObject(forKey: "role_Type") as? NSNumber
     }
     func savaAccout()->Bool{
     

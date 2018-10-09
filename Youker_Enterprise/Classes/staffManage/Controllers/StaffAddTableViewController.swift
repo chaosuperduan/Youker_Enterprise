@@ -74,18 +74,44 @@ class StaffAddTableViewController: BaseTableViewController {
         dismiss(animated: true, completion: nil)
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let roleid = UserAccount.loadUserAccount()?.role_Id
+        
         
         if indexPath.row == 0 {
-            let vc = AddViewController()
-            vc.type = addType.ADD_EMPLOYEE
-            self.navigationController?.pushViewController(vc, animated: true)
             
+            //权限校验。
+           
             
+            if(roleid == 125 || roleid == 126 || roleid == 131){
+                
+                UserAccount.loadUserAccount()?.role_Id
+                let vc = AddViewController()
+                vc.type = addType.ADD_EMPLOYEE
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+            }else{
+              
+                
+            }
+                
+            
+                
         }else{
-           showCodeView()
+            
+            if(roleid == 125 || roleid == 126){
+                 showCodeView()
+                
+            }else{
+                self.ReqType = RequestResultType.LIMIT
+                
+            }
+    
+            
+          
             
         }
     }
+    //获取
     
     
     //MARK:弹出邀请URL
@@ -93,6 +119,7 @@ class StaffAddTableViewController: BaseTableViewController {
         let popView = ZXPopView.init(frame: self.view.bounds)
         let codeV = CodeView.LoadFromNib()
         codeV.frame = CGRect.init(x: 0, y: kScreenH-234, width: KScreenW, height: 234)
+        
         codeV.url = self.url
         codeV.setUpUI()
         popView.contenView = codeV
