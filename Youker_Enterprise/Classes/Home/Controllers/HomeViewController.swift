@@ -39,8 +39,9 @@ class HomeViewController: BaseViewController {
                 if(UserAccount.loadUserAccount()?.head_Url != nil){
                     
                     header?.ImageIcon.kf.setImage(with: URL.init(string: (UserAccount.loadUserAccount()?.head_Url)!))
-                    header?.titleLabel.text = UserAccount.loadUserAccount()?.nick_Name
+                    
                 }
+                header?.titleLabel.text = UserAccount.loadUserAccount()?.nick_Name
                 
             }else{
                 
