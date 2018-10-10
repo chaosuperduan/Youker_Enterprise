@@ -52,7 +52,7 @@ class HomeViewController: BaseViewController {
     //设置UI.
     func setUpUi(){
        self.header = UserHeaderView.LoadFromNib()
-        header?.frame = CGRect.init(x: 0, y: 0, width: KScreenW, height: 260)
+        header?.frame = view1.bounds
         print(header?.frame)
         header?.callback = {
             let navi = FWNavigationController.init(rootViewController: UserCenterTableViewController())
@@ -146,7 +146,7 @@ extension HomeViewController{
     }
     //MARK:-设置的尾部。
     func setUpUifootView(){
-        footView.frame = CGRect.init(x: 0, y: 0,width: KScreenW, height:homeH )
+        footView.frame = thirdV.bounds
         footView.submit = { str in
             let price:Double = Double(str) ?? 0
             self.param.price = NSInteger(price)

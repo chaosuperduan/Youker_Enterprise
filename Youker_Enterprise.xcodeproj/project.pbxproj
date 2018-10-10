@@ -22,7 +22,6 @@
 		185232D42136FCF8009927D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185232D32136FCF8009927D2 /* ViewController.swift */; };
 		185232D72136FCF8009927D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185232D52136FCF8009927D2 /* Main.storyboard */; };
 		185232D92136FCF9009927D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185232D82136FCF9009927D2 /* Assets.xcassets */; };
-		185232DC2136FCF9009927D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185232DA2136FCF9009927D2 /* LaunchScreen.storyboard */; };
 		185232E72136FCF9009927D2 /* Youker_EnterpriseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185232E62136FCF9009927D2 /* Youker_EnterpriseTests.swift */; };
 		185232F22136FCF9009927D2 /* Youker_EnterpriseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185232F12136FCF9009927D2 /* Youker_EnterpriseUITests.swift */; };
 		185D5A8821403F920085E559 /* cpyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D5A8721403F920085E559 /* cpyInfo.swift */; };
@@ -55,6 +54,8 @@
 		E5041265216A010A0019213E /* InvoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5041264216A010A0019213E /* InvoiceView.swift */; };
 		E5041267216A011D0019213E /* InvoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5041266216A011D0019213E /* InvoiceView.xib */; };
 		E5041269216A09620019213E /* InvoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5041268216A09620019213E /* InvoiceViewModel.swift */; };
+		E50495CD216DFFB90020FF37 /* LaunchScreen 17-35-39-242.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50495CC216DFFB90020FF37 /* LaunchScreen 17-35-39-242.storyboard */; };
+		E50495CF216DFFF20020FF37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50495CE216DFFF20020FF37 /* LaunchScreen.storyboard */; };
 		E507ED772152475C00592C40 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507ED762152475C00592C40 /* AddressViewController.swift */; };
 		E507ED7A215248DC00592C40 /* AddressNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507ED78215248DC00592C40 /* AddressNaviView.swift */; };
 		E507ED7B215248DC00592C40 /* AddressNaviView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E507ED79215248DC00592C40 /* AddressNaviView.xib */; };
@@ -94,7 +95,6 @@
 		E50BBD962137A07D00F09D92 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50BBD202137A07C00F09D92 /* SVIndefiniteAnimatedView.m */; };
 		E50BBD972137A07D00F09D92 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E50BBD212137A07C00F09D92 /* SVProgressHUD.bundle */; };
 		E50BBD982137A07D00F09D92 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBD232137A07C00F09D92 /* common.swift */; };
-		E50BBD992137A07D00F09D92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50BBD252137A07C00F09D92 /* LaunchScreen.storyboard */; };
 		E50BBD9A2137A07D00F09D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50BBD272137A07C00F09D92 /* Main.storyboard */; };
 		E50BBD9B2137A07D00F09D92 /* url_configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50BBD292137A07C00F09D92 /* url_configuration.swift */; };
 		E50BBD9C2137A07D00F09D92 /* DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50BBD2A2137A07C00F09D92 /* DViewController.m */; };
@@ -303,7 +303,6 @@
 		185232D32136FCF8009927D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		185232D62136FCF8009927D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		185232D82136FCF9009927D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		185232DB2136FCF9009927D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185232DD2136FCF9009927D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185232E22136FCF9009927D2 /* Youker_EnterpriseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Youker_EnterpriseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		185232E62136FCF9009927D2 /* Youker_EnterpriseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youker_EnterpriseTests.swift; sourceTree = "<group>"; };
@@ -349,6 +348,8 @@
 		E5041264216A010A0019213E /* InvoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceView.swift; sourceTree = "<group>"; };
 		E5041266216A011D0019213E /* InvoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceView.xib; sourceTree = "<group>"; };
 		E5041268216A09620019213E /* InvoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewModel.swift; sourceTree = "<group>"; };
+		E50495CC216DFFB90020FF37 /* LaunchScreen 17-35-39-242.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "LaunchScreen 17-35-39-242.storyboard"; sourceTree = "<group>"; };
+		E50495CE216DFFF20020FF37 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E507ED762152475C00592C40 /* AddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		E507ED78215248DC00592C40 /* AddressNaviView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressNaviView.swift; sourceTree = "<group>"; };
 		E507ED79215248DC00592C40 /* AddressNaviView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressNaviView.xib; sourceTree = "<group>"; };
@@ -415,7 +416,6 @@
 		E50BBD222137A07C00F09D92 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		E50BBD232137A07C00F09D92 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		E50BBD242137A07C00F09D92 /* officialDemoLoc-Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "officialDemoLoc-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		E50BBD262137A07C00F09D92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E50BBD282137A07C00F09D92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E50BBD292137A07C00F09D92 /* url_configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = url_configuration.swift; sourceTree = "<group>"; };
 		E50BBD2A2137A07C00F09D92 /* DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DViewController.m; sourceTree = "<group>"; };
@@ -753,10 +753,11 @@
 			children = (
 				185232FF2136FDA1009927D2 /* Classes */,
 				185232D12136FCF8009927D2 /* AppDelegate.swift */,
+				E50495CC216DFFB90020FF37 /* LaunchScreen 17-35-39-242.storyboard */,
+				E50495CE216DFFF20020FF37 /* LaunchScreen.storyboard */,
 				185232D32136FCF8009927D2 /* ViewController.swift */,
 				185232D52136FCF8009927D2 /* Main.storyboard */,
 				185232D82136FCF9009927D2 /* Assets.xcassets */,
-				185232DA2136FCF9009927D2 /* LaunchScreen.storyboard */,
 				185232DD2136FCF9009927D2 /* Info.plist */,
 			);
 			path = Youker_Enterprise;
@@ -970,7 +971,6 @@
 				E50BBD182137A07C00F09D92 /* SVProgressHUD */,
 				E50BBD232137A07C00F09D92 /* common.swift */,
 				E50BBD242137A07C00F09D92 /* officialDemoLoc-Swift-Bridging-Header.h */,
-				E50BBD252137A07C00F09D92 /* LaunchScreen.storyboard */,
 				E50BBD272137A07C00F09D92 /* Main.storyboard */,
 				E50BBD292137A07C00F09D92 /* url_configuration.swift */,
 				E50BBD2A2137A07C00F09D92 /* DViewController.m */,
@@ -1691,6 +1691,7 @@
 				E50BBDBC2137A07D00F09D92 /* CGXBasicInfoPicker.plist in Resources */,
 				E50BBE1C2137DC3400F09D92 /* HotelViewController.xib in Resources */,
 				1814FC4E216925340046A3D3 /*  Invoice.xib in Resources */,
+				E50495CF216DFFF20020FF37 /* LaunchScreen.storyboard in Resources */,
 				E5118209213E262E00A1CC11 /* LimitCell.xib in Resources */,
 				E50BBDA62137A07D00F09D92 /* AlipaySDK.bundle in Resources */,
 				E50BBD9A2137A07D00F09D92 /* Main.storyboard in Resources */,
@@ -1702,14 +1703,12 @@
 				E50BBEBF21391E4000F09D92 /* HomeHeaderView.xib in Resources */,
 				E50BBE2A2137DF4600F09D92 /* HotelImageView.xib in Resources */,
 				E50BBE312137E01A00F09D92 /* PayView.xib in Resources */,
-				185232DC2136FCF9009927D2 /* LaunchScreen.storyboard in Resources */,
 				18CBB628214C21D200F1C807 /* UserImageViewCell.xib in Resources */,
 				186109CF213EEF23002D0BC1 /* UpdateInfoViewController.xib in Resources */,
 				185232D92136FCF9009927D2 /* Assets.xcassets in Resources */,
 				E50BBDD32137CA3F00F09D92 /* WSDatePickerView.xib in Resources */,
 				186109CC213EE5A2002D0BC1 /* FirstViewController.xib in Resources */,
 				E50BBE7E2137EA9700F09D92 /* OrderHotelViewController.xib in Resources */,
-				E50BBD992137A07D00F09D92 /* LaunchScreen.storyboard in Resources */,
 				E50BBE772137EA1600F09D92 /* OrdersTableViewCell.xib in Resources */,
 				E50BBE532137E62300F09D92 /* facilitiesCell.xib in Resources */,
 				E50BBE362137E1D500F09D92 /* RoomTableViewCell.xib in Resources */,
@@ -1717,6 +1716,7 @@
 				18B469ED2157A06500A419B0 /* CodeView.xib in Resources */,
 				E50BBDAE2137A07D00F09D92 /* AMap.bundle in Resources */,
 				E50BBE262137DF1C00F09D92 /* PriceView.xib in Resources */,
+				E50495CD216DFFB90020FF37 /* LaunchScreen 17-35-39-242.storyboard in Resources */,
 				E50BBE5F2137E7AB00F09D92 /* ImgeViewCollectionViewCell.xib in Resources */,
 				E50BBD812137A07D00F09D92 /* MJRefresh.bundle in Resources */,
 				E50BBDAA2137A07D00F09D92 /* 5-160914192R4-50.gif in Resources */,
@@ -2098,22 +2098,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		185232DA2136FCF9009927D2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				185232DB2136FCF9009927D2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		E50BBD252137A07C00F09D92 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E50BBD262137A07C00F09D92 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		E50BBD272137A07C00F09D92 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2267,7 +2251,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Youker_Enterprise/Classes/Home/ViewModel/Youker_Enterprise-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2298,7 +2282,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Youker_Enterprise/Classes/Home/ViewModel/Youker_Enterprise-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

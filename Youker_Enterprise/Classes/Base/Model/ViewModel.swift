@@ -79,10 +79,29 @@ class LoginViewModel: NSObject {
                         print(copMode)
                         print(cpyInfo.getDic(mode: copMode))
                         
-                         account.company_Id = copMode.company_Id
+                        account.company_Id = copMode.company_Id
                         
                     }
-                     account.savaAccout()
+                    
+                    if(dicts.keys.contains("cpyUserInfo")){
+                        //MARK://大坑
+                        guard  let copDic:[String:AnyObject] = dicts["cpyUserInfo"]! as? [String : AnyObject] else{
+                            account.savaAccout()
+                            
+                            caBalck!("登录成功.")
+                            orVC?.dismiss(animated: true, completion: nil)
+                            return
+                        }
+                        
+//                        let copMode:cpyInfo = cpyInfo.init(dict: copDic)
+//                        print(copMode)
+//                        print(cpyInfo.getDic(mode: copMode))
+                        account.role_Type = copDic["role_Type"] as! NSNumber
+                       // account.company_Id = copMode.company_Id
+                        
+                    }
+                    
+                    account.savaAccout()
                     //orVC?.callBack1!()
                     caBalck!("登录成功.")
                     orVC?.dismiss(animated: true, completion: nil)
@@ -103,6 +122,27 @@ class LoginViewModel: NSObject {
                         account.company_Id = copMode.company_Id
                         
                     }
+                    
+                    
+                    
+                    if(dicts.keys.contains("cpyUserInfo")){
+                        //MARK://大坑
+                        guard  let copDic:[String:AnyObject] = dicts["cpyUserInfo"]! as? [String : AnyObject] else{
+                            account.savaAccout()
+                            
+                            caBalck!("登录成功.")
+                            orVC?.dismiss(animated: true, completion: nil)
+                            return
+                        }
+                        
+                        //                        let copMode:cpyInfo = cpyInfo.init(dict: copDic)
+                        //                        print(copMode)
+                        //                        print(cpyInfo.getDic(mode: copMode))
+                        account.role_Type = copDic["role_Type"] as! NSNumber
+                        // account.company_Id = copMode.company_Id
+                        
+                    }
+                    
                     account.savaAccout()
                     
                     if(caBalck != nil){

@@ -74,7 +74,7 @@ class StaffAddTableViewController: BaseTableViewController {
         dismiss(animated: true, completion: nil)
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let roleid = UserAccount.loadUserAccount()?.role_Id
+        let roleid = UserAccount.loadUserAccount()?.role_Type
         
         
         if indexPath.row == 0 {
@@ -98,7 +98,8 @@ class StaffAddTableViewController: BaseTableViewController {
                 
         }else{
             
-            if(roleid == 125 || roleid == 126){
+            
+            if(roleid == 125 || roleid == 126 || roleid == 131){
                  showCodeView()
                 
             }else{
