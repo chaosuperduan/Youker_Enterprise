@@ -48,8 +48,8 @@ class InviteViewModel: NSObject {
     //获取邀请连接
     
     func GetInviteURL(params:[String:AnyObject],orVC:StaffAddTableViewController?,callback1:@escaping (()->())){
-        print(RegisterMerchant)
-        NetworkTools.requestData(.get, URLString:  GetUsersList, parameters: params as? [String : Any]) { (response,mes) in
+        print(GettInviteURL)
+        NetworkTools.requestData(.get, URLString:  GettInviteURL, parameters: params as? [String : Any]) { (response,mes) in
             print(response)
             if  response != nil{
                 

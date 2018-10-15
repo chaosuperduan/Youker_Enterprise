@@ -93,7 +93,7 @@ let DeleteUserToGroupURL = rootURL + "v3/cpy/del/users/group"
 //获取企业管理员。
 let GetAdminInfoURL = rootURL + "v3/cpy/get/admins/info"
 //获取邀请url
-let GetInviteURL = "v3/cpy/get/inviteUrl"
+let GettInviteURL = rootURL + "v3/cpy/get/inviteUrl"
 //根据员工状态获取员工列表
 let GetUsersList = rootURL + "v3/cpy/get/user/state"
 //删除企业员工信息。

@@ -12,6 +12,7 @@ class StaffAddTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpui()
+        GetInviteURL()
 
        
     }
@@ -122,6 +123,7 @@ class StaffAddTableViewController: BaseTableViewController {
         codeV.frame = CGRect.init(x: 0, y: kScreenH-234, width: KScreenW, height: 234)
         
         codeV.url = self.url
+        
         codeV.setUpUI()
         popView.contenView = codeV
         
@@ -129,6 +131,19 @@ class StaffAddTableViewController: BaseTableViewController {
         
         
         
+    }
+    
+    
+    func GetInviteURL(){
+        
+        let param = NSMutableDictionary()
+        param["companyId"] = UserAccount.loadUserAccount()?.company_Id
+        param["userId"] = UserAccount.loadUserAccount()?.user_Id
+        param["token"] = UserAccount.loadUserAccount()?.token!
+        
+        InviteViewModel.sharedInstance.GetInviteURL(params: param as! [String : AnyObject], orVC: self) {
+            
+        }
     }
     
 
